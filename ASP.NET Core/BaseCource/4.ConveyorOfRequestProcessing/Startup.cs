@@ -1,6 +1,5 @@
 using _4.ConveyorOfRequestProcessing.middlewares;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace _4.ConveyorOfRequestProcessing
 {
@@ -15,6 +14,8 @@ namespace _4.ConveyorOfRequestProcessing
              */
             app.UseMiddleware<AuthMiddleware>();
             app.UseMiddleware<RoutingMiddleware>();
+
+            // Изображение конфейера - https://metanit.com/sharp/aspnet5/pics/2.20.png
         }
     }
 }

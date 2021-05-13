@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace _4.ConveyorOfRequestProcessing.middlewares
@@ -17,7 +14,7 @@ namespace _4.ConveyorOfRequestProcessing.middlewares
         {
             var inputPassword = context.Request.Query["password"];
             if (inputPassword != "1488")
-                context.Response.StatusCode = 404;
+                await context.Response.WriteAsync("Access Denied");
             else
                 await _next.Invoke(context);
         }
