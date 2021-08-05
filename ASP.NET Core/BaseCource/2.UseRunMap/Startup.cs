@@ -38,46 +38,46 @@ namespace _2.UseRunMap
         #endregion
 
         #region Use()
-        //public void Configure(IApplicationBuilder app)
-        //{
-        //    int x = 1000;
+        public void Configure(IApplicationBuilder app)
+        {
+            int x = 1000;
 
-        //    /*
-        //     * как и метод Run() добавляет компонент в конвеер, но при этом
-        //     * вызывает следующий по списку компонент middleware
-        //     */
-        //    // первый конвеер middleware
-        //    app.Use(async (context, next) =>
-        //    {
-        //        // logic 1...
-        //        x -= 7;
-        //        await next.Invoke();
-        //    });
-        //    // второй конвеер middleware
-        //    app.Run(async context =>
-        //    {
-        //        // logic 2...
-        //        await context.Response.WriteAsync("RESPONSE : " + x);
-        //    });
-        //    /*
-        //     * ПРИМЕЧАНИЕ: не рекоммендуется отправлять ответ из разных конвееров,
-        //     * поскольку может все поплыть, сломаться и вообще....
-        //     * Ниже пример:
-        //     */
-        //    #region НЕ РЕКОММЕНДУЕМЫЙ ВАРИАНТ:
-        //    //app.Use(async (context, next) =>
-        //    //{
-        //    //    await context.Response.WriteAsync("<p>Hello world!</p>");
-        //    //    await next.Invoke();
-        //    //});
+            /*
+             * как и метод Run() добавляет компонент в конвеер, но при этом
+             * вызывает следующий по списку компонент middleware
+             */
+            // первый конвеер middleware
+            app.Use(async (context, next) =>
+            {
+                // logic 1...
+                x -= 7;
+                await next.Invoke();
+            });
+            // второй конвеер middleware
+            app.Run(async context =>
+            {
+                // logic 2...
+                await context.Response.WriteAsync("RESPONSE : " + x);
+            });
+            /*
+             * ПРИМЕЧАНИЕ: не рекоммендуется отправлять ответ из разных конвееров,
+             * поскольку может все поплыть, сломаться и вообще....
+             * Ниже пример:
+             */
+            //#region НЕ РЕКОММЕНДУЕМЫЙ ВАРИАНТ:
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("<p>Hello world!</p>");
+            //    await next.Invoke();
+            //});
 
-        //    //app.Run(async (context) =>
-        //    //{
-        //    //    // await Task.Delay(10000); можно поставить задержку
-        //    //    await context.Response.WriteAsync("<p>Good bye, World...</p>");
-        //    //});
-        //    #endregion
-        //}
+            //app.Run(async (context) =>
+            //{
+            //    // await Task.Delay(10000); можно поставить задержку
+            //    await context.Response.WriteAsync("<p>Good bye, World...</p>");
+            //});
+            //#endregion
+        }
         #endregion
 
         #region Map()
@@ -130,10 +130,10 @@ namespace _2.UseRunMap
         #endregion
 
         #region MapWhen()
-        public void Configure(IApplicationBuilder app)
-        {
-            app.Map("/auth", Auth); //   ./auth/?name="input_name"
-        }
+        //public void Configure(IApplicationBuilder app)
+        //{
+        //    app.Map("/auth", Auth); //   ./auth/?name="input_name"
+        //}
         private void Auth(IApplicationBuilder app)
         {
             /*
