@@ -20,11 +20,11 @@ namespace _3_Repeat_.CreateMiddleware.Middlewares
         {
             if(_registeredPeople.Contains(context.Request.Query["name"]))
             {
-                await context.Response.WriteAsync("Success authorizated emae!!!! All registrated people count: " + _registeredPeople.Count);
+                await _next?.Invoke(context);
             }
             else
             {
-                _next?.Invoke(context);
+                context.Response.StatusCode = 403;
             }
         }
         private void SetRegisteredPeople()
