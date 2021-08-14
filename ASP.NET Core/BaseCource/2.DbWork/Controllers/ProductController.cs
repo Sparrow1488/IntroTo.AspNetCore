@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 namespace _2.DbWork.Controllers
 {
-    [Route("/product")]
     public class ProductController : Controller
     {
         private readonly ProductsDbContext _db;
@@ -19,6 +18,11 @@ namespace _2.DbWork.Controllers
         {
             IEnumerable<Product> allProducts = _db.Products;
             return View(allProducts);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
