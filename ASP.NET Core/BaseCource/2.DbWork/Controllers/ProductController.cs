@@ -20,9 +20,19 @@ namespace _2.DbWork.Controllers
             return View(allProducts);
         }
 
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Product product)
+        {
+            _db.Products.Add(product);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,2 +1,56 @@
-﻿@model IEnumerable<Product>
+﻿@model Product
 
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+         
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Product</h2> 
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Title"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="Price"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="Amount"></label>
+                    </div>
+                    <div class="col-3">
+                        <label asp-for="ReleseDate"></label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-3">
+                        <input asp-for="Title" class="form-control"/>
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="Price" class="form-control"/>
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="Amount" class="form-control"/>
+                    </div>
+                    <div class="col-3">
+                        <input asp-for="ReleseDate" class="form-control"/>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 text-center row offset-2">
+                        <div class="col">
+                            <input class="btn btn-info w-75" type="submit" value="Create"/>
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger w-75" asp-action="Index" >Go back</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
