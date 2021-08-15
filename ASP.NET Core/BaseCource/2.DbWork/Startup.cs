@@ -17,11 +17,11 @@ namespace _2.DbWork
 
         public IConfiguration Configuration { get; }
 
+        
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ProductsDbContext>(options=> 
-                                                                                                    options.UseSqlServer(
-                                                                                                        Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ProductsDbContext>(options => UseSqlServer(options));
+            services.AddDbContext<CarsDbContext>(options => UseSqlServer(options));
 
             services.AddControllersWithViews();
         }
@@ -49,6 +49,11 @@ namespace _2.DbWork
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private DbContextOptionsBuilder UseSqlServer(DbContextOptionsBuilder builder)
+        {
+            return builder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
         }
     }
 }
