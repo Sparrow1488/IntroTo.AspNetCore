@@ -433,3 +433,4 @@ C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\Ba
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\2.DbWork\obj\Debug\net5.0\Razor\Views\Product\Create.cshtml.g.cs
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\2.DbWork\obj\Debug\net5.0\Razor\Views\Cars\Index.cshtml.g.cs
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\2.DbWork\obj\Debug\net5.0\Razor\Views\Cars\Create.cshtml.g.cs
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\2.DbWork\obj\Debug\net5.0\Razor\Views\Gallery\Index.cshtml.g.cs

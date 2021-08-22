@@ -1,0 +1,51 @@
+﻿@model Car
+
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Product</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Model"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Mark"></label>
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="ReleaseDate"></label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <input asp-for="Model" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="Mark" class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="ReleaseDate" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 text-center row offset-2">
+                        <div class="col">
+                            <input class="btn btn-info w-75" type="submit" value="Create" />
+                        </div>
+                        <div class="col">
+                            <a class="btn btn-danger w-75" asp-action="Index">Go back</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
