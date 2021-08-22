@@ -1,0 +1,25 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    display: grid;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.nav-logo {
+    float: left;
+}
+
+.nav-tabs-container {
+    grid-column: 2;
+    justify-content: center;
+}
+
+.tab-button {
+    border-bottom-color: #000;
+    border-bottom: 1px;
+    color: rgb(230, 230, 230);
+    padding: 20px;
+}
