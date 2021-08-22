@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different forms</title>
+</head>
+<body style="font-size: 18;">
+    <form action="#" method="POST" enctype="multipart/form-data">
+        <p><input tabindex="1" placeholder="Login" type="text" name="login"/></p>
+        <p><input tabindex="2" placeholder="Password" type="password" name="password" /></p>
+        <p><input disabled placeholder="Disabled"/></p>
+
+        <div name="radio-block-1">
+            <p><input checked type="radio" name="radio" value="radio1"/>(BLOCK-1) Radio 1</p>
+            <p><input type="radio" name="radio" value="radio2"/>(BLOCK-1) Radio 2</p>
+        </div>
+        <br>
+        <div name="radio-block-2">
+            <p><input checked type="radio" name="radio-2" value="radio2-1"/>(BLOCK-2) Radio 1</p>
+            <p><input type="radio" name="radio-2" value="radio2-2"/>(BLOCK-2) Radio 2</p>
+        </div>
+        <br>
+
+        <p><input type="checkbox">Check box 1</p>
+        <p><input type="checkbox">Check box 2</p>
+        <p><input type="checkbox">Check box 3</p>
+        <br>
+
+        <textarea style="height: 50px; width: 200px;" name="text">ЛЯЯЯЯЯЯЯЯЯ</textarea>
+        <br>
+        <span>Цвет текста:</span>
+        <select name="color">
+            <option value="red">Красный</option>
+            <option value="yellow">Желтый</option>
+            <option value="orange">Оранжевый</option>
+        </select>
+        <p><button action="#" type="submit">Отправить</button></p>
+        <p><button action="#" type="reset">ОЧИСТИТЬ</button></p>
+        <p><input type="file" name="attach"></p>
+    </form>
+</body>
+</html>
