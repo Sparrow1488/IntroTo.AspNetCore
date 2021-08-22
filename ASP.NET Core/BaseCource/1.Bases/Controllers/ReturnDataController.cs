@@ -58,7 +58,7 @@ namespace _1.Bases.Controllers
         {
             string filePath = @"C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\1.Bases\Sources\Images\img1.jpg";
             var fileBytes = System.IO.File.ReadAllBytes(filePath);
-            return File(fileBytes, "application/jpg");
+            return File(fileBytes, "application/jpg", "name.jpg");
         }
     }
 }
