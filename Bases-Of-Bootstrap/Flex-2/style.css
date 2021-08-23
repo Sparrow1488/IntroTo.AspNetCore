@@ -6,23 +6,22 @@
 
 .block__row {
     background-color: rgb(184, 223, 117);
-    padding: 2px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 500px;
 }
 
-.block__column {
-    /* flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 150px; */
-    flex: 1 1 150px;
+.block__column__2 {
+    flex: 1 1 auto;
 }
 
 .block__item {
-    background-color: darksalmon;
-    margin: 5px;
+    background-color: rgb(248, 183, 161);
     min-height: 80px;
+    min-width: 80px;
     text-align: center;
 }
 
