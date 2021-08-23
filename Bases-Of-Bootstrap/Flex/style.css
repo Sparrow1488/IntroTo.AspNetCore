@@ -1,0 +1,21 @@
+.main-block {
+    background-color: darkkhaki;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.block__row {
+    background-color: rgb(184, 223, 117);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.block__item {
+    background-color: darksalmon;
+    padding: 5px;
+    margin: 5px;
+    height: 40px;
+    min-width: 40px;
+    text-align: justify;
+}
