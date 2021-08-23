@@ -1,21 +1,26 @@
 .main-block {
     background-color: darkkhaki;
-    padding: 10px;
+    padding: 5px;
     font-size: 18px;
 }
 
 .block__row {
     background-color: rgb(184, 223, 117);
-    padding: 10px;
+    padding: 2px;
     display: flex;
-    justify-content: flex-end;
+}
+
+.block__column {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 150px;
+    flex: 1 0 150px;
 }
 
 .block__item {
     background-color: darksalmon;
-    padding: 5px;
     margin: 5px;
-    height: 40px;
-    min-width: 40px;
-    text-align: justify;
+    height: 120px;
+    min-width: 70px;
+    text-align: center;
 }
