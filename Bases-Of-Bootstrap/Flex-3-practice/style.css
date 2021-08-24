@@ -88,6 +88,105 @@ body {
 }
 
 
+.cards {
+    background-color: rgba(177, 201, 202, 0.295);
+    padding: 50px 0;
+}
+.cards__title {
+    text-align: center;
+}
+.cards__row {
+    display: flex;
+}
+.card {
+    padding: 5px;
+    flex: 0 1 50%;
+    display: flex;
+    margin: 2px;
+    min-height: 150px;
+}
+.card__body {
+    text-align: justify;
+    line-height: 18px;
+}
+.card__image {
+    min-width: 220px;
+    max-height: 140px;
+    background-color: white;
+    margin: 0 10px 0 0;
+    background-color: #445162;
+}
+.card__title {
+    line-height: 45px;
+}
+.card__list li {
+    background: url('https://image.flaticon.com/icons/png/512/1443/1443000.png') 0 1px no-repeat;
+    background-size: 14px;
+    padding: 0 0 0 25px;
+}
+
+
+.subscribers {
+    padding: 50px 0;
+}
+.subscribers__row {
+    display: flex;
+    justify-content: center;
+}
+/*
+    Display: flex задан для класса subscribers__column чтобы контент растягивался вниз вместе с контентом!!!
+*/
+.subscribers__column {
+    display: flex;
+}
+.subscribers__title {
+    text-align: center;
+}
+.subscribe {
+    flex: 0 1 300px;
+    background: #445162;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 2px solid #445162;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+}
+.subscribe__type {
+    text-align: center;
+    padding: 10px 0;
+}
+.subscribe__title {
+    text-align: center;
+    background-color: #fff;
+    color: #445162;
+    padding: 10px;
+}
+.subscribe__desc {
+    margin: 10px;
+    font-size: 18px;
+    height: 100%;
+}
+.subscribe__desc p {
+    margin: 0 0 10px 0;
+}
+.subscribe__desc p:last-child {
+    margin: 0;
+}
+.subscribe__button {
+    background-color: white;
+    text-align: center;
+    display: block;
+    margin: 5px 20px;
+    padding: 5px 0px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 5px;
+    color: #445162;
+}
+
+
 
 .footer {
     background-color: #f5f5f5;
