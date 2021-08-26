@@ -15,3 +15,9 @@ const man = {
     cash: 10000000
 }
 console.log(man);
+man.age = 1488;
+console.log(man);
+console.log("age type is number : " + !isNaN(man.age));
+function isValidObject(){
+
+}
