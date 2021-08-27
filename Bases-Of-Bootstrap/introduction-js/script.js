@@ -81,3 +81,26 @@ console.log(`Try authorizate. Input: ${inputPassword},
             Auth success: ${tryAuthorizate(repeatPassword)}`);
 
 
+        
+// РАБОТА С МАССИВАМИ
+const baseArray = ["TheFirst", "TheSecond", "TheThird"];
+const array = ["TheFirst", "TheSecond", "TheThird"];
+const firstItem = array.shift(); // удаляет первый элемет массива и возвращает его
+const lastItem = array.pop(); // удаляет последний элемент и возвращает его
+console.log(`Было: '${baseArray}'; Стало: '${array}'`);
+
+const hiRow = "Всем хааааааааййй!!!!!!!"; 
+const reverseRow = hiRow.split("").reverse().join("");
+console.log(reverseRow);
+
+const baseOfPeople = 
+[
+    {name:"Valentosik", bucks: 300},
+    {name:"Gokhlia", bucks: 450},
+    {name:"Yuri", bucks: 1488},
+]
+const foundHuman = baseOfPeople.find(zyabl => { // используем лямбду
+    return zyabl.bucks > 400;
+});
+console.log("Human which has more than 400 bucks: " + foundHuman.name);
+
