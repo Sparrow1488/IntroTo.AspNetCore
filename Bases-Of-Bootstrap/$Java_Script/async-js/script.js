@@ -1,3 +1,5 @@
+"use strict"
+
 // Асинхронность в js реализована на основе Event Loop
 // выполняется один раз после указанной задержки
 const timeOut = setTimeout(() => {
@@ -62,6 +64,40 @@ async function foo() {
         setTimeout(() => resolve("Ready!"), 3000)
     });
     let result = await promise;
-    alert(result);
+    console.log(result);
 }
 foo();
+
+
+
+// РАБОТА С DOM ДЕРЕВОМ
+const customizeElement = (headingClass, bgColor = "white") => {
+    const heading = document.querySelector(`.${headingClass}`);
+    heading.style.color = "#fff234";
+    heading.style.fontFamily = "Arial";
+    heading.style.background = bgColor;
+    heading.style.padding = "10px";
+    heading.style.margin = "-50 0 0 0";
+}
+const dynamicCustomizeElement = (htmlClass, delay = 1000, isBgCustom = false) => {
+    setTimeout(() => {
+        let customColor = "";
+        if(isBgCustom === true){
+            customColor = "black";
+        }
+        customizeElement(htmlClass, customColor);
+    }, delay);
+}
+
+dynamicCustomizeElement("heading-1", 100);
+dynamicCustomizeElement("heading-2", 200);
+dynamicCustomizeElement("heading-3", 300);
+
+dynamicCustomizeElement("heading-1", 700, true);
+dynamicCustomizeElement("heading-2", 800, true);
+dynamicCustomizeElement("heading-3", 900, true);
+
+
+const element = document.getElementById("main-title");
+console.log(element.innerHTML);
+console.log(element.baseURI);
