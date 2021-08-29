@@ -149,3 +149,18 @@ const keys = Object.keys(women);
 keys.forEach(key => {
     console.log(`KEY: ${key};\t VALUE: ${women[key]}`);
 });
+
+
+
+// КОНТЕКСТ - CONTEXT
+const logger = {
+    keys(){
+        console.log("Keys: " + Object.keys(this));
+    }
+}
+logger.keys();
+// вызывается сразу
+logger.keys.call(women); // вызывает функцию у логера, где вместо ключ.слова 'this' подставляет указанный объект
+// возвращает функцию
+const bound = logger.keys.bind(women);
+bound();
