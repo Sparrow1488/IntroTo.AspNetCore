@@ -104,3 +104,48 @@ const foundHuman = baseOfPeople.find(zyabl => { // используем лямб
 });
 console.log("Human which has more than 400 bucks: " + foundHuman.name);
 
+
+
+// ОБЪЕКТЫ 2
+const women = {
+    name: "Arina",
+    "serial number": 123456789,
+    ["special_key_" + (2 + 2)]: 12,
+    age: 17,
+    boys: ["Tomir", "Arturchik", "Uzir", "Kalima", "Mikle"],
+    printBoys(){
+        boysString = `${this.name} boys are `;
+        for (const boy of this.boys) {
+            boysString += boy + ", ";
+        }
+        console.log(boysString);
+    }
+}
+console.log(`Name: ${women.name}\nNumber: ${women["serial number"]}\nAge: ${women["special_key_4"]}`);
+women.printBoys();
+
+// дальше идет полный пиписоздец 
+console.log(women); 
+delete women['special_key_4']; // удаление свойств объекта
+console.log(women); 
+
+// деструктуризация
+// this        ∙↓↓↓∙
+// const serialNumber = women["serial number"];
+// const age = women.age;
+// equals this ∙↓↓↓∙        ∙ - 249
+const {name = "", age = 0} = women; // с заданными значениями по умолчанию (если из women прилетело undefined)
+const printNameAndAge = `${name} ${age}`;
+console.log(printNameAndAge);
+
+// this        ↓
+for (const key in women) {  // → → → ПРО FOREIN СТОИТ ПОЧИТАТЬ ДЛЯ СОБЕСА ← ← ← 
+    if (women.hasOwnProperty(key)){
+        console.log(`KEY: ${key};\t VALUE: ${women[key]}`);
+    }
+}
+// equals this ↓
+const keys = Object.keys(women);
+keys.forEach(key => {
+    console.log(`KEY: ${key};\t VALUE: ${women[key]}`);
+});
