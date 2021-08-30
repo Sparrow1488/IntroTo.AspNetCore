@@ -60,6 +60,9 @@
     line-height: 25px;
     margin: 0 0 20px 0;
 }
+.light {
+    color: white;
+}
 .text:last-child {
     margin: 0px;
 }
@@ -78,4 +81,27 @@
 
 .image-block {
     background-color: black;
+}
+
+
+
+.footer {
+    height: 250px;
+    background-color: #191919;
+}
+.footer .container {
+    height: 100%;
+}
+.footer-content  {
+    height: 100%;
+}
+.footer-content__row {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.footer-body p {
+    justify-content: center;
+    text-align: center;
+    height: 100%;
 }
