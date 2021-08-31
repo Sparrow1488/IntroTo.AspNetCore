@@ -3,15 +3,15 @@ In this repo I contains all materials, which I can find, while learned (and stud
 
 ### Visit my training projects
 
-* [ASP.NET Core](../ASP.NET Core/BaseCource)
+* [ASP.NET Core](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/BaseCource)
 
-* [HTML / CSS / JS](../Bases-Of-Bootstrap/)
+* [HTML / CSS / JS](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap)
 
-* [JavaScript](../Bases-Of-Bootstrap/$Java_Script/)
+* [JavaScript](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/%24Java_Script)
 
 ### And my practice projects
 
-* [Software market](../SoftwareShop/)
+* [Software market](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/SoftwareShop)
 
 That's all that I wanted to tell you :з
 
