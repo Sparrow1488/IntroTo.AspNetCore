@@ -14,10 +14,14 @@ namespace _9.MyService
         {
             // Transient - временный
             services.AddTransient<IHomeBuilder, OneFloorHomeBuilder>();
+            services.AddTransient<HomeBuilderService>();
         }
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, HomeBuilderService service)
         {
-            app.UseMiddleware<HomeBuilderMiddleware>();
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync(service.GetInfo());
+            });
         }
     }
 }
