@@ -16,6 +16,11 @@ const pet = Object.create(animal, {
     },
     color: {
         value: "black"
+    },
+    birthday: {
+        get(){
+            return new Date().getFullYear() - this.age;
+        }
     }
 });
 pet.age = 11;
