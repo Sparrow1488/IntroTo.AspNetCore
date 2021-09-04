@@ -130,3 +130,56 @@ const p = new Promise(function(resolve, reject){
 
 **reject** выбрасывает исключение, которое можно поймать, вызвав метод `catch()`
 
+```javascript
+const passport = {
+    pass : "1234",
+    login : "Sparrow"
+};
+console.log(passport);
+
+const promise = new Promise(async function(resolve, reject){
+    console.log("Async task started...");
+    let authorizateResult = false;
+
+    if(passport === undefined || passport === null){
+        reject("Object reference null or undefined exception!");
+    }
+    else{
+        authorizateResult = await isAuthorizate(passport);
+        resolve(authorizateResult);
+    }
+});
+promise.catch((err) => {
+    console.error("EXCEPTION IS", err);
+})
+.then(function(successAuth){
+    console.log(successAuth);
+    if(successAuth){
+        console.log("Authorization was success!");
+    }
+    else{
+        console.log("Authorizate was failed");
+    }
+});
+
+function isAuthorizate(passport){
+    return new Promise(function(resolve){
+        setTimeout(() => {
+            let authRes = false;
+            if(passport.login === "Sparrow" &&
+                passport.pass === "1234"){
+                authRes = true;
+            }
+            resolve(authRes);
+        }, 2000);
+    }); 
+}
+// вызывается, когда массив промисов в параметре был выполнен
+Promise.all([authUser]).then(()=>{
+    console.log("Task was completed.");
+});
+```
+
+В данном коде была задета тема `async/await`. Опираясь на опыт разработки на языке 
+
+`C#`, могу позволить себе пропустить объяснение нюансов использования данных ключевых слов. В коде может быть оправдано использование промисов, поскольку метод `isAuthorizate()`по идее должен взаимодействовать с хранилищем данных (БД), обращение к которой может занять значительное количество времени. Чтобы не блокировать основной поток, мы прибегли к использованию промисов и асинхронности в коде.
