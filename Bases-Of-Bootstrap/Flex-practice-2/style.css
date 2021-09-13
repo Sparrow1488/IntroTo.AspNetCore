@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /* http://htmlbook.ru/css/box-sizing */
+}
+body {
+    margin: 0;
+    font-weight: 300;
+    background: #181818;
+    color: #fff;
+    overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* https://html5book.ru/edinicy-izmereniya-vh-vw-vmin-vmax/ */
+}
+.right {
+    flex: 1;
+}
+
+.signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+.signin form {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+.signin .logo {
+    margin-bottom: 8vh;
+    width: 300px;
+}
+.signin label {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+.signin .text-input {
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 2px;
+    background: #181818;
+    border: 1px #555 solid;
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 0.5rem, 1rem;
+    line-height: 1.7rem;
+}
+
+.signin .primary-btn {
+    width: 100%;
+}
+.signin .secondary-btn,
+.or,
+.links {
+    width: 60%;
+}
+.signin .links a {
+    color: white;
+    text-align: center;
+    margin-bottom: 0.9rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+.signin .or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+.signin .or .bar {
+    width: 100%;
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #fff;
+}
+.signin .or span {
+    color: lightgray;
+    padding: 0 0.5rem;
+}
+
+/*  Buttons   */
+.primary-btn {
+    padding: 0.7rem 1rem;
+    display: block;
+    color: white;
+    border: 0px #fff solid;
+    border-radius: 2px;
+    background-color: orangered;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.5s; /* задаем transition в селекторе и hover'e для плавного наведения/отвода мышки */
+}
+.primary-btn:hover {
+    transition: all 0.5s;
+    background-color: peru;
+}
+.secondary-btn {
+    padding: 0.7rem 1rem;
+    display: block;
+    color: white;
+    border: 1px lightgray solid;
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.5s; /* задаем transition в селекторе и hover'e для плавного наведения/отвода мышки */
+}
+.secondary-btn:hover {
+    transition: all 0.5s;
+    background-color: lightgray;
+    color: #000;
+}
+
+/*  Showcase    */
+.showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('src/bg-3.jpg') no-repeat center center / cover;
+    height: 100vh;
+    text-align: center;
+}
+.showcase .showcase-text {
+    width: 100%;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.showcase .showcase-content .secondary-btn {
+    width: 60%;
+    margin: auto;
+}
+
+/*  Footer  */
+#main-footer {
+    text-align: center;
+    font-size: 0.8rem;
+    min-width: 80%;
+    padding-top: 5rem;
+    text-decoration: none;
+}
+#main-footer a {
+    color: orangered;
+    text-decoration: underline;
+}
+
+
+/* Media Queries */
+@media (min-width: 1200px){
+    .left {
+        flex: 4;
+    }
+    .right {
+        flex: 6;
+    }
+}
+@media (max-width: 900px){
+    body {
+        overflow: auto;
+    }
+    .wrapper {
+        align-items: center;
+    }
+    .right{
+        display: none;
+    }
+    .signin .logo {
+        margin-bottom: 4vh;
+    }
+    .signin .text-input {
+        margin-bottom: 0.5rem;
+    }
+    .signin form {
+        margin-bottom: 0rem;
+    }
+}
