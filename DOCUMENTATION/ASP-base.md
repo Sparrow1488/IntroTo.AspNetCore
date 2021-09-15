@@ -451,10 +451,10 @@ public void Configure(IApplicationBuilder app, HomeBuilderService service)
 
 Короче будем круты и будем сами указывать какой сервис как будет существовать и вообще...
 Короче бывает 3 гендера жизненных циклов:
-**Transient** - временный, т.е. при каждом запросе создается новый объект сервиса. Во время одного запроса может быть множественное обращение к сервису, но каждый раз будет создаваться новый объект.
-**Scoped** - ограниченный, т.е. при обработке одного запроса будет храниться и использоваться один объект сервиса.
-**Singelton** - ну получается, что на протяжении всего срока существования приложения будет использоваться один объект.
-Чтобы указывать в конфигурационном методе кто и сколько должен жить, нужно воспользоваться методами `Add(Lifetime)< service ... >();`
+**Transient** - временный, т.е. <u>при каждом запросе</u> создается новый объект сервиса. Во время одного запроса может быть множественное обращение к сервису, но каждый раз будет создаваться новый объект.
+**Scoped** - ограниченный, т.е. <u>при обработке одного запроса</u> будет храниться и использоваться один объект сервиса.
+**Singelton** - ну получается, что <u>на протяжении всего срока существования приложения</u> будет использоваться один объект.
+Чтобы указывать в конфигурационном методе кто и сколько должен жить, нужно воспользоваться методами `Add*Lifetime*<service...>();`
 
 ```c#
 public void ConfigureServices(IServiceCollection services)
@@ -486,3 +486,49 @@ public class CounterMiddleware
 	}
 }
 ```
+
+### Использование сервисов в кастомных Middleware
+
+Мы знаем, что можем создавать собственные сервисы, а также передавать их пользовательские компоненты middleware. Сделать это мы можем, например, через  конструктор middleware, либо метод Invoke/InvokeAsync. Стоит учесть, что при компиляции проекта, все компоненты middleware создаются один раз. Поэтому, какой бы жизненный цикл сервиса мы не использовали, попав в middleware через конструктор - останется там навсегда (как Singleton). Однако, мы можем использовать передачу через параметры метода Invoke, что сохранит изначально-указанный lifetime нашего сервиса, и он сможет использоваться как Singleton, так и Transient или Scoped.  
+```C#
+	public class TimeMiddleware
+	{
+        private readonly RequestDelegate _next;
+        private readonly TimeService _timeService;
+		// либо через ctor
+        public TimeMiddleware(RequestDelegate next, TimeService timeService)
+        {
+            _next = next;
+            _timeService = timeService;
+        }
+        // либо через параметр метода
+        // public async Task InvokeAsync(HttpContext context, TimeService service)
+        public async Task InvokeAsync(HttpContext context)
+        {
+            if (context.Request.Path.Value.ToLower() == "/time")
+                await context.Response.WriteAsync("Actual time : " + _timeService.GetActualTime());
+            else
+                await _next?.Invoke(context);
+        }
+    }
+```
+
+```C#
+public class TimeService
+{
+    private DateTime _actualTime = DateTime.Now;
+    public DateTime GetActualTime() => _actualTime;
+}
+```
+
+```C#
+public void Configure(IApplicationBuilder app)
+{
+    app.UseMiddleware<TimeMiddleware>();
+    app.UseMiddleware<CounterMiddleware>();
+    app.Run(async context => {
+    await context.Response.WriteAsync("Hello World!");
+    });
+}
+```
+
