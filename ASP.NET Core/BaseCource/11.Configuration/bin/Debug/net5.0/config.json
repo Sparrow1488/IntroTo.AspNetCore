@@ -1,0 +1,13 @@
+{
+    "author": {
+        "name": "Sparrow",
+        "rating": "10",
+        "status": "creator"
+    },
+    "application": {
+        "title": "11.Configuration",
+        "version": "1.0.0",
+        "status": "develop"
+    },
+    "dateCreate":  "15.09.2021"
+}

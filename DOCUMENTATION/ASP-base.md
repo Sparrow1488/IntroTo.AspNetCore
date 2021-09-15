@@ -633,3 +633,59 @@ var builder = new ConfigurationBuilder()
 });
 AppConfiguration = builder.Build();
 ```
+
+### Файловые провайдеры конфигурации
+
+**Провайдер JsonConfigurationProvider**
+
+```C#
+var builder = new ConfigurationBuilder()
+.AddJsonFile("config.json");
+AppConfiguration = builder.Build();
+```
+
+Позволяет использовать большую вложенность, что позволяет вытворять следующие махинации:
+```json
+// файл - config.json
+{
+    "author": {
+        "name": "Sparrow",
+        "rating": "10",
+        "status": "creator"
+    },
+    "application": {
+        "title": "11.Configuration",
+        "version": "1.0.0",
+        "status": "develop"
+    },
+    "dateCreate":  "15.09.2021"
+}
+```
+
+Обращение к значениям осуществляется через перечисление вложенных ключей, указывая перед ключем следующей вложенности знак двоеточия:
+<p>Author: {AppConfiguration["author:name"]}</p>
+<p>Rating: {AppConfiguration["author:rating"]}</p>
+
+В проекте можно использовать множество конфигурационных json файлов, главное - чтобы не повторялись ключи.
+
+**Провайдер** **XmlConfigurationProvider** 
+
+Здесь проще прочитать [первоисточник](https://metanit.com/sharp/aspnet5/2.12.php#:~:text=text%20%3D%20AppConfiguration%5B%22namespace%3Aclass%3Amethod%22%5D%3B-,%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B2%20XML,-%D0%97%D0%B0%20%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D0%B8), поскольку уже 12й час и я хочу спать.
+
+Простенький XML конфиг файл выглядит следующим образом
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <color>blue</color>
+  <text>Hello ASP.NET</text>
+</configuration>
+```
+
+Тут главное не забывать указывать в свойствах файла постоянное копирование при компиляции.
+
+![](https://metanit.com/sharp/aspnet5/pics/config6.png)
+
+**Конфигурация в ini-файлах**
+
+Читаем [первоисточник](https://metanit.com/sharp/aspnet5/2.12.php#:~:text=%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B2%20ini-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D1%85) (нет)

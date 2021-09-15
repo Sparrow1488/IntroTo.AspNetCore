@@ -22,7 +22,8 @@ namespace _11.Configuration
             {
                 {"color", "blue"},
                 {"text", "Hello ASP.NET 5"}
-            });
+            })
+            .AddJsonFile("config.json");
             AppConfiguration = builder.Build();
         }
         public IConfiguration AppConfiguration { get; set; }
@@ -33,7 +34,14 @@ namespace _11.Configuration
             var text = AppConfiguration["text"];
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync($"<p style='color:{color};'>{text}</p>");
+                // в JSON (как и XML), можно использовать большую вложенность, главное - указывать путь до значения через двоеточие и ключи
+                await context.Response.WriteAsync($"<p style='color:{color};'>{text}</p>" +
+                    $"<br>" +
+                    $"<p>Author: {AppConfiguration["author:name"]}</p><br>" +
+                    $"<p>Rating: {AppConfiguration["author:rating"]}</p><br>" +
+                    $"<p>Application: {AppConfiguration["application:title"]}</p><br>" +
+                    $"<p>Status: {AppConfiguration["application:status"]}</p><br>" +
+                    $"<p>Date create: {AppConfiguration["dateCreate"]}</p><br>");
             });
         }
     }
