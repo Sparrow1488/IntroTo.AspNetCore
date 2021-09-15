@@ -11,9 +11,9 @@ In this repo I contains all materials, which I can find, while learned (and stud
 
 ### And my practice projects
 
-* [Software market](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/SoftwareShop)
+* [Software market](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/SoftwareShop) → in develop
 * [First HTML/CSS](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/Flex-3-practice)
 * [Second HTML/CSS](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/Flex-practice-2)
+* [Random site](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/flex-practice-3)
 
 That's all that I wanted to tell you :з
-
