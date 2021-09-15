@@ -11,7 +11,8 @@ namespace _10.ServicesLifetime
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ICounter, RandomCounter>();
-            services.AddTransient<TimeService>();
+            services.AddTransient<IWatch, Watch>();
+            services.AddSingleton<TimeService>();
         }
         public void Configure(IApplicationBuilder app)
         {

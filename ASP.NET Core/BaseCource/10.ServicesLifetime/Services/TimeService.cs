@@ -4,10 +4,11 @@ namespace _10.ServicesLifetime.Services
 {
     public class TimeService
     {
-        private DateTime _actualTime = DateTime.Now;
-        public DateTime GetActualTime()
+        private readonly IWatch _watch;
+        public TimeService(IWatch watch)
         {
-            return _actualTime;
+            _watch = watch;
         }
+        public DateTime GetActualTime() => _watch.GetActualTime();
     }
 }

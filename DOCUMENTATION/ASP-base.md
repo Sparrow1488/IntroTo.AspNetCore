@@ -489,7 +489,7 @@ public class CounterMiddleware
 
 ### Использование сервисов в кастомных Middleware
 
-Мы знаем, что можем создавать собственные сервисы, а также передавать их пользовательские компоненты middleware. Сделать это мы можем, например, через  конструктор middleware, либо метод Invoke/InvokeAsync. Стоит учесть, что при компиляции проекта, все компоненты middleware создаются один раз. Поэтому, какой бы жизненный цикл сервиса мы не использовали, попав в middleware через конструктор - останется там навсегда (как Singleton). Однако, мы можем использовать передачу через параметры метода Invoke, что сохранит изначально-указанный lifetime нашего сервиса, и он сможет использоваться как Singleton, так и Transient или Scoped.  
+Мы знаем, что можем создавать собственные сервисы, а также передавать их пользовательские компоненты middleware. Сделать это мы можем, например, через  конструктор middleware, либо метод `Invoke/InvokeAsync`. Стоит учесть, что при компиляции проекта, все компоненты middleware создаются один раз. Поэтому, какой бы жизненный цикл сервиса мы не использовали, попав в middleware через конструктор - останется там навсегда (как `Singleton`). Однако, мы можем использовать передачу через параметры метода `Invoke`, что сохранит изначально-указанный lifetime нашего сервиса, и он сможет использоваться как `Singleton`, так и `Transient` или Scoped.  
 ```C#
 	public class TimeMiddleware
 	{
@@ -532,3 +532,59 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
+**ВНИМАНИЕ**: **Мы не можем по умолчанию передавать в конструктор singleton-объекта scoped-сервис**
+
+```C#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddScoped<IWatch, Watch>();
+    services.AddSingleton<TimeService>(); // System.AggregateException: 'Some services are not able to be constructed
+}
+```
+
+Мы можем использовать объекты `Transient` и `Singleton` в качестве аргумента для конструктора сервиса, однако `Scoped` в этом плане пролетает.
+
+# Конфигурация ASP.NET Core приложения
+
+### О конфигурации приложения
+
+Конфигурация определяет базовые настройки приложения. Проект ASP.NET Core по умолчанию имеет базовую конфигурацию, просмотреть которую можно указав в параметре конструктора класса Startup объект IConfiguration.
+```C#
+public IConfiguration AppConfiguration { get; }
+public Startup(IConfiguration config)
+{
+	AppConfiguration = config;
+}     
+```
+
+Приложение ASP.NET Core может получать конфигурационные настройки из следующих источников:
+
+* Аргументы командной строки
+* Переменные среды окружения
+* Объекты .NET в памяти
+* Файлы (json, xml, ini)
+* Azure
+* Можно использовать свои кастомные источники и под них создавать провайдеры конфигурации
+
+Более подробно в [статье](https://metanit.com/sharp/aspnet5/2.6.php) на сайте Metanit.
+
+### Использование кастомной конфигурации приложения
+
+```C#
+public Startup()
+{
+    var builder = new ConfigurationBuilder()
+    .AddInMemoryCollection(new Dictionary<string, string>
+    {
+        {"firstname", "Sparrow"},
+        {"age", "17"}
+    });
+    AppConfiguration = builder.Build();
+}
+public IConfiguration AppConfiguration { get; set; }
+public void Configure(IApplicationBuilder app)
+{
+	app.Run(async (context) =>
+		await context.Response.WriteAsync(AppConfiguration["firstname"]));
+}
+```
