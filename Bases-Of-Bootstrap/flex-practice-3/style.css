@@ -219,9 +219,15 @@ hr {
     .row-card__row img {
         max-width: 100%;
     }
+    .nav-bar {
+        font-size: 14px;
+    }
 }
 @media(max-width: 620px){
     .opening-side-container__row .opening-img {
         width: 22rem;
+    }
+    * {
+        font-size: 14px;
     }
 }
