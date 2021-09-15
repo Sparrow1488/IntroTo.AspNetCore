@@ -588,3 +588,48 @@ public void Configure(IApplicationBuilder app)
 		await context.Response.WriteAsync(AppConfiguration["firstname"]));
 }
 ```
+
+### Нефайловые провайдеры конфигурации
+
+**Провайдер CommandLineConfigurationProvider**
+
+Обеспечивает передачу аргументов командной строки в конфигурацию приложения. Добавить новые ключ/значение можно следующим образом:
+
+1. Через свойства проекта, указав пары key/value разделе Debug.
+
+![](https://metanit.com/sharp/aspnet5/pics/config2.png)
+
+2. Через параметры при запуске приложения
+
+   ![](https://metanit.com/sharp/aspnet5/pics/config4.png)
+
+3. Используя метод AddCommandLine
+
+   ```C#
+   public Startup()
+    {
+        string[] args = { "name=Alice", "age=29"};  // псевдопараметры командной строки
+        var builder = new ConfigurationBuilder().AddCommandLine(args);
+        AppConfiguration = builder.Build();
+    }
+   ```
+
+**Провайдер EnvironmentVariablesConfigurationProvider**
+
+```C#
+AppConfiguration = new ConfigurationBuilder()
+        .AddEnvironmentVariables()
+        .Build();
+```
+
+**Провайдер MemoryConfigurationProvider** (хранение конфигурации в памяти)
+
+```C#
+var builder = new ConfigurationBuilder()
+.AddInMemoryCollection(new Dictionary<string, string>
+{
+    {"color", "blue"},
+    {"text", "Hello ASP.NET 5"}
+});
+AppConfiguration = builder.Build();
+```
