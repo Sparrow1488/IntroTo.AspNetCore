@@ -19,6 +19,7 @@ namespace _11.Configuration
                 {"text", "Hello ASP.NET 5"}
             })
             .AddJsonFile("config.json")
+            .AddJsonFile("man.json")
             .AddConfiguration(config); // добавление конфигурации по умолчанию 
             
             AppConfiguration = builder.Build();
@@ -26,10 +27,13 @@ namespace _11.Configuration
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient(provider => AppConfiguration);
+            services.Configure<Man>(AppConfiguration);
+            services.Configure<Man>(options => options.Age = options.Age < 0 ? 0 : options.Age);
         }
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseMiddleware<ManMiddleware>();
             app.UseMiddleware<ConfigMiddleware>(); 
         }
     }

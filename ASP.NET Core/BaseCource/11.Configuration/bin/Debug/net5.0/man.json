@@ -1,0 +1,18 @@
+{
+    "name": "Valentin",
+    "age": "11",
+    "skills": [
+        "ASP.NET Core 5 back-end",
+        "Web full-stack",
+        "Admin of databases"
+    ],
+    "languages": [
+        "English",
+        "Russian",
+        "Polish"
+    ],
+    "company": {
+        "title": "Amazon",
+        "income":  "90000"
+    }
+}

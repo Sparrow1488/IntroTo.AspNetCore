@@ -757,3 +757,74 @@ _appConfig.Bind(txtSets);
 ```C#
 var txtSettings = _appConfig.Get<TextSettings>();
 ```
+
+### Использование сервисов IOptions<T>
+
+При помощи этого сервиса, а так же возможностей dependency injection, мы можем проецировать конфигурационные настройки в определенный класс и передавать их в любые middleware компоненты. 
+```JSON
+{
+    "name": "Valentin",
+    "age": "11",
+    "skills": [
+        "ASP.NET Core 5 back-end",
+        "Web full-stack",
+        "Admin of databases"
+    ],
+    "languages": [
+        "English",
+        "Russian",
+        "Polish"
+    ],
+    "company": {
+        "title": "Amazon",
+        "income":  "90000"
+    }
+}
+```
+Конструктор Startup:
+```C#
+var builder = new ConfigurationBuilder()
+.AddJsonFile("man.json");
+```
+Класс Man:
+
+```C#
+public class Man
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public List<string> Languages { get; set; }
+    public List<string> Skills { get; set; }
+    public Company Company { get; set; } // отдельный класс
+}
+```
+
+Метод ConfigureServices:
+
+```C#
+services.Configure<Man>(AppConfiguration);
+services.Configure<Man>(options => options.Age = options.Age < 0 ? 0 : options.Age);
+```
+Метод Configure:
+```C#
+app.UseMiddleware<ManMiddleware>();
+```
+ManMiddleware:
+```C#
+private readonly RequestDelegate _next;
+private readonly IOptions<Man> _man;
+public ManMiddleware(RequestDelegate next, IOptions<Man> man)
+{
+    _next = next;
+    _man = man;
+}
+public async Task InvokeAsync(HttpContext context)
+{
+    if (context.Request.Path.Value == "/man")
+    await context.Response.WriteAsync($"<p>Name{_man.Value.Name}.</p>");
+    else await _next.Invoke(context);
+}
+```
+
+Данный механизм, позволяет нам работать с конфигурацией, не прибегая к декомпозиции ключей с большой вложенностью, а также дает возможность инкапсулировать config файлы, вычленив из них конкретную настройку.
+

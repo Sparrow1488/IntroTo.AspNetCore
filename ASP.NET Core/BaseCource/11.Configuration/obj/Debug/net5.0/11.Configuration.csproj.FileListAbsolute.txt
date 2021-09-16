@@ -22,3 +22,4 @@ C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\Ba
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\11.Configuration\obj\Debug\net5.0\11.Configuration.pdb
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\11.Configuration\obj\Debug\net5.0\11.Configuration.genruntimeconfig.cache
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\11.Configuration\bin\Debug\net5.0\config.json
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\BaseCource\11.Configuration\bin\Debug\net5.0\man.json
