@@ -689,3 +689,71 @@ AppConfiguration = builder.Build();
 **Конфигурация в ini-файлах**
 
 Читаем [первоисточник](https://metanit.com/sharp/aspnet5/2.12.php#:~:text=%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B2%20ini-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D1%85) (нет)
+
+### Использование конфигурации по-умолчанию
+
+Указывая в билдере конфигурации собственные настройки, тем самым мы вынуждены сбросить конфигурацию по-умолчанию. Чтобы вновь добавить ее в проект и дальше использовать, можно воспользоваться методом `AddConfiguration` config builder'a.
+```C#
+var builder = new ConfigurationBuilder()
+.AddInMemoryCollection(new Dictionary<string, string>
+{
+    {"color", "blue"},
+    {"text", "Hello ASP.NET 5"}
+})
+.AddJsonFile("config.json")
+.AddConfiguration(config); // добавление конфигурации по умолчанию 
+AppConfiguration = builder.Build();
+```
+
+### Использование конфигурации в пользовательских компонентах Middleware
+Создадим наш компонент Middleware
+```C#
+private readonly RequestDelegate _next;
+private readonly IConfiguration _appConfig;
+public ConfigMiddleware(RequestDelegate next, IConfiguration config)
+{
+    _next = next;
+    _appConfig = config;
+}
+```
+
+И зарегистрируем наш конфигурационный объект в методе
+```C#
+public IConfiguration AppConfiguration { get; set; }
+public void ConfigureServices(IServiceCollection services)
+{
+	services.AddTransient(provider => AppConfiguration);
+}
+```
+
+Готово, теперь мы можем передавать нашу конфигурацию куда угодно.
+
+### Создание собственных провайдеров конфигурации
+
+Рассмотрим эту интересную тему в данной [статье](https://metanit.com/sharp/aspnet5/2.15.php).
+
+### Проекция конфигурации на классы
+
+Чтобы не вытаскивать каждое значение через индексатору, можно сразу использовать метод объекта IConfiguration `Get<T>()` или `Bind(obj)`. Рассмотрим примеры.
+
+Мы имеем следующий файл конфигурации:
+
+```JSON
+{
+    "text": "some text",
+    "color": "red"
+}
+```
+
+И мы можем сразу спроецировать пары ключ/значение на объекта класса `TxtSettings`.
+
+Или изначально создав для привязки объект:
+```C#
+var txtSets = new TextSettings();
+_appConfig.Bind(txtSets);
+```
+
+Либо использовав метод `Get<T>()` с указанием типа привязки:
+```C#
+var txtSettings = _appConfig.Get<TextSettings>();
+```
