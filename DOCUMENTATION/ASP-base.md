@@ -891,6 +891,8 @@ public void Configure(IApplicationBuilder app)
 
 # Работа с маршрутизацией в ASP.NET Core
 
+### Основы маршрутизации. Работа с Router и секциями запроса
+
 Маршрутизация в любом веб-сервисе заключается в обработке запроса, исходя из строки-запроса (query). Строка запроса делится на сегменты (двух (трех) сегментный запрос). Например: https://localhost:5050/home/index - двухсегментный запрос.
 ```C#
 public void Configure(IApplicationBuilder app)
@@ -942,3 +944,65 @@ routeBuilder.MapRoute("default", "{controller=Home}/{action=Index}/{name}-{year}
 * MapPost
 * MapPut
 
+### Пользовательская маршрутизация. Создание собственных маршрутизаторов
+
+Для создания собственных маршрутизаторов, нужно создать класс, реализующий методы интерфейса `IRouter`. 
+
+```C#
+public class HomeRouter : IRouter
+{
+    public VirtualPathData GetVirtualPath(VirtualPathContext context)
+    {
+    	throw new NotImplementedException();
+    }
+
+    public async Task RouteAsync(RouteContext context)
+    {
+        var url = context.HttpContext.Request.Path.Value;
+        if (url.ToLower().StartsWith("/home"))
+        await context.HttpContext.Response.WriteAsync("HELLO from HOME!!!");
+    }
+}
+```
+
+Метод RouteAsync отвечает за обработку самого запроса, тогда как GetVirtualPath служит [для генерации ссылок в соответствии с данным маршрутом.](https://metanit.com/sharp/aspnet5/11.8.php#:~:text=%D0%90%20%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%20GetVirtualPath()%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D0%B8%20%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA%20%D0%B2%20%D1%81%D0%BE%D0%BE%D1%82%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D0%B8%D0%B8%20%D1%81%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%BC%20%D0%BC%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D0%BE%D0%BC.)
+
+Подключим сервис маршрутизации в методе ConfigureServices и пропишем следующий минимальный код:
+
+```C#
+public void ConfigureServices(IServiceCollection services)
+{
+	services.AddRouting();
+}
+
+public void Configure(IApplicationBuilder app)
+{
+    var routeBuilder = new RouteBuilder(app);
+    routeBuilder.Routes.Add(new HomeRouter());
+    app.UseRouter(routeBuilder.Build());
+
+    app.Run(async context =>
+    	await context.Response.WriteAsync("DEFAULT"));
+}
+```
+
+Теперь, если мы сделаем все так, как показано на примерах выше и перейдем в раздел `/home`, то на наше удивление увидим, что то вроде: 
+
+```Query
+HELLO from HOME!!!DEFAULT
+```
+
+Загвостка в том, что наш "подхватывающий" метод, обрабатывающий необрабатываемое, тоже выполнился, тем самым навел суету на воображаемой сервисе. Все дело в `RouteContext context`, который используется в классе `RouteAsync` класса `HomeRouter`. Запрос был обработан и пущен дальше по конвейеру для последующей обработки. Чтобы этого избежать, нужно поставить точку на дальнейшей обработке. 
+
+```C#
+public Task RouteAsync(RouteContext context)
+{
+    var url = context.HttpContext.Request.Path.Value;
+    if (url.ToLower().StartsWith("/home"))
+    	context.Handler = async httpContext =>
+    		await context.HttpContext.Response.WriteAsync("HELLO from HOME!!!");
+    return Task.CompletedTask;
+}
+```
+
+Таким образом, мы останавливаем конвейер обработки для данного запроса, обработав его `context.Handler`.

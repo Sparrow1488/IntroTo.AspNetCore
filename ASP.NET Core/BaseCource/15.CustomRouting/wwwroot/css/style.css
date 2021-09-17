@@ -1,0 +1,14 @@
+﻿* {
+    font-family: Arial;
+}
+body {
+    background-color: #323232;
+}
+.title {
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+}
+.text {
+    color: #fff;
+}
