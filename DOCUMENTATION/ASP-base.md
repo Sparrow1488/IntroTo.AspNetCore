@@ -888,3 +888,57 @@ public void Configure(IApplicationBuilder app)
 ```
 
 Хочу отметить наличие свойства [IdleTimeout](https://metanit.com/sharp/aspnet5/2.26.php#:~:text=%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D1%8D%D1%82%D0%BE%D0%B3%D0%BE%20%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-,IdleTimeout,-%3A%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F%20%D1%81%D0%B5%D1%81%D1%81%D0%B8%D0%B8), которое определяет время хранения данных сессии при неактивности пользователя (афк).
+
+# Работа с маршрутизацией в ASP.NET Core
+
+Маршрутизация в любом веб-сервисе заключается в обработке запроса, исходя из строки-запроса (query). Строка запроса делится на сегменты (двух (трех) сегментный запрос). Например: https://localhost:5050/home/index - двухсегментный запрос.
+```C#
+public void Configure(IApplicationBuilder app)
+{
+    var routeBuilder = new RouteBuilder(app);
+    routeBuilder.MapRoute("{controller}/{action}", HomeHandle);
+    routeBuilder.MapRoute("{controller}/{action}/{id}", IndexHandle);
+    app.UseRouter(routeBuilder.Build());
+    
+    app.Run(async context =>
+    	await context.Response.WriteAsync("DEFAULT PAGE"));
+}
+```
+
+Где `HomeHandler` и `IndexHandle` методы, принимающие `HttpContext`. Таким образом (в данном примере), если запрос будет иметь два сегмента, то выполнится `HomeHandler`, если 3 - `IndexHandle`. Либо, мы можем указать конкретный раздел: 
+```C#
+routeBuilder.MapRoute("/home", HomeHandle);
+```
+```C#
+var routeBuilder = new RouteBuilder(app);
+routeBuilder.MapRoute("/home", HomeHandle);                       
+routeBuilder.MapRoute("/index", IndexHandle);				    // обработка запроса по адресу /index
+routeBuilder.MapRoute("default", "{controller}/{action}/{id?}"); // обработка запроса через контроллер/метод/необязательный_параметр
+routeBuilder.MapRoute("default", "api/{controller}/{action}");   // обработка через статический сегмент
+app.UseRouter(routeBuilder.Build());
+```
+
+Так же можно использовать значения по-умолчанию:
+```C#
+routeBuilder.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+```
+
+Использование неограниченного кол-ва параметров (сегментов).
+```C#
+routeBuilder.MapRoute("default", "{controller=Home}/{action=Index}/{id?}/{*catchall}");
+// Пример: localhost/home/index/1488/login/news/studio
+```
+
+Использование нескольких параметров в сегменте:
+
+```C#
+routeBuilder.MapRoute("default", "{controller=Home}/{action=Index}/{name}-{year}");
+```
+
+У объекта класса `RouteBuilder` помимо метода `MapRoute`, есть еще ряд методов для различных видов маршрутизации:
+
+* MapGet
+* MapDelete
+* MapPost
+* MapPut
+
