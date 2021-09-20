@@ -4,28 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/MarketStyle.css">
     <link rel="stylesheet" href="Styles/ResetBasedStyles.css">
+    <link rel="stylesheet" href="Styles/MarketStyle.css">
+    <link rel="stylesheet" href="Styles/IndexStyle.css">
     <title>Market</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="filter-panel">
+    <div id="wrapper">
 
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar__row">
+                    <div class="logo">
+                        <img src="https://image.flaticon.com/icons/png/512/4229/4229359.png" alt="icon" width="60" height="60" />
+                        <span>Software market</span>
+                    </div>
+                    <div class="navbar-content">
+                        <div class="btn active">
+                            <p>Home</p>
+                        </div>
+                        <div class="btn">
+                            <p>Market</p>
+                        </div>
+                        <div class="btn">
+                            <p>Profile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="header">
+                <div class="container">
+                    <h3 class="title">Описание магазина</h3>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores rerum obcaecati, maiores corporis porro possimus magnam, mollitia iure repellat, sequi optio voluptas culpa molestiae sapiente. Itaque quibusdam dolores cumque recusandae, dolor incidunt voluptatum quo! Omnis quo vel nulla, aliquid nam, hic error deserunt laboriosam quaerat delectus velit ipsum quas. In!</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- <div class="products-navigation">
+            <div class="container">
+                <div class="products-navigation__row">
+                    <a href="#" class="product-nav-link">Sites</a>
+                    <a href="#" class="product-nav-link">Desktop</a>
+                    <a href="#" class="product-nav-link">3D Models</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="main-container">
+            <div class="container">
+                <div class="main-container__row">
+
+                    <div class="filter-panel">
+                        <div class="filter-panel__row">
+                            <div class="filter-panel__block">
+                                <p class="text">Category</p>
+                            </div>
+                            <div class="filter-panel__block">
+                                <p class="text">Price</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list">
+                        <div class="product-list__row">
+                            <div class="product-item active-card">
+                                <div class="product-item__row">
+                                    <div class="product-item__desc">
+                                        <h3 class="sub-title">Сайт для парсинга данных</h3>
+                                        <a href="#" class="btn">Узнать больше</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-item__row">
+                                    <div class="product-item__desc">
+                                        <h3 class="sub-title">Прорывное приложение для экономии трафика в 2 раза!</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-item__row">
+                                    <div class="product-item__desc">
+                                        <h3 class="sub-title">Я вообще молчу</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-item__row">
+                                    <div class="product-item__desc">
+                                        <h3 class="sub-title">Я вообще молчу</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="product-item__row">
+                                    <div class="product-item__desc">
+                                        <h3 class="sub-title">Я вообще молчу</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="content-list">
-            <div class="product-preview">
-            </div>
-            <div class="product-preview">
-            </div>
-            <div class="product-preview">
-            </div>
-            <div class="product-preview">
-            </div>
-            <div class="product-preview">
-            </div>
-            <div class="product-preview">
-            </div>
+
+        <div id="footer">
+            <footer>
+                <div class="container">
+                    <div class="footer__row">
+                        
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </body>

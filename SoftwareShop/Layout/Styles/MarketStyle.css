@@ -1,38 +1,133 @@
 * {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #282828; 
+    background-color: rgb(231, 231, 231);
+    overflow-x: hidden;
+    justify-content: center;
 }
-.wrapper {
-    padding: 10px 0px 0px 0px;
-    display: flex;
-    margin: 0 auto;
-    width: 75%;
-    min-width: 920px;
-    height: 1008px;
-    background-color: #323232; 
-    box-shadow: 1px 2px 2px #202020;
-}
-.filter-panel {
-    margin: 0 5px;
-    background-color: darkgrey;
-    height: 480px;
-    width: 350px;
-}
-.content-list {
-    margin: 0 5px 0 0;
-    background-color: gray;
+.main-container {
     height: 100%;
+}
+.header .container {
+    padding: 20px 0;
+}
+
+.products-navigation {
+    background-color: #323232;
+}
+.products-navigation .container{
+    padding: 20px 0;
+}
+.products-navigation__row {
+    display: flex;
+    justify-content: space-between;
+}
+.product-nav-link {
+    margin: 0px 5px 0px 0px;
+    line-height: 25px;
+    color: blueviolet;
+    padding: 5px 50px;
+    font-size: 22px;
+    border: 1px blueviolet solid;
+    border-radius: 1px;
+}
+.product-nav-link :hover {
+    color: #fff;
+}
+
+.filter-panel {
     width: 100%;
+    background-color: #fff;
+    border: 1px gray solid;
+    border-radius: 2px;
+    height: auto;
+}
+.filter-panel__row {
+    display: flex;
+}
+.filter-panel__block {
+    flex: 1 1 33%;
+    padding: 5px;
+}
+.filter-panel .title {
+    margin: 5px 10px;
+}
+
+.product-list {
+    flex: 5;
+}
+.product-list__row {
     display: flex;
     flex-wrap: wrap;
 }
-.product-preview {
-    min-width: 250px;
-    margin: 5px 5px 0px 0px;
-    background-color: #252525;
+.product-item {
+    background: url("https://c4.wallpaperflare.com/wallpaper/991/578/371/minimalism-simple-circle-blue-cortana-hd-wallpaper-preview.jpg") no-repeat center center;
+    background-size: cover;
+    margin: 2px;
+    flex: 1 1 33%;
+    max-width: 33%;
+    background-color: #fff;
+    border: 1px lightgray solid;
+    border-radius: 2px;
+    height: 220px;
     display: flex;
-    flex: 1 0 150px;
+}
+.product-item__row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.product-item__desc {
+    background: rgba(5, 5, 5, 0.5);
+    color: rgb(224, 224, 224);
+    padding: 5px 10px;
+    height: 80px;
+    width: 100%;
+    /* overflow: auto; */
+}
+
+
+.title {
+    font-size: 30px;
+    line-height: 35px;
+}
+.sub-title {
+    font-size: 22px;
+    line-height: 32px;
+}
+.text {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#footer {
+    background-color: #323232;
+    height: 200px;
+}
+
+@media(max-width: 1200px){
+    .product-item {
+        max-width: auto;
+        flex: 1 1 49%;
+        min-width: 49%;
+    }
+}
+@media(max-width: 950px){
+    .product-item {
+        max-width: auto;
+        min-width: 100%;
+    }
+}
+@media(max-width: 830px){
+    /* .product-item {
+        max-width: auto;
+        min-width: 100%;
+        height: 380px;
+    } */
+    body {
+        width: 830px;
+    }
 }

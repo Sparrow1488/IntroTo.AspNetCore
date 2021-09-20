@@ -44,6 +44,7 @@ hr {
     min-height: 750px;
     font-size: 18px;
     background: url('src/showcase-bg-1.jpg') no-repeat center / cover;
+    background-size: cover;
 }
 #showcase .container {
     padding: 20px 0;
