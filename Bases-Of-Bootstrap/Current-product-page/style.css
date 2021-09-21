@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+/* 2B2047 */
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+}
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+.title {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.text {
+    line-height: 25px;
+}
+
+.header__row {
+    display: flex;
+    height: 65px;
+}
+.header-left-side {
+    flex: 1 1 55%;
+}
+.header-left-side__row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.header__logo {
+    padding: 5px 20px;
+}
+.header__logo img {
+    height: 55px;
+}
+
+
+.header-right-side {
+    flex: 1 1 45%;
+    background-color: #312E3A;
+}
+.header__navigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-right-side__row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-btn {
+    height: 100%;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+}
+
+.content-block__row {
+    display: flex;
+}
+.content__slider {
+    flex: 0 0 55%;
+    background-color: rgb(246, 246, 246);
+}
+.slider__images {
+    flex: 0 1 45%;
+}
+.slider__current-image img {
+    width: 100%;
+}
+.slider-images__row {
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+.slider-images__row img {
+    padding: 2px;
+    max-height: 100px;
+}
+
+.content__product-info {
+    display: flex;
+    justify-content: center;
+}
+.product-info__column {
+    padding: 5px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.product-desc__block {
+    margin: 20px 0 0 0;
+}
+.desc-block__row {
+    display: flex;
+}
+.desc-block__subject {
+    flex: 0 0 33%;
+}
+.desc-block__text {
+    padding: 0 10px;
+}
+.desc-block__text p {
+    font-size: 16px;
+}
+.product-size {
+}
+.product-color {
+    width: 50px;
+    height: 35px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.product-price {
+    padding: 20px 0;
+}
+
+.buy-product__row {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.btn-dark {
+    color: white;
+    font-weight: bolder;
+    background-color: #252525;
+    padding: 10px 20px;
+}
+.btn-light {
+    color: black;
+    font-weight: bolder;
+    padding: 10px 20px;
+}
+
+.payment-systems__row img {
+    height: 30px;
+    size: 25px;
+}
