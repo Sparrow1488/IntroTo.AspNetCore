@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using ShoesShop.Middlewares;
 using ShoesShop.Services;
+using ShoesShop.Services.Builders;
 
 namespace ShoesShop
 {
@@ -12,6 +13,7 @@ namespace ShoesShop
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IPagesStorage, PagesStorage>();
+            services.AddTransient<IProductPageBuilder, ProductPageBuilder>();
         }
 
         public void Configure(IApplicationBuilder app)
