@@ -31,4 +31,6 @@ $(document).ready(function(){
         function(){
             $(this).next("em").animate({opacity: "hide" }, 100)
         });
+
+        console.log($("div.custom-attr").data().userLogin);
 });
