@@ -3,23 +3,22 @@ In this repo I contains all materials, which I can find, while learned (and stud
 
 ## Visit my training projects
 
-* [ASP.NET Core](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/BaseCource)
-* [HTML / CSS / JS](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap)
-* [JavaScript](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/%24Java_Script)
+* [ASP.NET Core](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core)
+* [HTML / CSS / JS](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack)
 
 ## And my practice projects
 
 #### Good jobs:
 
-* [Shoes shop](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ShoesShop)
+* [Shoes shop](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/practice/ShoesShop)
 
 #### Other:
 
-* [Software market](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/SoftwareShop) → __in develop__
-* [First HTML/CSS](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/Flex-3-practice)
-* [Second HTML/CSS](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/Flex-practice-2)
-* [Random site](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/flex-practice-3)
-* [Product page](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/Bases-Of-Bootstrap/Current-product-page)
+* [Software market](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/practice/SoftwareShop) → __in develop__
+* [Hello-Flex (html/css)](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack/%24HTML-CSS/practice/Flex-Hello_practice)
+* [Crown (html/css)](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack/%24HTML-CSS/practice/Crown_practice)
+* [Todoist (html/css)](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack/%24HTML-CSS/practice/Todoist_practice)
+* [Product page](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack/%24HTML-CSS/practice/Shoes-shop_practice)
 
 
 That's all that I wanted to tell you :з
