@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+body {
+    background-color: #323232;
+}
+#wrapper{
+    height: 100%;
+    font-size: 20px;
+}
+.container {
+    padding: 80px 20px;
+    max-width: 1180px;
+    min-width: 780px;
+    margin: 0 auto;
+}
+.title {
+    line-height: 35px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.text {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+header {
+    background-color: #252525;
+}
+header .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header__row {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.header__body {
+    height: 100%;
+}
+.header__logo {
+    margin: 0 50px 0 0;
+}
+.header__logo h3 {
+    color: white;
+}
+.header__navigation {
+    height: 100%;
+}
+.nav-btn {
+    color: white;
+    margin: 0px 15px 0px 0px;
+    padding: 6px 0 3px 0;
+}
+.nav-btn:hover {
+    text-decoration: underline;
+}
+.login-btn {
+    color: #43CC5C;
+}
+.register-btn {
+    color: #5C70FB;
+}
+
+.explain-panel:nth-child(even) {
+    background-color: #EEEEEE;
+}
+.explain-panel:nth-child(odd) * {
+    color: white;
+}
+.explain-panel__text * {
+    color: black;
+}
+.btn {
+    background-color: cadetblue;
+    padding: 5px 10px;
+    line-height: 38px;
+    border-radius: 5px;
+}
+
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    background-color: #404983;
+    margin: 0 5px;
+    border-radius: 2px;
+}
+.offer-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 33%;
+}
+.offer-card__title {
+    padding: 10px 0;
+}
+.offer-card__text {
+    height: 100%;
+}
+.offer-card__image {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+.offer-card__image img {
+    height: 120px;
+    max-width: 100%;
+}
+.explain-panel-cards__row {
+    justify-content: center;
+    display: flex;
+}
+.offer-card {
+    width: 30%;
+}
+.offer-card__footer {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.offer-card__footer .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.footer__row {
+    display: flex;
+    justify-content: space-between;
+}
+.copytight a {
+    color: yellowgreen;
+}
+.contacts h3 {
+    display: inline-block;
+    margin: 0 20px 0 0;
+}
