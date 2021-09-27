@@ -244,3 +244,55 @@ $('div').html("<p>Новый контент!!!</p>")
 var oldHtml = $('div.header').html();
 $('div.header').html(oldHtml+"<p>Новый контент!!!</p>")
 ```
+
+## [Работа со структурой страницы](https://metanit.com/web/jquery/4.1.php)
+
+### Создание / добавление / удаление дочерних элементов
+
+**Создание нового элемента html**
+
+```js
+var newList=$('<ul><li>Item1</li><li>Item2</li></ul>');
+console.log(newList.html());
+```
+
+**Клонирование существующего элемента**
+
+```js
+var newList=$('ul').first().clone();
+```
+
+**Добавление нового элемента** **в конец**
+
+```js
+$('#langs').append('<li>C#</li>');
+```
+
+```js
+$('ul#langs').append(function(index,html){
+    return $('<li>JavaScript</li>');
+});
+```
+
+**Добавление нового элемента в начало**
+
+```js
+$('#langs').prepend('<li>C#</li>');
+```
+
+**Обертывание всех элементов под один**
+
+```js
+$('.langs').wrap('<div class="redStyle"></div>');
+```
+Итог:
+
+```html
+<div class="redStyle">
+    <ul class="langs">
+        <li>Java</li>
+        <li>C/C++</li>
+        <li>PHP</li>
+    </ul>
+</div>
+```
