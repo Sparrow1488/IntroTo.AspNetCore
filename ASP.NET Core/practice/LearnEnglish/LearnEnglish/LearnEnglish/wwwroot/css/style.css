@@ -1,0 +1,68 @@
+#wrapper{
+    font-size: 20px;
+    height: 100%;
+}
+body {
+}
+.explain-panel {
+    height: 100%;
+}
+.explain-panel__text * {
+    color: black;
+}
+.explain-panel__buttons {
+    display: flex;
+    justify-content: center;
+}
+.explain-panel__buttons .btn {
+    flex: 1 1 100%;
+    margin: 0 5px;
+    text-align: center;
+}
+
+
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    background-color: #404983;
+    margin: 0 5px;
+    border-radius: 2px;
+}
+.offer-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 33%;
+}
+.offer-card__title {
+    padding: 10px 0;
+}
+.offer-card__text {
+    height: 100%;
+}
+.offer-card__image {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+.offer-card__image img {
+    height: 120px;
+    max-width: 100%;
+}
+.explain-panel-cards__row {
+    justify-content: center;
+    display: flex;
+}
+.offer-card {
+    width: 30%;
+}
+.offer-card__footer {
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.offer-card__footer .btn {
+    width: 100%;
+    text-align: center;
+}
+
