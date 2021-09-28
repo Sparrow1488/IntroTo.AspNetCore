@@ -3,7 +3,9 @@
 * {
     font-family: 'Poppins', sans-serif;
     color: #fff;
+    font-size: 22px;
 }
+
 body {
     background-color: #EEEEEE;
 }
@@ -20,8 +22,10 @@ p {
     line-height: 35px;
     font-size: 25px;
     font-weight: bold;
+    color:  black;
 }
 .text {
+    color:  black;
     font-size: 18px;
     line-height: 25px;
 }
@@ -30,6 +34,7 @@ p {
     padding: 5px 10px;
     line-height: 38px;
     border-radius: 5px;
+    font-size: 18px;
     transition: background-color 0.2s;
 }
 .btn:hover {
@@ -49,59 +54,15 @@ p {
 .blue:hover {
     background-color: #333a66;
 }
-
-header {
-    background-color: #252525;
+.textbox {
+    padding: 5px 10px;
+    color: black;
+    background-color: rgb(231, 231, 231);
+    font-weight: bold;
+    border-radius: 5px;
 }
-header .container {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.header__row {
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-}
-.header__body {
-    height: 100%;
-}
-.header__logo {
-    margin: 0 50px 0 0;
-}
-.header__logo h3 {
-    color: white;
-}
-.header__navigation {
-    height: 100%;
-}
-.nav-btn {
-    color: white;
-    margin: 0px 15px 0px 0px;
-    padding: 6px 0 3px 0;
-}
-.nav-btn:hover {
-    text-decoration: underline;
-}
-.login-btn {
-    color: #43CC5C;
-}
-.register-btn {
-    color: #5C70FB;
-}
-
-
-
-footer {
-    background-color: #323232;
-}
-.footer__row {
-    display: flex;
-    justify-content: space-between;
-}
-.copytight a {
-    color: yellowgreen;
-}
-.contacts h3 {
-    display: inline-block;
-    margin: 0 20px 0 0;
+.textbox:focus {
+    transition: background-color 0.1s;
+    background-color: rgb(68, 68, 68);
+    color: #fff;
 }

@@ -1,0 +1,46 @@
+* {
+}
+.word-information * {
+    color:  black;
+}
+.word-information {
+    padding: 20px 10px;
+}
+
+.main-dictionary-panel .container {
+    height: 500px;
+    padding: 10px 5px;
+    width: 880px;
+}
+.main-dictionary-panel__body {
+    border: 1px rgb(150, 150, 150) solid;
+    border-radius: 1px;
+    background-color: rgb(243, 243, 243);
+    padding: 20px;
+    height: 100%;
+}
+.header {
+    padding: 5px 0;
+}
+.header__row {
+    display: flex;
+    justify-content: center;
+}
+.header__row .btn {
+    margin: 0 0 0 15px;
+    width: 120px;
+    text-align: center;
+}
+.header__row input {
+    width: 500px
+}
+
+.translate__row {
+    display: flex;
+}
+.word-information p {
+    margin: 5px 0;
+}
+.word__examples li {
+    line-height: 25px;
+}

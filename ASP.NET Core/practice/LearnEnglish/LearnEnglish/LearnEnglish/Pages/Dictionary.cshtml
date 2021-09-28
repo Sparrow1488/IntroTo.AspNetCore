@@ -1,0 +1,56 @@
+﻿@page
+@model LearnEnglish.Pages.DictionaryModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/root-style.css">
+    <link rel="stylesheet" href="~/css/dictionary-style.css">
+    <link rel="stylesheet" href="~/css/ResetBasedStyles.css">
+    <title>Dictionary</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- //header -->
+
+        <div class="main-dictionary-panel">
+            <div class="container">
+                <div class="main-dictionary-panel__body">
+                    <div class="header">
+                        <div class="header__row">
+                            <input class="textbox" type="text" placeholder="Find word">
+                            <a href="#" class="btn">Find</a>
+                            <a href="#" class="btn blue">Add word</a>
+                        </div>
+                    </div>
+
+                    <div class="word-information">
+                        <!-- <h3 class="title">Select word</h3> -->
+
+                        <div class="word__translate">
+                            <h3 class="title">Translate</h3>
+                            <div class="translate__row">
+                                <p class="text">Word    →    Translate</p>
+                            </div>
+                        </div>
+                        <div class="word__transcription">
+                            <p class="text">[t r a n s c r i p sh i n]</p>
+                        </div>
+                        <div class="word__examples">
+                            <h3 class="title">Examples</h3>
+                            <ul>
+                                <li><div class="example">The first example</div></li>
+                                <li><div class="example">The second example</div></li>
+                                <li><div class="example">The third example</div></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

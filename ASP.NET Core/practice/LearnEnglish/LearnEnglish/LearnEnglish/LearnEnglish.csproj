@@ -4,14 +4,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="Pages\Index.cshtml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\css\ResetBasedStyles.css" />
-    <None Include="wwwroot\css\root-style.css" />
-    <None Include="wwwroot\css\style.css" />
-  </ItemGroup>
-
 </Project>
