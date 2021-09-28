@@ -1,8 +1,5 @@
-﻿@page
-@model LearnEnglish.Pages.IndexModel
-
-@*<!DOCTYPE html>
-<html lang="en">*@
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +10,8 @@
     <title>LearnEnglish</title>
 </head>
 <body>
-    @*<div id="wrapper">*@
-        @*<header>
+    <div id="wrapper">
+        <header>
             <div class="container">
                 <div class="header__body">
                     <div class="header__row">
@@ -38,26 +35,13 @@
                     </div>
                 </div>
             </div>
-        </header>*@
+        </header>
 
-        <div class="explain-panel">
-            <div class="container">
-                <div class="explain-panel__body">
-                    <div class="explain-panel__text">
-                        <h3 class="title">Hello, people!</h3>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, nihil aspernatur? Vel commodi voluptatem in voluptates expedita odit sequi tempore accusamus suscipit, laboriosam et velit sed ea magnam quidem reprehenderit! Sunt velit quibusdam ab magni!</p>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vero deleniti suscipit necessitatibus quisquam illo dolor beatae modi asperiores earum corrupti reprehenderit dolorum, accusamus possimus maiores obcaecati.</p>
-                    </div>
-                    <div class="explain-panel__buttons">
-                        <a href="#" class="btn">Create profile</a>
-                        <a href="#" class="btn green">Login</a>
-                        <a href="#" class="btn blue">Try execute task</a>
-                    </div>
-                </div>
-            </div>
+        <div id="wrapper">
+            @RenderBody()
         </div>
 
-        @*<footer>
+        <footer>
             <div class="container">
                 <div class="footer__row">
                     <div class="copytight">
@@ -72,6 +56,6 @@
             </div>
         </footer>
 
-    </div>*@
+    </div>
 </body>
-@*</html>*@
+</html>

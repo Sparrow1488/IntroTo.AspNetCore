@@ -18,13 +18,16 @@ header {
     background-color: #252525;
 }
 header .container {
+    width: 1180px;
+    min-width: 780px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 .header__row {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
+    width: 100%;
 }
 .header__body {
     height: 100%;

@@ -1,8 +1,8 @@
 ﻿@page
 @model LearnEnglish.Pages.DictionaryModel
 
-<!DOCTYPE html>
-<html lang="en">
+@*<!DOCTYPE html>
+<html lang="en">*@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
     <title>Dictionary</title>
 </head>
 <body>
-    <div id="wrapper">
+    @*<div id="wrapper">*@
         <!-- //header -->
 
         <div class="main-dictionary-panel">
@@ -21,38 +21,48 @@
                 <div class="main-dictionary-panel__body">
                     <div class="header">
                         <div class="header__row">
-                            <input class="textbox" type="text" placeholder="Find word">
-                            <a href="#" class="btn">Find</a>
-                            <a href="#" class="btn blue">Add word</a>
-                            <a href="#" class="btn green">Look at all</a>
+                            <form method="post" target="_self">
+                                <input name="word" class="textbox" type="text" placeholder="Find word">
+                                <input class="btn" type="submit" value="Find">
+                                <input class="btn blue" type="submit" value="Add word">
+                                @*<a href="#" class="btn green">Look at all</a>*@
+                            </form>
                         </div>
                     </div>
 
                     <div class="word-information">
-                        @*<h3 class="title">Select word</h3>*@
-                        <h3 class="title">Last word: @Model.lastWord</h3>
-
-                        <div class="word__translate">
-                            <h3 class="title">Translate</h3>
-                            <div class="translate__row">
-                                <p class="text">Word    →    Translate</p>
+                        @if (!string.IsNullOrWhiteSpace(@Model.inputWord))
+                        {
+                            <h3 class="title">Вы хотите добавить новое слово в словарь (@Model.inputWord)?</h3>
+                        }
+                        @if (@Model.word != null)
+                        {
+                            <div class="word__translate">
+                                <h3 class="title">Translate</h3>
+                                <div class="translate__row">
+                                    <p class="text">@Model.word.Value    →    @Model.word.Translate</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="word__transcription">
-                            <p class="text">[t r a n s c r i p sh i n]</p>
-                        </div>
-                        <div class="word__examples">
-                            <h3 class="title">Examples</h3>
-                            <ul>
-                                <li><div class="example">The first example</div></li>
-                                <li><div class="example">The second example</div></li>
-                                <li><div class="example">The third example</div></li>
-                            </ul>
-                        </div>
+                            <div class="word__transcription">
+                                <p class="text">Model.word.Transcription</p>
+                            </div>
+                            <div class="word__examples">
+                                @*<h3 class="title">Examples</h3>
+                <ul>
+                    <li><div class="example">The first example</div></li>
+                    <li><div class="example">The second example</div></li>
+                    <li><div class="example">The third example</div></li>
+                </ul>*@
+                            </div>
+                        }
+                        else
+                        {
+                            <h3 class="title">Select word</h3>
+                        }
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    @*</div>*@
 </body>
-</html>
+@*</html>*@

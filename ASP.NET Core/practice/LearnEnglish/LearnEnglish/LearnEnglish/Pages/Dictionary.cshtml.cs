@@ -1,6 +1,9 @@
 using LearnEnglish.Database;
 using LearnEnglish.Entities;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace LearnEnglish.Pages
 {
@@ -8,22 +11,29 @@ namespace LearnEnglish.Pages
     {
         private readonly DictionariesDbContext _db;
         public string lastWord;
+        public Word word;
+        public string inputWord;
         public DictionaryModel(DictionariesDbContext db)
         {
             _db = db;
         }
-        public void OnGet()
+        public async Task OnGetAsync()
         {
-            var dic = new WordsDictionary();
-            dic.Items.Add(new Word() { Value = "Happy", Translate = "Счастливый" });
-            var succDic = _db.Dictionaries.Add(dic);
-            _db.SaveChanges();
+            //var firstDictionary = _db.Dictionaries.Where(dict => dict.Id == 1).FirstOrDefault();
+            //if(firstDictionary != null)
+            //{
+            //    firstDictionary.Items.Add(new Word() { Value = "Reject", Translate = "Отклонять" });
+            //    var succDic = _db.Dictionaries.Update(firstDictionary);
+            //    await _db.SaveChangesAsync();
 
-            if (succDic != null)
-            {
-                var word = succDic.Entity.Items[0];
-                lastWord = word.Value ?? "";
-            }
+            //    if (succDic != null)
+            //        word = succDic.Entity.Items.Last();
+            //}
+        }
+
+        public async Task OnPostAsync(string word, string translate)
+        {
+            inputWord = word;
         }
     }
 }

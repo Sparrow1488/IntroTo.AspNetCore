@@ -65,3 +65,6 @@ C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\pr
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\Humanizer.dll
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\LearnEnglish.csprojAssemblyReference.cache
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
