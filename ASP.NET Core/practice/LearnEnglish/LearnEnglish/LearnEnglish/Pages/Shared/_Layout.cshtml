@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/ResetBasedStyles.css">
-    <link rel="stylesheet" href="~/css/layout-style.css">
-    <link rel="stylesheet" href="~/css/root-style.css">
+    <link rel="stylesheet" href="/css/ResetBasedStyles.css">
+    <link rel="stylesheet" href="/css/layout-style.css">
+    <link rel="stylesheet" href="/css/root-style.css">
     <title>LearnEnglish</title>
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrapper" style="display: flex; font-size: 22px; height: 100%; flex-direction: column;">
         <header>
             <div class="container">
                 <div class="header__body">
@@ -37,7 +37,7 @@
             </div>
         </header>
 
-        <div id="wrapper">
+        <div id="content" style="flex: 1 1 auto;">
             @RenderBody()
         </div>
 

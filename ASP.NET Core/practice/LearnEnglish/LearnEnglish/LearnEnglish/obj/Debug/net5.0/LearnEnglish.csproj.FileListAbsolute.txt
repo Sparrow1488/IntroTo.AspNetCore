@@ -68,3 +68,7 @@ C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\pr
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\wwwroot\css\dictionary-style.css
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\wwwroot\css\layout-style.css
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\wwwroot\css\ResetBasedStyles.css
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\wwwroot\css\root-style.css
