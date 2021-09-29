@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/ResetBasedStyles.css">
+    <link rel="stylesheet" href="/css/layout-style.css">
+    <link rel="stylesheet" href="/css/root-style.css">
+    <title>LearnEnglish</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <div class="header__body">
+                    <div class="header__row">
+                        <div class="header__logo">
+                            <h3 class="title">LearnEnglish</h3>
+                        </div>
+                        <div class="header__navigation">
+                            <nav class="navigation">
+                                <a href="Index" class="nav-btn">Main</a>
+                                <a href="#" class="nav-btn">Profile</a>
+                                <a href="#" class="nav-btn">Training</a>
+                                <a href="Dictionary" class="nav-btn">Dictionary</a>
+                            </nav>
+                        </div>
+                        <div class="header__login">
+                            <nav>
+                                <a href="#" class="login-btn nav-btn">Login</a>
+                                <a href="#" class="register-btn nav-btn">Sign up</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="content">
+            @RenderBody()
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer__row">
+                    <div class="copytight">
+                        <p>LearnEnglish by <a href="https://github.com/Sparrow1488/">Sparrow1488</a>&copy;</p>
+                    </div>
+                    <div class="contacts">
+                        <h3>Contacts:</h3>
+                        <a href="https://github.com/Sparrow1488/">GitHub</a>
+                        <a href="https://vk.com/sparrow1488228kavo">VK</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

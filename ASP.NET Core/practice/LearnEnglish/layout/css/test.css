@@ -1,0 +1,19 @@
+body {
+    height: 100%;
+}
+#wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    height: 200px;
+    background-color: black;
+}
+.main {
+    flex: 1 1 auto;
+}
+footer {
+    height: 200px;
+    background-color: black;
+} 
