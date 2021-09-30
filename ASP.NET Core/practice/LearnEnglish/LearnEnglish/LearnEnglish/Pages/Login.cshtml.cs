@@ -4,7 +4,7 @@ namespace LearnEnglish.Pages
 {
     public class LoginModel : PageModel
     {
-        public void OnGet(string login, string password)
+        public void OnPost(string login, string password)
         {
         }
     }
