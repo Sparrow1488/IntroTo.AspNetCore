@@ -72,3 +72,4 @@ C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\pr
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\wwwroot\css\layout-style.css
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\wwwroot\css\ResetBasedStyles.css
 C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\bin\Debug\net5.0\wwwroot\css\root-style.css
+C:\Users\Dom\Desktop\Репозитории\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Login.cshtml.g.cs

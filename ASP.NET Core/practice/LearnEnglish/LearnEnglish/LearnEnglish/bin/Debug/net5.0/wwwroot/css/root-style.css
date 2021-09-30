@@ -29,12 +29,16 @@ p {
     font-size: 18px;
     line-height: 25px;
 }
+.error {
+    color: rgb(170, 8, 8);
+}
 .btn {
     background-color: cadetblue;
     padding: 5px 10px;
     line-height: 38px;
     border-radius: 5px;
     font-size: 18px;
+    color: white;
     transition: background-color 0.2s;
 }
 .btn:hover {

@@ -1,0 +1,38 @@
+﻿@page
+@model LearnEnglish.Pages.LoginModel
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="css/auth-style.css">
+    <title>Authorization From</title>
+</head>
+<div class="auth-panel">
+    <div class="container">
+        <div class="auth-panel__body">
+            <div class="auth-panel__title">
+                <h3 class="title">Login account</h3>
+            </div>
+            <div class="description-text text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, asperiores!
+            </div>
+            <div class="auth-panel__form">
+                <form action="post">
+                    <div class="auth-panel-form__row">
+                        <p>Your login</p>
+                        <input name="login" type="text" placeholder="Login" class="textbox">
+                        <p>Your password</p>
+                        <input name="password" type="password" placeholder="Password" class="textbox">
+                        <button class="btn">Sign in</button>
+                    </div>
+                </form>
+            </div>
+            <div class="error-massage">
+                <p class="error text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus illo qui maxime itaque, impedit commodi excepturi quasi ea quod id.</p>
+            </div>
+            <div class="auth_panel__signin">
+                <a href="Signup">Don't have account?</a>
+            </div>
+        </div>
+    </div>
+</div>

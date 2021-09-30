@@ -17,9 +17,6 @@ namespace LearnEnglish
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => UseSqlServer(options));
-
-            //services.AddDbContext<DictionariesDbContext>(options => UseSqlServer(options));
-            //services.AddDbContext<ProfilesDbContext>(options => UseSqlServer(options));
             services.AddRazorPages();
         }
 
