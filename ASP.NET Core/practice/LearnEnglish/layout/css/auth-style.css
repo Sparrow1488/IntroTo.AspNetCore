@@ -1,0 +1,39 @@
+* {
+    color: black;
+}
+.auth-panel .container {
+    justify-content: center;
+    display: flex;
+}
+.auth-panel__body {
+    border: 1px #bbbbbb solid;
+    padding: 80px 80px;
+    box-shadow: 2px 3px 3px gray;
+    max-width: 550px;
+}
+.auth-panel__title {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.auth-panel-form__row {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+.auth-panel-form__row input {
+    margin: 0 0 15px 0;
+}
+
+.auth_panel__signin {
+    text-align: center;
+    padding: 20px;
+    margin: 15px 0 0 0;
+}
+.auth_panel__signin a {
+    font-weight: bold;
+    transition: all 0.2s;
+}
+.auth_panel__signin a:hover {
+    color: gray;
+}
