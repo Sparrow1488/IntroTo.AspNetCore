@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LearnEnglish.Entities
 {
@@ -11,5 +8,6 @@ namespace LearnEnglish.Entities
         [Key]
         public int Id { get; set; }
         public List<Word> Items { get; set; } = new List<Word>();
+        public Profile Profile { get; set; }
     }
 }

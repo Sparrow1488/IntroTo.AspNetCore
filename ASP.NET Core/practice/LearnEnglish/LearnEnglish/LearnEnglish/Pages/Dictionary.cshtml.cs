@@ -1,7 +1,7 @@
 using LearnEnglish.Database;
 using LearnEnglish.Entities;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,26 +9,26 @@ namespace LearnEnglish.Pages
 {
     public class DictionaryModel : PageModel
     {
-        private readonly DictionariesDbContext _db;
+        private readonly ApplicationDbContext _db;
         public string lastWord;
         public Word word;
         public string inputWord;
-        public DictionaryModel(DictionariesDbContext db)
+        public DictionaryModel(ApplicationDbContext db)
         {
             _db = db;
         }
         public async Task OnGetAsync()
         {
-            //var firstDictionary = _db.Dictionaries.Where(dict => dict.Id == 1).FirstOrDefault();
-            //if(firstDictionary != null)
-            //{
-            //    firstDictionary.Items.Add(new Word() { Value = "Reject", Translate = "Отклонять" });
-            //    var succDic = _db.Dictionaries.Update(firstDictionary);
-            //    await _db.SaveChangesAsync();
 
-            //    if (succDic != null)
-            //        word = succDic.Entity.Items.Last();
-            //}
+            var profile = _db.Profiles.FirstOrDefault();
+            if (profile != null)
+            {
+                var words = new List<Word>() { new Word() { Value = "Pizza", Translate = "пицца" } };
+                profile.Dictionaries = new List<WordsDictionary>();
+                profile.Dictionaries.Add(new WordsDictionary() { Items = words });
+                var succDic = _db.Profiles.Update(profile);
+                await _db.SaveChangesAsync();
+            }
         }
 
         public async Task OnPostAsync(string word, string translate)

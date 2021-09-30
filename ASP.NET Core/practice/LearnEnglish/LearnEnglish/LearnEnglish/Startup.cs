@@ -1,10 +1,8 @@
 using LearnEnglish.Database;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace LearnEnglish
 {
@@ -18,7 +16,10 @@ namespace LearnEnglish
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DictionariesDbContext>(options => UseSqlServer(options));
+            services.AddDbContext<ApplicationDbContext>(options => UseSqlServer(options));
+
+            //services.AddDbContext<DictionariesDbContext>(options => UseSqlServer(options));
+            //services.AddDbContext<ProfilesDbContext>(options => UseSqlServer(options));
             services.AddRazorPages();
         }
 
