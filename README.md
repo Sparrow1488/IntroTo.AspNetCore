@@ -11,10 +11,11 @@ In this repo I contains all materials, which I can find, while learned (and stud
 #### Good jobs:
 
 * [Shoes shop](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/practice/ShoesShop)
+* [LearnEnglish](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/practice/LearnEnglish) → __in develop__
 
 #### Other:
 
-* [Software market](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/practice/SoftwareShop) → __in develop__
+* [Software market](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/ASP.NET%20Core/practice/SoftwareShop) → __frozen__
 * [Hello-Flex (html/css)](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack/%24HTML-CSS/practice/Flex-Hello_practice)
 * [Crown (html/css)](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack/%24HTML-CSS/practice/Crown_practice)
 * [Todoist (html/css)](https://github.com/Sparrow1488/The-basis-of-ASP.NET/tree/main/WebStack/%24HTML-CSS/practice/Todoist_practice)
