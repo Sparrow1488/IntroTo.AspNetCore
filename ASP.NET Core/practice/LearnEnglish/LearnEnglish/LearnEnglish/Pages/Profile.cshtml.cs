@@ -9,7 +9,11 @@ namespace LearnEnglish.Pages
         public IActionResult OnGet()
         {
             string cookie = Request.Cookies["Login"];
-            IActionResult result = new OkResult();
+            var view = new ViewResult()
+            {
+                ViewName = "Profile"
+            };
+            IActionResult result = view;
             if (string.IsNullOrWhiteSpace(cookie))
                 result = RedirectToPage("Login");
             return result;
