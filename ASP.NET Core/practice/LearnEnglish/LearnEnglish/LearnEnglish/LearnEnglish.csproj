@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Authors>Sparrow1488</Authors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\ProfilesDb\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

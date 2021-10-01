@@ -1,56 +1,64 @@
-#wrapper{
-    font-size:  22px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
 .explain-panel {
     height: 100%;
 }
+
 .explain-panel__buttons {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
 }
+
 .explain-panel__buttons .btn {
     flex: 1 1 auto;
     margin: 0 5px;
     text-align: center;
 }
+
 header {
     background-color: #252525;
 }
+
 header .container {
     padding-top: 10px;
     padding-bottom: 10px;
+    min-width: 820px;
 }
+
 .header__row {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
 }
+
 .header__body {
     height: 100%;
 }
+
 .header__logo {
     margin: 0 50px 0 0;
 }
-.header__logo h3 {
-    color: white;
-}
+
+    .header__logo h3 {
+        color: white;
+    }
+
 .header__navigation {
     height: 100%;
 }
+
 .nav-btn {
     color: white;
     margin: 0px 15px 0px 0px;
     padding: 6px 0 3px 0;
 }
-.nav-btn:hover {
-    text-decoration: underline;
-}
+
+    .nav-btn:hover {
+        text-decoration: underline;
+    }
+
 .login-btn {
     color: #43CC5C;
 }
+
 .register-btn {
     color: #5C70FB;
 }
@@ -63,13 +71,16 @@ header .container {
 footer {
     background-color: #323232;
 }
+
 .footer__row {
     display: flex;
     justify-content: space-between;
 }
+
 .copytight a {
     color: yellowgreen;
 }
+
 .contacts h3 {
     display: inline-block;
     margin: 0 20px 0 0;
