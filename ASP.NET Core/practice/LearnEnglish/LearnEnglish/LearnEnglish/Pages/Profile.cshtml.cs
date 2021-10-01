@@ -32,13 +32,13 @@ namespace LearnEnglish.Pages
         }
         private List<WordsDictionary> GetUserDictionaries()
         {
-            var profile = _db.Profiles.Where(p => p.Login == UserLogin).FirstOrDefault();
             var findDictionaries = new List<WordsDictionary>();
-            if (profile != null)
+            var dictionary = _db.Dictionaries.Where(d => d.Profile.Login == UserLogin).ToList();
+            if (dictionary != null)
             {
-                var dictionary = _db.Dictionaries.Where(d => d.Profile.Id == profile.Id).ToList();
-                if (dictionary != null)
-                    findDictionaries = dictionary;
+                findDictionaries = dictionary;
+                findDictionaries[0].Title = "The first dictionary";
+                _db.Dictionaries.Update(findDictionaries[0]);
             }
             return findDictionaries;
         }
