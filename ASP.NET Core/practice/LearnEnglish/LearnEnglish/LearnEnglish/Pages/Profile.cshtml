@@ -14,8 +14,8 @@
                         <img src="https://sun9-78.userapi.com/impg/7l4enVTgAtgOUCSUXV1bxRhA-EJyiNsAvJ0iXg/NTgZYE_Ijlg.jpg?size=899x673&quality=95&sign=a508813fa4a792f15c198ab1f933d02a&type=album" alt="profile cover">
                     </div>
                     <div class="profile-desc">
-                        <h3 class="title">UserLogin</h3>
-                        <p class="text">English: A2</p>
+                        <h3 class="title">@Model.UserLogin</h3>
+                        <p class="text">English: Undefined</p>
                         <a href="#" class="btn blue edit-btn">Edit profile</a>
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate natus error, iusto magni quis fuga!</p>
                     </div>
@@ -26,11 +26,15 @@
                             <h3 class="title">Dictionaries</h3>
                             <a href="#" class="btn blue">Add new</a>
                             <div class="dictionaries__container">
-                                <a href="#" class="btn">Vocablulary</a>
-                                <a href="#" class="btn">Test dictionary</a>
-                                <a href="#" class="btn">Vocablulary 2</a>
-                                <a href="#" class="btn">Vocablulary 3</a>
-                                <a href="#" class="btn">Vocablulary 13123124124</a>
+                                @foreach (var dic in @Model.UserDictionaries)
+                                {
+                                    <a href="#" class="btn">Test dictionary</a>
+                                }
+                                @*<a href="#" class="btn">Vocablulary</a>
+                                    <a href="#" class="btn">Test dictionary</a>
+                                    <a href="#" class="btn">Vocablulary 2</a>
+                                    <a href="#" class="btn">Vocablulary 3</a>
+                                    <a href="#" class="btn">Vocablulary 13123124124</a>*@
                             </div>
                         </div>
                     </div>

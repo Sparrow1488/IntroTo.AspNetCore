@@ -1,8 +1,6 @@
 using LearnEnglish.Database;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -58,11 +56,6 @@ namespace LearnEnglish
             app.UseDeveloperExceptionPage();
             app.UseRouting();
             app.UseStaticFiles();
-
-            //app.UseCookiePolicy();
-            //app.UseAuthentication();
-            //app.UseAuthorization();
-            //app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
