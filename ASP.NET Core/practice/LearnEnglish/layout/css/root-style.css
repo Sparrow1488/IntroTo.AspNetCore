@@ -5,8 +5,8 @@
     color: #fff;
     font-size: 22px;
 }
-
 body {
+    height: 100%;
     background-color: #EEEEEE;
 }
 p {
@@ -28,6 +28,9 @@ p {
     color:  black;
     font-size: 18px;
     line-height: 25px;
+}
+.black {
+    color: black;
 }
 .error {
     color: rgb(170, 8, 8);

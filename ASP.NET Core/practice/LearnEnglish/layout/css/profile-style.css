@@ -1,0 +1,39 @@
+.profile-body__row {
+    display: flex;
+    justify-content: center;
+}
+.profile-cover img {
+    border-radius: 100%;
+    height: 220px;
+    width: 220px;
+    size: cover;
+    border-image-width: 100%;
+}
+.profile__info {
+    padding: 15px;
+}
+.profile__info .profile-cover {
+    text-align: center;
+}
+.profile-desc {
+    display: flex;
+    flex-direction: column;
+}
+.profile-desc .title {
+    text-align: center;
+}
+.profile__info {
+    flex: 0 1 350px;
+}
+.profile__dictionaries .title {
+    display: inline-block;
+}
+
+.dictionaries__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.dictionaries__container a {
+    margin: 5px;
+}

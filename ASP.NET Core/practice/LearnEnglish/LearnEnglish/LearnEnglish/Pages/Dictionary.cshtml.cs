@@ -1,8 +1,6 @@
 using LearnEnglish.Database;
 using LearnEnglish.Entities;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace LearnEnglish.Pages
@@ -20,15 +18,15 @@ namespace LearnEnglish.Pages
         public async Task OnGetAsync()
         {
 
-            var profile = _db.Profiles.FirstOrDefault();
-            if (profile != null)
-            {
-                var words = new List<Word>() { new Word() { Value = "Pizza", Translate = "пицца" } };
-                profile.Dictionaries = new List<WordsDictionary>();
-                profile.Dictionaries.Add(new WordsDictionary() { Items = words });
-                var succDic = _db.Profiles.Update(profile);
-                await _db.SaveChangesAsync();
-            }
+            //var profile = _db.Profiles.FirstOrDefault();
+            //if (profile != null)
+            //{
+            //    var words = new List<Word>() { new Word() { Value = "Pizza", Translate = "пицца" } };
+            //    profile.Dictionaries = new List<WordsDictionary>();
+            //    profile.Dictionaries.Add(new WordsDictionary() { Items = words });
+            //    var succDic = _db.Profiles.Update(profile);
+            //    await _db.SaveChangesAsync();
+            //}
         }
 
         public async Task OnPostAsync(string word, string translate)

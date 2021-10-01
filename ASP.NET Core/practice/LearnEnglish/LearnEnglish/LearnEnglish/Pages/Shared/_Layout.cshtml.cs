@@ -1,15 +1,24 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using LearnEnglish.Database;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Threading.Tasks;
 
 namespace LearnEnglish.Pages.Shared
 {
-    public class _LayoutModel : PageModel
+    public class LayoutModel : PageModel
     {
-        public void OnGet()
+        public string UserLogin { get; set; } = string.Empty;
+        public bool IsAuth {
+            get {
+                bool auth = false;
+                if (Request != null && Request.Cookies.ContainsKey("Login"))
+                {
+                    auth = true;
+                    UserLogin = Request.Cookies["Login"];
+                }
+                return auth;
+            }
+        }
+        public LayoutModel()
         {
         }
     }

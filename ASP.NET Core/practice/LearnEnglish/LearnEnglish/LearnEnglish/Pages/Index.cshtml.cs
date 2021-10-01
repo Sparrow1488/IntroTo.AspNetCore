@@ -15,16 +15,16 @@ namespace LearnEnglish.Pages
         }
         public async Task OnGetAsync()
         {
-            _db.Database.EnsureDeleted();
-            _db.Database.EnsureCreated();
+            //_db.Database.EnsureDeleted();
+            //_db.Database.EnsureCreated();
 
-            var profile = new Profile();
-            profile.Login = "Sparrow";
-            profile.Password = "1488";
-            profile.Dictionaries = new List<WordsDictionary>();
-            profile.Dictionaries.Add(new WordsDictionary());
-            var res = _db.Profiles.Add(profile);
-            await _db.SaveChangesAsync();
+            //var profile = new Profile();
+            //profile.Login = "Sparrow";
+            //profile.Password = "1488";
+            //profile.Dictionaries = new List<WordsDictionary>();
+            //profile.Dictionaries.Add(new WordsDictionary());
+            //var res = _db.Profiles.Add(profile);
+            //await _db.SaveChangesAsync();
         }
     }
 }
