@@ -35,11 +35,7 @@ namespace LearnEnglish.Pages
             var findDictionaries = new List<WordsDictionary>();
             var dictionary = _db.Dictionaries.Where(d => d.Profile.Login == UserLogin).ToList();
             if (dictionary != null)
-            {
                 findDictionaries = dictionary;
-                findDictionaries[0].Title = "The first dictionary";
-                _db.Dictionaries.Update(findDictionaries[0]);
-            }
             return findDictionaries;
         }
     }
