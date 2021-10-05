@@ -10,5 +10,6 @@ namespace LearnEnglish.Entities
         public string Translate { get; set; }
         public string Transcription { get; set; }
         public string Category { get; set; }
+        public WordsDictionary Dictionary { get; set; }
     }
 }

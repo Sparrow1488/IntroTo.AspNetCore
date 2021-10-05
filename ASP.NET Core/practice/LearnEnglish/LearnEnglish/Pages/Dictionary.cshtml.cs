@@ -29,7 +29,7 @@ namespace LearnEnglish.Pages
                 if (dictionary != null)
                 {
                     Dictionary = dictionary;
-                    WordsList = _db.Dictionaries.
+                    WordsList = _db.Words.Where(word => word.Dictionary.Id == Dictionary.Id).ToList();
                     result = new PageResult();
                 }
             }

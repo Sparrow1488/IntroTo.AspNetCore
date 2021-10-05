@@ -4,14 +4,16 @@ using LearnEnglish.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LearnEnglish.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211005121718_Words")]
+    partial class Words
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,9 +55,6 @@ namespace LearnEnglish.Migrations
                     b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("DictionaryId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Transcription")
                         .HasColumnType("nvarchar(max)");
 
@@ -65,9 +64,12 @@ namespace LearnEnglish.Migrations
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("WordsDictionaryId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("DictionaryId");
+                    b.HasIndex("WordsDictionaryId");
 
                     b.ToTable("Words");
                 });
@@ -94,11 +96,9 @@ namespace LearnEnglish.Migrations
 
             modelBuilder.Entity("LearnEnglish.Entities.Word", b =>
                 {
-                    b.HasOne("LearnEnglish.Entities.WordsDictionary", "Dictionary")
+                    b.HasOne("LearnEnglish.Entities.WordsDictionary", null)
                         .WithMany("Items")
-                        .HasForeignKey("DictionaryId");
-
-                    b.Navigation("Dictionary");
+                        .HasForeignKey("WordsDictionaryId");
                 });
 
             modelBuilder.Entity("LearnEnglish.Entities.WordsDictionary", b =>
