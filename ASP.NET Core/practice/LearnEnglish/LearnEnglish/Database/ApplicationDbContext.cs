@@ -8,5 +8,6 @@ namespace LearnEnglish.Database
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
         public DbSet<WordsDictionary> Dictionaries { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Word> Words { get; set; }
     }
 }
