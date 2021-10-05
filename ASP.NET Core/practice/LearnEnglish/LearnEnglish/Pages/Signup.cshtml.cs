@@ -17,11 +17,14 @@ namespace LearnEnglish.Pages
         public async Task<IActionResult> OnPostAsync(string email, string login, string password)
         {
             IActionResult actionResult = new PageResult();
-            var profile = new Profile();
-            profile.Login = login;
-            profile.Email = email;
-            profile.Password = password;
+            var profile = new Profile
+            {
+                Login = login,
+                Email = email,
+                Password = password
+            };
             var result = await _db.Profiles.AddAsync(profile);
+            await _db.SaveChangesAsync();
             if (result.State == EntityState.Added)
             {
                 Response.Cookies.Append("Login", login);

@@ -1,10 +1,11 @@
 ﻿@page
 @model LearnEnglish.Pages.ProfileModel
 
-    <head>
-        <link rel="stylesheet" href="css/profile-style.css">
-        <title>Profile</title>
-    </head>
+<head>
+    <link rel="stylesheet" href="css/profile-style.css">
+    <link rel="stylesheet" href="css/modal-style.css">
+    <title>Profile</title>
+</head>
 <div class="main-profile">
     <div class="container">
         <div class="profile__body">
@@ -24,7 +25,7 @@
                     <div class="profile-body__row">
                         <div class="profile__dictionaries">
                             <h3 class="title">Dictionaries</h3>
-                            <a href="#" class="btn blue">Add new</a>
+                            <a href="#" class="btn blue create-dictionary">Add new</a>
                             <div class="dictionaries__container">
                                 @foreach (var dic in @Model.UserDictionaries)
                                 {
@@ -38,8 +39,24 @@
                             </div>
                         </div>
                     </div>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="modal-content__header">
+                                <h3 class="title">Create new dictionary</h3>
+                            </div>
+                            <div class="modal-content__body">
+                                <p class="text">Title</p>
+                                <input type="text" class="textbox" placeholder="Dictionary title">
+                            </div>
+                            <div class="modal-content__footer">
+                                <a href="#" class="btn green">Create</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="js/modal-script.js"></script>

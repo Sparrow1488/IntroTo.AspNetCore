@@ -1,18 +1,29 @@
+using LearnEnglish.Database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Linq;
 
 namespace LearnEnglish.Pages
 {
     public class LoginModel : PageModel
     {
-        public LoginModel()
+        private readonly ApplicationDbContext _db;
+
+        public LoginModel(ApplicationDbContext db)
         {
+            _db = db;
         }
         public IActionResult OnPost(string login, string password)
         {
-            Response.Cookies.Append("Login", login);
-            Response.Cookies.Append("Test", password);
-            return RedirectToPage("Profile");
+            string redirectToPage = "Login";
+            var foundProfile = _db.Profiles.Where(profile => profile.Login == login && profile.Password == password).FirstOrDefault();
+            if (foundProfile != null)
+            {
+                Response.Cookies.Append("Login", foundProfile.Login);
+                Response.Cookies.Append("Identy", foundProfile.Id.ToString());
+            }
+            else redirectToPage = "Profile";
+            return RedirectToPage(redirectToPage);
         }
     }
 }
