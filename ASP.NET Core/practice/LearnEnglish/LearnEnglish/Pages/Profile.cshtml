@@ -27,9 +27,8 @@
                             <h3 class="title">Dictionaries</h3>
                             <a href="#" class="btn blue create-dictionary">Add new</a>
                             <div class="dictionaries__container">
-                                @foreach (var dic in @Model.UserDictionaries)
-                                {
-                                    <a href="#" class="btn">@dic.Title</a>
+                                @foreach (var dic in @Model.UserDictionaries) {
+                                    <a href="Dictionary?id=@dic.Id" class="btn">@dic.Title</a>
                                 }
                             </div>
                         </div>

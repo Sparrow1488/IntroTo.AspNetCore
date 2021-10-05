@@ -20,7 +20,6 @@ namespace LearnEnglish.Pages
         public List<WordsDictionary> UserDictionaries { get; set; } = new List<WordsDictionary>();
         public string UserLogin { get; set; } = string.Empty;
 
-        
         public IActionResult OnGet()
         {
             string cookie = Request.Cookies["Login"];
@@ -51,6 +50,11 @@ namespace LearnEnglish.Pages
                 }
             }
             return output;
+        }
+
+        public IActionResult ShowDictionaryOnPost(int dictionaryId)
+        {
+            return null;
         }
 
         private List<WordsDictionary> GetUserDictionaries()

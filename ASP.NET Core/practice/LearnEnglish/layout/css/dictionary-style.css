@@ -6,7 +6,7 @@
 }
 
 .main-dictionary-panel .container {
-    height: 500px;
+    min-height: 500px;
     padding: 10px 5px;
     width: 880px;
 }
@@ -22,7 +22,6 @@
 }
 .header__row {
     display: flex;
-    /*justify-content: center;*/
 }
 .header__row .btn {
     margin: 0 0 0 15px;
@@ -41,4 +40,15 @@
 }
 .word__examples li {
     line-height: 25px;
+}
+
+.word-panel a {
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+.word-item {
+    margin-right: 10px;
+}
+.word-panel__row {
+    display: flex;
 }
