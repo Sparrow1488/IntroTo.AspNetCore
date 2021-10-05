@@ -23,13 +23,10 @@ namespace LearnEnglish.Pages
                 Email = email,
                 Password = password
             };
-            var result = await _db.Profiles.AddAsync(profile);
+            await _db.Profiles.AddAsync(profile);
             await _db.SaveChangesAsync();
-            if (result.State == EntityState.Added)
-            {
-                Response.Cookies.Append("Login", login);
-                actionResult = new RedirectToPageResult("Profile");
-            }
+            Response.Cookies.Append("Login", login);
+            actionResult = new RedirectToPageResult("Profile");
             return actionResult;
         }
     }

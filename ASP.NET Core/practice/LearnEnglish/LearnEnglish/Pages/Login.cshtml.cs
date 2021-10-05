@@ -16,13 +16,14 @@ namespace LearnEnglish.Pages
         public IActionResult OnPost(string login, string password)
         {
             string redirectToPage = "Login";
+            var all = _db.Profiles;
             var foundProfile = _db.Profiles.Where(profile => profile.Login == login && profile.Password == password).FirstOrDefault();
             if (foundProfile != null)
             {
                 Response.Cookies.Append("Login", foundProfile.Login);
                 Response.Cookies.Append("Identy", foundProfile.Id.ToString());
+                redirectToPage = "Profile";
             }
-            else redirectToPage = "Profile";
             return RedirectToPage(redirectToPage);
         }
     }

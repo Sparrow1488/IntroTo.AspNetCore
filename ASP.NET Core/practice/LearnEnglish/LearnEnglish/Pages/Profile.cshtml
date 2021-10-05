@@ -29,30 +29,27 @@
                             <div class="dictionaries__container">
                                 @foreach (var dic in @Model.UserDictionaries)
                                 {
-                                    <a href="#" class="btn">Test dictionary</a>
+                                    <a href="#" class="btn">@dic.Title</a>
                                 }
-                                @*<a href="#" class="btn">Vocablulary</a>
-                                    <a href="#" class="btn">Test dictionary</a>
-                                    <a href="#" class="btn">Vocablulary 2</a>
-                                    <a href="#" class="btn">Vocablulary 3</a>
-                                    <a href="#" class="btn">Vocablulary 13123124124</a>*@
                             </div>
                         </div>
                     </div>
                     <div id="myModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <div class="modal-content__header">
-                                <h3 class="title">Create new dictionary</h3>
+                        <form method="post">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="modal-content__header">
+                                    <h3 class="title">Create new dictionary</h3>
+                                </div>
+                                <div class="modal-content__body">
+                                    <p class="text">Title</p>
+                                    <input name="dictionaryTitle" type="text" class="textbox" placeholder="Dictionary title">
+                                </div>
+                                <div class="modal-content__footer">
+                                    <input type="submit" value="Create" class="btn green"/>
+                                </div>
                             </div>
-                            <div class="modal-content__body">
-                                <p class="text">Title</p>
-                                <input type="text" class="textbox" placeholder="Dictionary title">
-                            </div>
-                            <div class="modal-content__footer">
-                                <a href="#" class="btn green">Create</a>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
