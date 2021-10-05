@@ -49,6 +49,9 @@
 .word-item {
     margin-right: 10px;
 }
+.word-translate-item {
+    visibility: hidden;
+}
 .word-panel__row {
     display: flex;
 }
