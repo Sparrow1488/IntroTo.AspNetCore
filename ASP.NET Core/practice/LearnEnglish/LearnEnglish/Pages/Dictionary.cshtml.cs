@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace LearnEnglish.Pages
 {
@@ -35,10 +36,44 @@ namespace LearnEnglish.Pages
             }
             return result;
         }
-
-        public void OnPost(string word, string translate)
+        public async Task<IActionResult> OnPostAddWord(string wordValue, string wordTranslate, string wordTranscription, int dictionaryId)
         {
-            inputWord = word;
+            IActionResult actionResult = new RedirectToPageResult("Profile");
+            if (IsNotNullRange(new string[]{ wordValue, wordTranslate}) && dictionaryId > 0)
+            {
+                var newWord = new Word()
+                {
+                    Value = wordValue,
+                    Translate = wordTranslate,
+                    Transcription = string.IsNullOrWhiteSpace(wordTranscription) || wordTranscription == null ? "[ ]" : wordTranscription
+                };
+                var dictionaryFromDb = _db.Dictionaries.Where(dict => dict.Id == dictionaryId).FirstOrDefault();
+                if(dictionaryFromDb != null)
+                {
+                    dictionaryFromDb.Items.Add(newWord);
+                    _db.Update(dictionaryFromDb);
+                    await _db.SaveChangesAsync();
+                }
+                actionResult = new RedirectToPageResult("Dictionary", new { id= dictionaryId });
+            }
+            return actionResult;
+        }
+
+
+        private bool IsNotNullRange(string[] values)
+        {
+            bool output = true;
+            if (values != null && values.Length > 0)
+            {
+                foreach (var item in values)
+                {
+                    if (item == null)
+                        output = false;
+                    if (!output)
+                        break;
+                }
+            }
+            return output;
         }
     }
 }

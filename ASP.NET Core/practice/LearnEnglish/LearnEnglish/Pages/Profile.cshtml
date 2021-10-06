@@ -25,7 +25,7 @@
                     <div class="profile-body__row">
                         <div class="profile__dictionaries">
                             <h3 class="title">Dictionaries</h3>
-                            <a href="#" class="btn blue create-dictionary">Add new</a>
+                            <a href="#" class="btn blue create-dictionary open-modal">Add new</a>
                             <div class="dictionaries__container">
                                 @foreach (var dic in @Model.UserDictionaries) {
                                     <a href="Dictionary?id=@dic.Id" class="btn">@dic.Title</a>

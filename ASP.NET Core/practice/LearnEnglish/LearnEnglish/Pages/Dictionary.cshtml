@@ -1,73 +1,111 @@
 ﻿@page
 @model LearnEnglish.Pages.DictionaryModel
+@{ 
+    int dictionaryId = 0;
+    if (Model?.Dictionary != null)
+    {
+        dictionaryId = Model.Dictionary.Id;
+    };
+}
 
 <head>
     <link rel="stylesheet" href="~/css/dictionary-style.css">
+    <link rel="stylesheet" href="~/css/modal-style.css">
     <title>Dictionary @Model?.Dictionary?.Title</title>
 </head>
 <body>
-        <div class="main-dictionary-panel">
-            <div class="container">
-                <div class="main-dictionary-panel__body">
-                    <div class="header">
-                        <div class="header__row">
-                            <form method="post" target="_self">
-                                <input name="word" class="textbox" type="text" placeholder="Find word in @Model?.Dictionary?.Title">
-                                <a href="#" class="btn">Find</a>
-                                <a href="#" class="btn blue">Add word</a>
-                            </form>
-                        </div>
+    <div class="main-dictionary-panel">
+        <div class="container">
+            <div class="main-dictionary-panel__body">
+                <div class="header">
+                    <div class="header__row">
+                        <form method="post" target="_self">
+                            <input name="word" class="textbox" type="text" placeholder="Find word in @Model?.Dictionary?.Title">
+                            <a href="#" class="btn">Find</a>
+                            <a href="#" class="btn blue open-modal add-word-btn">Add word</a>
+                        </form>
                     </div>
+                </div>
 
-                    <div class="word-information">
-                        @if (!string.IsNullOrWhiteSpace(@Model.inputWord))
+                <div class="word-information">
+                    @if (!string.IsNullOrWhiteSpace(@Model.inputWord))
+                    {
+                        <h3 class="title">Вы хотите добавить новое слово в словарь (@Model?.inputWord)?</h3>
+                    }
+                    @if (@Model?.Word != null)
+                    {
+                        <div class="word__translate">
+                            <h3 class="title">Translate</h3>
+                            <div class="translate__row">
+                                <p class="text">@Model?.Word?.Value    →    @Model?.Word?.Translate</p>
+                            </div>
+                        </div>
+                        <div class="word__transcription">
+                            <p class="text">Model.word.Transcription</p>
+                        </div>
+                        <div class="word__examples">
+                            @*THERE ARE NEED TO INSERT RANDOM EXAMPLES TO USE*@
+                        </div>
+                    }
+                    else
+                    {
+                        <h3 class="title">Select word</h3>
+                    }
+                </div>
+
+                <div class="list-of-words">
+
+                    <div class="list-of-words__header">
+                        @if (Model.WordsList == null || Model.WordsList.Count == 0)
                         {
-                            <h3 class="title">Вы хотите добавить новое слово в словарь (@Model?.inputWord)?</h3>
+                            <h3 class="title">Dictionary is empty</h3>
                         }
-                        @if (@Model?.Word != null) {
-                            <div class="word__translate">
-                               <h3 class="title">Translate</h3>
-                               <div class="translate__row">
-                                 <p class="text">@Model?.Word?.Value    →    @Model?.Word?.Translate</p>
-                               </div>
-                           </div>
-                           <div class="word__transcription">
-                                <p class="text">Model.word.Transcription</p>
-                           </div>
-                           <div class="word__examples">
-                                @*THERE ARE NEED TO INSERT RANDOM EXAMPLES TO USE*@
-                           </div>
-                        }
-                        else {
-                            <h3 class="title">Select word</h3>
+                        else
+                        {
+                            <h3 class="title">Words in @Model?.Dictionary?.Title dictionary</h3>
                         }
                     </div>
-
-                    <div class="list-of-words">
-                        
-                        <div class="list-of-words__header">
-                            @if (Model.WordsList == null || Model.WordsList.Count == 0) {
-                                <h3 class="title">Dictionary is empty</h3>
-                            }
-                            else {
-                                <h3 class="title">Words in @Model?.Dictionary?.Title dictionary</h3>
-                            }
-                        </div>
-                        <div class="list-of-words__list">
-                            @foreach (var word in Model.WordsList) {
-                                <div class="word-panel">
-                                    <div class="word-panel__row">
-                                        <a href="#" class="black word-item">○ @word.Value</a>
-                                        <a href="#" class="black word-translate-item">@word.Translate</a>
-                                        <a href="#" class="blue see-translate-btn">Fast translate</a>
-                                    </div>
+                    <div class="list-of-words__list">
+                        @foreach (var word in Model.WordsList)
+                        {
+                            <div class="word-panel">
+                                <div class="word-panel__row">
+                                    <a href="#" class="black word-item">○ @word.Value</a>
+                                    <a href="#" class="black word-translate-item">@word.Translate</a>
+                                    <a href="#" class="blue see-translate-btn">Fast translate</a>
                                 </div>
-                            }
-                        </div>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>
         </div>
+
+        <div id="myModal" class="modal">
+            <form method="post" asp-page-handler="AddWord" asp-route-dictionaryId="@dictionaryId">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="edit-word">
+                        <div class="modal-content__header">
+                            <h3 class="title">Edit word</h3>
+                        </div>
+                        <div class="modal-content__body">
+                            <p class="text">Word value</p>
+                            <input name="wordValue" type="text" class="textbox" placeholder="Value">
+                            <p class="text">Translate</p>
+                            <input name="wordTranslate" type="text" class="textbox" placeholder="Translate">
+                            <p class="text">Transcription</p>
+                            <input name="wordTranscription" type="text" class="textbox" placeholder="Transcription">
+                        </div>
+                        <div class="modal-content__footer">
+                            <input type="submit" value="Update dictionary" class="btn green add-new-word-btn" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
         <script src="~/jquery/jquery-3.6.0.min.js"></script>
         <script src="~/js/dictionary-script.js"></script>
+        <script src="~/js/modal-script.js"></script>
 </body>

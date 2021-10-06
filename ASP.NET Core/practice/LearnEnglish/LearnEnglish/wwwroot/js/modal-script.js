@@ -1,12 +1,12 @@
-var modal = document.getElementById("myModal");
-var btn = document.querySelector(".create-dictionary");
+let modal = document.getElementById("myModal");
+let openModalBtn = document.querySelector(".open-modal");
 
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() {
+let closeSpan = document.querySelector(".close");
+closeSpan.onclick = function() {
     modal.style.display = "none";
 }
 
-btn.onclick = function() {
+openModalBtn.onclick = function() {
   modal.style.display = "block";
 }
 

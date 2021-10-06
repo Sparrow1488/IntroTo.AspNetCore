@@ -35,6 +35,7 @@
   }
   .modal-content__footer {
       display: flex;
+      margin-top: 20px;
   }
   .modal-content__footer .btn {
       width: 100%;
