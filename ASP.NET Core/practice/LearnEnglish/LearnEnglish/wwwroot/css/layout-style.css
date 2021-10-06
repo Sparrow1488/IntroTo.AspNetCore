@@ -76,11 +76,18 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+footer .container {
+    padding: 30px 0;
+}
 
 .copytight a {
     color: yellowgreen;
 }
 
+.contacts {
+    display: flex;
+    align-items: center;
+}
 .contacts h3 {
     display: inline-block;
     margin: 0 20px 0 0;
