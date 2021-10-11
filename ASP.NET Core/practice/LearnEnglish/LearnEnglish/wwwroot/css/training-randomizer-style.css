@@ -1,0 +1,14 @@
+.dictionaries-list__row {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+}
+.input-child-item {
+    margin: 0 0 0 15px;
+    width: 250px;
+}
+.disabled-btn {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
