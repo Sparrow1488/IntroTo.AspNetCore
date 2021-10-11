@@ -1,0 +1,29 @@
+.cards__row {
+    text-align: center;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    max-width: 400px;
+    display: inline-block;
+}
+.card__image img {
+    max-width: 100%;
+    max-height: 220px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(132, 0, 255, 0.3);
+}
+.card__title {
+    padding: 20px 10px;
+}
+
+.disable {
+    background-color: rgb(230, 230, 230);
+}
+.disable:hover {
+    box-shadow: 0 8px 16px 0 rgba(255, 11, 11, 0.3);
+    cursor: default;
+}
+ 
+  

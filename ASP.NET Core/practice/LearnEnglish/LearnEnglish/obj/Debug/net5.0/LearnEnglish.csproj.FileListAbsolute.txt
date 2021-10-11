@@ -152,3 +152,5 @@ C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice
 C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\ref\LearnEnglish.dll
 C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\LearnEnglish.pdb
 C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\LearnEnglish.genruntimeconfig.cache
+C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Training\Index.cshtml.g.cs
+C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Training\Randomizer.cshtml.g.cs
