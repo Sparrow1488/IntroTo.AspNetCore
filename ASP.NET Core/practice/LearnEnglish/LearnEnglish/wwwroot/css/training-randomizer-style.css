@@ -3,9 +3,14 @@
     flex-direction: column;
     padding: 15px 0px;
 }
+.input-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
 .input-child-item {
     margin: 0 0 0 15px;
-    width: 250px;
+    width: 300px;
 }
 .disabled-btn {
     pointer-events: none;
