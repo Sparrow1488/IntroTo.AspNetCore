@@ -38,6 +38,9 @@ hr {
 .black {
     color: black;
 }
+.purple {
+    color: blueviolet;
+}
 .error {
     color: rgb(170, 8, 8);
 }

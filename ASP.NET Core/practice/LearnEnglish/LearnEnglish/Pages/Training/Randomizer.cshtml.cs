@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace LearnEnglish.Pages.Training
 {
@@ -25,6 +26,13 @@ namespace LearnEnglish.Pages.Training
                 result = new PageResult();
             }
             return result;
+        }
+
+        public IActionResult OnGetDictionariesJson(int[] identies)
+        {
+            string resultStatus = identies == null || identies.Length < 1 ? "bad" : "ok";
+            var words = _db.Words.Where(word => identies.Contains(word.Dictionary.Id)).ToArray();
+            return new JsonResult(new { Request = identies, Result = resultStatus, Values = words });
         }
     }
 }

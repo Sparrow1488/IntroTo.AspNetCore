@@ -1,5 +1,10 @@
+const baseURL = "https://localhost:44372/";
+
 const trainingDictionaries = [];
 const startBtn = $(".start-btn");
+
+let trainingWords = [];
+const numberTask = $(".number-of-tasks text");
 
 function removeArrayItem(array, item) {
     const index = array.indexOf(item);
@@ -11,18 +16,23 @@ function displayArrayOfDictionaries(array) {
     $(".selected-dictionaries-list").html("");
     array.forEach(element => {
         $(".selected-dictionaries-list").append(`<span class='selected-dictionary text'><b class='text'>${element}</b></span>`);
-        $(".selected-dictionaries-list").append("<span>         </span>");
+        $(".selected-dictionaries-list").append("<span>         </span>"); //   space
     });
 }
 async function receiveDictionaries(listOfId) {
-    let params = buildGetParams("identies", listOfId);
-    let url = "https://localhost:44372/Training/Randomizer?handler=DictionariesJson";
-
-    let response = await fetch(url + params);
-    let responseJson = await response.json();
+    const params = buildURLParams("identies", listOfId);
+    const url = baseURL + "Training/Randomizer?handler=DictionariesJson";
+    const response = await fetch(url + params);
+    const responseJson = await response.json();
     return responseJson;
 }
-function buildGetParams(key, values) {
+async function receiveRandomizerActivePage() {
+    const response = await fetch(baseURL + "Randomizer-active.html");
+    //const pageDocument = new DOMParser().parseFromString(response.text(), "text/html");
+    return response.text();
+}
+
+function buildURLParams(key, values) {
     let row = "&";
     values.forEach(function (elem) {
         row += key + "=" + elem + "&";
@@ -52,12 +62,16 @@ $(document).ready(function () {
     });
 
     $(startBtn).click(async function () {
-        let response = await receiveDictionaries([1, 2, 3, 4]);
-        console.log(response);
-        response.values.forEach(function (elem) {
-            console.log("Value", elem.value);
-        });
-        
+        let responseJson = await receiveDictionaries([1, 2, 3, 4]);
+        if (responseJson.result == "ok") {
+            console.log("Words GET Success");
+            console.log(responseJson.values);
+            trainingWords = responseJson.values;
+            numberTask.html(`Task 1/${trainingWords.length}`);
+            const randomiserActive = await receiveRandomizerActivePage();
+            $("#content").html(randomiserActive);
+            console.log(randomiserActive);
+        }
     });
 });
 
