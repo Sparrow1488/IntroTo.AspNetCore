@@ -34,7 +34,7 @@
                         @foreach (var dict in Model?.Dictionaries)
                         {
                             <div class="input-checkbox">
-                                <input type="checkbox" disabled><a href="#" class="black btn input-child-item">@dict.Title</a>
+                                <input type="checkbox" disabled><span class="dictionary-id" style="display: none">@dict.Id</span><a href="#" class="black btn input-child-item">@dict.Title</a>
                             </div>
                         }
                     </div>

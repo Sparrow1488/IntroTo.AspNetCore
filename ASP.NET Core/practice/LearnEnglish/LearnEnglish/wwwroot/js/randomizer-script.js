@@ -20,7 +20,7 @@ function displayArrayOfDictionaries(array) {
     });
 }
 async function receiveDictionaries(listOfId) {
-    const params = buildURLParams("identies", listOfId);
+    const params = buildURLParams("dictionariesTitle", listOfId);
     const url = baseURL + "Training/Randomizer?handler=DictionariesJson";
     const response = await fetch(url + params);
     const responseJson = await response.json();
@@ -44,7 +44,7 @@ function buildURLParams(key, values) {
 $(document).ready(function () {
     $(".input-child-item").click(function (e) { 
         e.preventDefault();
-        let input = $(this).prev();
+        let input = $(this).parent().children("input");
         if(!input.hasClass("active")){
             trainingDictionaries.push($(this).html());
             input.prop("checked", true).toggleClass("active");
@@ -62,7 +62,7 @@ $(document).ready(function () {
     });
 
     $(startBtn).click(async function () {
-        let responseJson = await receiveDictionaries([1, 2, 3, 4]);
+        let responseJson = await receiveDictionaries(trainingDictionaries);
         if (responseJson.result == "ok") {
             console.log("Words GET Success");
             console.log(responseJson.values);

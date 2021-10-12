@@ -28,11 +28,18 @@ namespace LearnEnglish.Pages.Training
             return result;
         }
 
-        public IActionResult OnGetDictionariesJson(int[] identies)
+        public IActionResult OnGetDictionariesJson(string[] dictionariesTitle)
         {
-            string resultStatus = identies == null || identies.Length < 1 ? "bad" : "ok";
-            var words = _db.Words.Where(word => identies.Contains(word.Dictionary.Id)).ToArray();
-            return new JsonResult(new { Request = identies, Result = resultStatus, Values = words });
+            string resultStatus = dictionariesTitle == null || dictionariesTitle.Length < 1 ? "bad" : "ok";
+            string userLogin = Request.Cookies["Login"];
+            var words = _db.Words.Where(word => dictionariesTitle.Contains(word.Dictionary.Title) && word.Dictionary.Profile.Login == userLogin).ToArray();
+            return new JsonResult(new 
+            { 
+                Request = dictionariesTitle, 
+                From = userLogin, 
+                Result = resultStatus, 
+                Values = words 
+            });
         }
     }
 }
