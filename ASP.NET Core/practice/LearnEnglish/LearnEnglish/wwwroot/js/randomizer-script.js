@@ -4,7 +4,7 @@ const trainingDictionaries = [];
 const startBtn = $(".start-btn");
 
 let trainingWords = [];
-const numberTask = $(".number-of-tasks text");
+
 
 function removeArrayItem(array, item) {
     const index = array.indexOf(item);
@@ -67,10 +67,8 @@ $(document).ready(function () {
             console.log("Words GET Success");
             console.log(responseJson.values);
             trainingWords = responseJson.values;
-            numberTask.html(`Task 1/${trainingWords.length}`);
             const randomiserActive = await receiveRandomizerActivePage();
             $("#content").html(randomiserActive);
-            console.log(randomiserActive);
         }
     });
 });
