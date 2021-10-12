@@ -57,7 +57,7 @@
     border-radius: 15px;
     animation: progres 4s infinite linear;    
 }
-@keyframes progres{
+/*@keyframes progres{
     0%{
       width: 0%;
     }
@@ -73,4 +73,4 @@
     100%{
         width: 100%;
     }
-};
+}*/
