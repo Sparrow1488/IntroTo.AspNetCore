@@ -1,2 +1,51 @@
-﻿body {
+﻿#wrapper {
+    height: 100%;
+}
+.edit-panel {
+}
+.edit-panel__row {
+    display: flex;
+    min-height: 400px;
+}
+.settings-menu {
+    flex: 0 0 320px;
+    border-right: 1px gray solid;
+}
+.settings-menu__column {
+    display: flex;
+    flex-direction: column;
+}
+.settings-block {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.setting-desc {
+    flex: 0 0 200px;
+}
+.setting-edit-data {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+.preview-cover {
+    height: 110px;
+    margin: 0 5px;
+}
+.settings-btn {
+    border-radius: 0;
+}
+
+
+
+.settings-part {
+    flex: 1 1 auto;
+    padding: 10px;
+}
+.settings__body {
+    padding: 10px 0;
+}
+.save-btn {
+    min-width: 100px;
+    text-align: center;
 }
