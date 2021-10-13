@@ -1,4 +1,56 @@
 ﻿@page
 @model LearnEnglish.Pages.Training.RandomizerModel
 @{
+    Model.ViewData["Title"] = "Randomizer";
 }
+
+<head>
+    <link rel="stylesheet" href="~/css/training-randomizer-style.css">
+</head>
+<div class="randomizer-body">
+    <div class="container">
+        <div class="randomizer__title">
+            <h3 class="title">Randomizer</h3>
+            <hr>
+        </div>
+        <div class="randomizer__description">
+            <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid fugiat id dolor itaque corporis quae, esse, omnis asperiores nulla et mollitia, impedit debitis iusto alias.</p>
+        </div>
+        @if (Model?.Dictionaries == null || Model?.Dictionaries.Count < 1)
+        {
+            <h3 class="title">No dictionary!</h3>
+            <p class="text">Create a dictionary to training this activity</p>
+            <a class="btn blue" href="../Profile">Go to profile</a>
+        }
+        else
+        {
+            <div class="select-dictionary-block">
+                <div class="block__title">
+                    <h3 class="title">Select dictionary to training</h3>
+                    <hr>
+                </div>
+                <div class="dictionaries-list">
+                    <div class="dictionaries-list__row">
+                        @foreach (var dict in Model?.Dictionaries)
+                        {
+                            <div class="input-checkbox">
+                                <input type="checkbox" disabled><span class="dictionary-id" style="display: none">@dict.Id</span><a href="#" class="black btn input-child-item">@dict.Title</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="selected-dictionaries">
+                <span class="text">Training by this dictionaries:</span>
+                <div class="selected-dictionaries-list" style="display: inline-block;">
+                </div>
+            </div>
+            <div class="start-training">
+                <a href="#" class="btn start-btn disabled-btn green" style="width: 500px;">Let's training!</a>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/jquery/jquery-3.6.0.min.js"></script>
+<script src="~/js/randomizer-script.js"></script>

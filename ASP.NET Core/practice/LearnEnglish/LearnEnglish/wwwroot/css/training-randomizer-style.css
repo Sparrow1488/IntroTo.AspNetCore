@@ -1,0 +1,59 @@
+.dictionaries-list__row {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+}
+.input-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.input-child-item {
+    margin: 0 0 0 15px;
+    width: 300px;
+}
+.disabled-btn {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.6;
+}
+
+
+.number-of-tasks {
+    text-align: center;
+}
+.task-body {
+    padding: 5px 0 25px 0;
+}
+.task-footer {
+    display: flex;
+}
+.task-footer a {
+    text-align: center;
+}
+.answer {
+    width: 400px;
+}
+.confirm-btn {
+    width: 400px;
+}
+
+.container {
+    padding: 10px 0;
+}
+.progress{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    border: 10px solid rgb(231, 231, 231);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.progress .color{
+    background-color: #00b80f;
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;    
+}

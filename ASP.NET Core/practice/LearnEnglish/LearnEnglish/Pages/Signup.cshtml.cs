@@ -1,8 +1,6 @@
 using LearnEnglish.Database;
-using LearnEnglish.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace LearnEnglish.Pages
@@ -16,8 +14,7 @@ namespace LearnEnglish.Pages
         }
         public async Task<IActionResult> OnPostAsync(string email, string login, string password)
         {
-            IActionResult actionResult = new PageResult();
-            var profile = new Profile
+            var profile = new LearnEnglish.Entities.Profile
             {
                 Login = login,
                 Email = email,
@@ -26,8 +23,7 @@ namespace LearnEnglish.Pages
             await _db.Profiles.AddAsync(profile);
             await _db.SaveChangesAsync();
             Response.Cookies.Append("Login", login);
-            actionResult = new RedirectToPageResult("Profile");
-            return actionResult;
+            return new RedirectToPageResult("Profile");
         }
     }
 }

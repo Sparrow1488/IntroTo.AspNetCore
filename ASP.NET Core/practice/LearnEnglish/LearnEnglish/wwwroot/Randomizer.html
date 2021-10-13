@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/training-randomizer-style.css">
+    <link rel="stylesheet" href="css/ResetBasedStyles.css">
+    <link rel="stylesheet" href="css/root-style.css">
+    <title>Randomizer</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="randomizer-body">
+            <div class="container">
+                <div class="randomizer__title">
+                    <h3 class="title">Randomizer</h3>
+                    <hr>
+                </div>
+                <div class="randomizer__description">
+                    <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid fugiat id dolor itaque corporis quae, esse, omnis asperiores nulla et mollitia, impedit debitis iusto alias.</p>
+                </div>
+                <div class="select-dictionary-block">
+                    <div class="block__title">
+                        <h3 class="title">Select dictionary to training</h3>
+                        <hr>
+                    </div>
+                    <div class="dictionaries-list">
+                        <div class="dictionaries-list__row">
+                            <div class="input-checkbox">
+                                <input type="checkbox" disabled><a href="#" class="black btn input-child-item">Dictionary 1</a></input>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" disabled><a href="#" class="black btn input-child-item">Dictionary 2</a></input>
+                            </div>
+                            <div class="input-checkbox">
+                                <input type="checkbox" disabled><a href="#" class="black btn input-child-item">Test</a></input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selected-dictionaries">
+                    <span class="text">Training by this dictionaries:</span>
+                    <div class="selected-dictionaries-list" style="display: inline-block;">
+                    </div>
+                </div>
+                <div class="start-training">
+                    <a href="#" class="btn start-btn disabled-btn green" style="width: 500px;">Let's training!</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <script src="js/randomizer-script.js"></script>
+</body>
+</html>
