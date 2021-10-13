@@ -2,3 +2,69 @@
 @model LearnEnglish.Pages.Profile.EditModel
 @{
 }
+
+<head>
+    <meta charset="utf-8" />
+    <title>Edit profile</title>
+    <link href="~/css/edit-profile-style.css" rel="stylesheet" />
+</head>
+<div class="edit-panel">
+    <div class="container">
+        <div class="edit-panel__row">
+            <div class="settings-menu">
+                <div class="settings-menu__column">
+                    <a href="#" class="btn settings-btn">Profile</a>
+                    <a href="#" class="btn settings-btn">Account</a>
+                </div>
+            </div>
+            <div class="settings-part">
+                <div class="profile-settings settings-part-item">
+                    <h3 class="title">Profile settings</h3>
+                    <hr />
+                    <div class="settings__body">
+                        <div class="profile-description settings-block">
+                            <span class="setting-desc"><b class="text">Profile description: </b></span>
+                            <div class="setting-edit-data">
+                                <input type="text" name="description" placeholder="Description" class="textbox" />
+                            </div>
+                            <a href="#" class="btn green save-btn">Save</a>
+                        </div>
+                        <div class="profile-cover settings-block">
+                            <span class="setting-desc"><b class="text">Profile cover: </b></span>
+                            <div class="setting-edit-data">
+                                <input type="file" id="file" name="file" multiple onchange="loadCover(event)">
+                                <img class="profile-cover preview-cover" src="@Model?.Profile?.CoverUrl" alt="No cover" />
+                            </div>
+                            <a href="#" class="btn green save-btn">Save</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="account-settings settings-part-item">
+                    <h3 class="title">Account settings</h3>
+                    <hr />
+                    <div class="settings__body">
+                        <div class="account-login settings-block">
+                            <span class="setting-desc"><b class="text">Change profile login: </b></span>
+                            <div class="setting-edit-data">
+                                <input type="text" name="login" placeholder="Current Login" class="textbox" value="@Model?.Profile?.Login" />
+                            </div>
+                            <a href="#" class="btn green save-btn">Save</a>
+                        </div>
+
+                        <div class="account-password settings-block">
+                            <span class="setting-desc"><b class="text">Change account password: </b></span>
+                            <div class="setting-edit-data">
+                                <input type="password" name="password" placeholder="Current password" class="textbox" value="@Model?.Profile?.Password" />
+                            </div>
+                            <a href="#" class="btn green save-btn">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/jquery/jquery-3.6.0.min.js"></script>
+<script src="~/js/profile-edit-script.js"></script>

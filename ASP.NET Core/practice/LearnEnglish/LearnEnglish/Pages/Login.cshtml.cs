@@ -22,7 +22,7 @@ namespace LearnEnglish.Pages
             {
                 Response.Cookies.Append("Login", foundProfile.Login);
                 Response.Cookies.Append("Identy", foundProfile.Id.ToString());
-                redirectToPage = "Profile";
+                redirectToPage = "Profile/Index";
             }
             return RedirectToPage(redirectToPage);
         }

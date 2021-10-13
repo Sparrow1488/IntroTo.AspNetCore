@@ -154,3 +154,4 @@ C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice
 C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Training\Randomizer.cshtml.g.cs
 C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Profile\Edit.cshtml.g.cs
 C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\Razor\Pages\Profile\Index.cshtml.g.cs
+C:\Users\DOM\Desktop\ИЛЬЯ\HTML\C#\The-basis-of-ASP.NET\ASP.NET Core\practice\LearnEnglish\LearnEnglish\obj\Debug\net5.0\LearnEnglish.csprojAssemblyReference.cache

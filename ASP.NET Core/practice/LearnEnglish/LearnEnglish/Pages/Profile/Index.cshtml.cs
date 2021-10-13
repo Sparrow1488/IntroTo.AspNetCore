@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Profile = LearnEnglish.Entities.Profile;
 
 namespace LearnEnglish.Pages.Profile
 {
@@ -19,6 +20,8 @@ namespace LearnEnglish.Pages.Profile
 
         public List<WordsDictionary> UserDictionaries { get; set; } = new List<WordsDictionary>();
         public string UserLogin { get; set; } = string.Empty;
+        public LearnEnglish.Entities.Profile Profile { get; set; }
+        public int UserId { get; set; } = 0;
 
         public IActionResult OnGet()
         {
@@ -26,10 +29,11 @@ namespace LearnEnglish.Pages.Profile
             var view = new PageResult();
             IActionResult result = view;
             if (string.IsNullOrWhiteSpace(cookie))
-                result = RedirectToPage("Login");
+                result = RedirectToPage("../Login");
             else
             {
                 UserLogin = cookie;
+                Profile = GetProfileByLogin(UserLogin);
                 UserDictionaries = GetUserDictionaries();
             }
             return result;
@@ -64,6 +68,10 @@ namespace LearnEnglish.Pages.Profile
             if (dictionary != null)
                 findDictionaries = dictionary;
             return findDictionaries;
+        }
+        private LearnEnglish.Entities.Profile GetProfileByLogin(string login)
+        {
+            return _db.Profiles.First(prof => prof.Login == login);
         }
 
         private string GetUserLoginFromCookie()

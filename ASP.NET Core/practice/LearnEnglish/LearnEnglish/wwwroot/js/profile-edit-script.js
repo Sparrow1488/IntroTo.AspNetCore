@@ -10,6 +10,10 @@
 function hideAllSettings() {
     $(".settings-part-item").hide();
 }
+function loadCover(event) {
+    var image = document.querySelector('.preview-cover');
+    image.src = URL.createObjectURL(event.target.files[0]);
+}
 
 $(document).ready(function () {
     displaySettingsPart("profile");
