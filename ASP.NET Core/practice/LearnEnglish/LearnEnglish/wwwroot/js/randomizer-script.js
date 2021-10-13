@@ -28,7 +28,6 @@ async function receiveDictionaries(listOfId) {
 }
 async function receiveRandomizerActivePage() {
     const response = await fetch(baseURL + "Randomizer-active.html");
-    //const pageDocument = new DOMParser().parseFromString(response.text(), "text/html");
     return response.text();
 }
 

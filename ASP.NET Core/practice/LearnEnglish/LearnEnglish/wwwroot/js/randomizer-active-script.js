@@ -1,23 +1,27 @@
 ﻿const numberTask = $(".number-of-tasks .text");
 const confirmBtn = $(".confirm-btn");
-let currentIndex = 0;
-let currentQuestionWord = trainingWords[currentIndex];
+const allTaskCount = trainingWords.length;
+let currentTask = 0;
+let currentQuestionWord = trainingWords[currentTask];
+let completedIndexes = [];
 
 function displayTask() {
     if (trainingWords.length < 1 || !trainingWords) {
         displayResults();
     }
     else {
-        currentQuestionWord = trainingWords[currentIndex];
-        $(numberTask).html(`Task ${currentIndex + 1}/${trainingWords.length}`);
+        currentQuestionWord = getRandomWord();
+        $(numberTask).html(`Task ${currentTask + 1}/${allTaskCount}`);
         $(".translate-word").html(`${currentQuestionWord.value}`);
     }
 }
 
 function nextTask() {
-    currentIndex++;
+    currentTask++;
     moveProgressBar();
-    if (currentIndex < trainingWords.length) {
+    if (currentTask < allTaskCount) {
+        removeArrayItem(trainingWords, currentQuestionWord);
+        console.log("trainingWords:", trainingWords);
         displayTask();
         resetInputValue();
     }
@@ -36,14 +40,15 @@ function resetInputValue() {
     answer.value = "";
 }
 
+function getRandomWord() {
+    const rndIndex = Math.floor(Math.random() * (trainingWords.length - 1));
+    return trainingWords[rndIndex];
+}
+
 function moveProgressBar() {
-    let all = trainingWords.length;
-    let current = currentIndex;
-    let kaef = all / current;
-    let result = 100 / kaef;
-    console.log(`${all}/${current} = ${kaef}`);
+    const kaef = allTaskCount / currentTask;
+    const result = 100 / kaef;
     $(".progress .color").width(`${result}%`);
-    console.log(result);
 }
 
 $(document).ready(function () {
