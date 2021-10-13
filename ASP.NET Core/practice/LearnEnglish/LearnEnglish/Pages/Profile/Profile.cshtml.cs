@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LearnEnglish.Pages
+namespace LearnEnglish.Pages.Profile
 {
     public class ProfileModel : PageModel
     {
