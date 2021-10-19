@@ -41,7 +41,7 @@ namespace LearnEnglish.Pages.Profile
 
         public async Task<IActionResult> OnPostAsync(string dictionaryTitle)
         {
-            IActionResult output = new RedirectToPageResult("Profile");
+            IActionResult output = new RedirectToPageResult("Profile/Index");
             var userLogin = GetUserLoginFromCookie();
             if (!string.IsNullOrWhiteSpace(dictionaryTitle) &&
                !string.IsNullOrWhiteSpace(userLogin))

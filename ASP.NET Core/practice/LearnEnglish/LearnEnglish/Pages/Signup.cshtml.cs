@@ -23,7 +23,7 @@ namespace LearnEnglish.Pages
             await _db.Profiles.AddAsync(profile);
             await _db.SaveChangesAsync();
             Response.Cookies.Append("Login", login);
-            return new RedirectToPageResult("Profile");
+            return new RedirectToPageResult("Profile/Index");
         }
     }
 }

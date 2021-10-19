@@ -18,30 +18,6 @@ namespace LearnEnglish
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => UseSqlServer(options));
-            //services.Configure<CookiePolicyOptions>(options =>
-            //{
-            //    options.CheckConsentNeeded = context => true;
-            //    options.MinimumSameSitePolicy = SameSiteMode.None;
-            //    options.OnAppendCookie = cookieContext =>
-            //      CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
-            //    options.OnDeleteCookie = cookieContext =>
-            //      CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
-            //});
-
-            //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-            //    .AddCookie(options =>
-            //    {
-            //        options.Cookie.SameSite = SameSiteMode.None;
-            //        options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-            //        options.Cookie.IsEssential = true;
-            //    });
-
-            //services.AddSession(options =>
-            //{
-            //    options.Cookie.SameSite = SameSiteMode.None;
-            //    options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-            //    options.Cookie.IsEssential = true;
-            //});
             services.AddRazorPages();
         }
 
