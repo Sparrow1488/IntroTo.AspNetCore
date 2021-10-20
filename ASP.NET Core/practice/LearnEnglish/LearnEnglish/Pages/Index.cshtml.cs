@@ -13,7 +13,7 @@ namespace LearnEnglish.Pages
         {
             _db = db;
         }
-        public async Task OnGetAsync()
+        public void OnGetAsync()
         {
             //_db.Database.EnsureDeleted();
             //_db.Database.EnsureCreated();

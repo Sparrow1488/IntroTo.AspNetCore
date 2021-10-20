@@ -19,25 +19,28 @@
             </div>
             <div class="settings-part">
                 <div class="profile-settings settings-part-item">
-                    <h3 class="title">Profile settings</h3>
-                    <hr />
-                    <div class="settings__body">
-                        <div class="profile-description settings-block">
-                            <span class="setting-desc"><b class="text">Profile description: </b></span>
-                            <div class="setting-edit-data">
-                                <input type="text" name="description" placeholder="Description" class="textbox" />
+                    <form method="post" enctype="multipart/form-data" asp-page-handler="ProfileSettings" asp-route-id="@Model?.Profile.Id">
+                        <h3 class="title">Profile settings</h3>
+                        <hr />
+                        <div class="settings__body">
+                            <div class="profile-description settings-block">
+                                <span class="setting-desc"><b class="text">Profile description: </b></span>
+                                <div class="setting-edit-data">
+                                    <input type="text" name="description" placeholder="Description" class="textbox" value="@Model?.Profile?.Description" />
+                                </div>
                             </div>
-                            <a href="#" class="btn green save-btn">Save</a>
-                        </div>
-                        <div class="profile-cover settings-block">
-                            <span class="setting-desc"><b class="text">Profile cover: </b></span>
-                            <div class="setting-edit-data">
-                                <input type="file" id="file" name="file" multiple onchange="loadCover(event)">
-                                <img class="profile-cover preview-cover" src="@Model?.Profile?.CoverUrl" alt="No cover" />
+                            <div class="profile-cover settings-block">
+                                <span class="setting-desc"><b class="text">Profile cover: </b></span>
+                                <div class="setting-edit-data">
+                                    <input type="file" id="file" asp-for="Cover" multiple onchange="loadCover(event)">
+                                    <img class="profile-cover preview-cover" src="@Model?.Profile?.CoverUrl" alt="No cover" />
+                                </div>
                             </div>
-                            <a href="#" class="btn green save-btn">Save</a>
                         </div>
-                    </div>
+                        <div class="save-block">
+                            <input type="submit" href="#" class="btn green save-btn" value="Save">
+                        </div>
+                    </form>
                 </div>
 
                 <div class="account-settings settings-part-item">

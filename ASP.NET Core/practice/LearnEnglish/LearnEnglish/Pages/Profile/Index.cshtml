@@ -18,7 +18,7 @@
                         <h3 class="title">@Model.UserLogin</h3>
                         <p class="text">English: Undefined</p>
                         <a href="Profile/Edit?profileId=@Model.Profile.Id" class="btn blue edit-btn">Edit profile</a>
-                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate natus error, iusto magni quis fuga!</p>
+                        <p class="text">@Model?.Profile?.Description</p>
                     </div>
                 </div>
                 <div class="profile__body">
