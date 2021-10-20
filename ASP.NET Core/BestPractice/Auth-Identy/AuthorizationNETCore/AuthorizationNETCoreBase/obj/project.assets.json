@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\BestPractice\\Auth-Identy\\AuthorizationNETCore\\AuthorizationNETCoreBase\\AuthorizationNETCoreBase.csproj",
-      "projectName": "AuthorizationNETCoreBase",
-      "projectPath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\BestPractice\\Auth-Identy\\AuthorizationNETCore\\AuthorizationNETCoreBase\\AuthorizationNETCoreBase.csproj",
+      "projectUniqueName": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\BestPractice\\Auth-Identy\\AuthorizationNETCore\\AuthorizationNETCoreBase\\AuthorizationNETCore.Base.csproj",
+      "projectName": "AuthorizationNETCore.Base",
+      "projectPath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\BestPractice\\Auth-Identy\\AuthorizationNETCore\\AuthorizationNETCoreBase\\AuthorizationNETCore.Base.csproj",
       "packagesPath": "C:\\Users\\aleks\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\BestPractice\\Auth-Identy\\AuthorizationNETCore\\AuthorizationNETCoreBase\\obj\\",
       "projectStyle": "PackageReference",

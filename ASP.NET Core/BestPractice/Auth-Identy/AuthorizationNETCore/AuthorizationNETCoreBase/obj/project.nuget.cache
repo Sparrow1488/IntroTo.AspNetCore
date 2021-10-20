@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BCkLOZJx4yc6j8ooOWski4PQuiHvhVCTDDaMiTOXpmz9bLadQQWwEbWBpdflf5m+8oiyas23XvvNyemcskfErw==",
+  "dgSpecHash": "qzh0SdABKtg17JBDr2k0u1ULl3vIH9w6JHsRRuNfVd9+iLiBFcRU26/RpnaEffEgTHVFSxmion8+ldrLS73//g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\BestPractice\\Auth-Identy\\AuthorizationNETCore\\AuthorizationNETCoreBase\\AuthorizationNETCoreBase.csproj",
+  "projectFilePath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\BestPractice\\Auth-Identy\\AuthorizationNETCore\\AuthorizationNETCoreBase\\AuthorizationNETCore.Base.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

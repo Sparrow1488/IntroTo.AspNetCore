@@ -1,0 +1,19 @@
+﻿@model LoginViewModel
+<h1>Admin login</h1>
+
+<a asp-controller="Home" asp-action="Index">Go to <b>Home</b></a>
+
+<form class="auth-form" method="post" asp-controller="Admin" asp-action="Login">
+    <input hidden asp-for="ReturnUrl">
+    <div class="auth-form__item">
+        <label>User name</label>
+        <input type="text" asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div class="auth-form__item">
+        <label>Password</label>
+        <input type="text" asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <button class="auth-btn" type="submit">Sign in</button>
+</form>
