@@ -38,5 +38,18 @@ namespace LearnEnglish.Pages.Profile
             }
             return RedirectToPagePermanent("Edit", new { profileId = id });
         }
+        public async Task<IActionResult> OnPostAccountSettings(int id, string login, string password)
+        {
+            var updatedProfile = _db.Profiles.Where(prof => prof.Id == id).First();
+            if (updatedProfile != null)
+            {
+                updatedProfile.Login = login;
+                updatedProfile.Password = password;
+                Response.Cookies.Append("Login", login);
+                _db.Update(updatedProfile);
+                await _db.SaveChangesAsync();
+            }
+            return RedirectToPagePermanent("Edit", new { profileId = id });
+        }
     }
 }

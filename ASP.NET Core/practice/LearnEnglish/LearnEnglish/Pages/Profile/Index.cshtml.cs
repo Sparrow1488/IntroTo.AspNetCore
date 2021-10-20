@@ -2,6 +2,7 @@ using LearnEnglish.Database;
 using LearnEnglish.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -32,9 +33,17 @@ namespace LearnEnglish.Pages.Profile
                 result = RedirectToPage("../Login");
             else
             {
-                UserLogin = cookie;
-                Profile = GetProfileByLogin(UserLogin);
-                UserDictionaries = GetUserDictionaries();
+                try
+                {
+                    UserLogin = cookie;
+                    Profile = GetProfileByLogin(UserLogin);
+                    UserDictionaries = GetUserDictionaries();
+                }
+                catch
+                {
+                    result = RedirectToPage("../Login");
+                    Response.Cookies.Delete("Login");
+                };
             }
             return result;
         }
