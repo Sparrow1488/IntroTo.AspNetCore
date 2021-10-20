@@ -20,8 +20,7 @@ header {
 header .container {
     padding-top: 10px;
     padding-bottom: 10px;
-    min-width: 820px;
-}
+} 
 
 .header__row {
     display: flex;
@@ -91,4 +90,10 @@ footer .container {
 .contacts h3 {
     display: inline-block;
     margin: 0 20px 0 0;
+}
+
+@media (min-width: 820px) {
+    .explain-panel__buttons {
+        flex-direction: column;
+    }
 }

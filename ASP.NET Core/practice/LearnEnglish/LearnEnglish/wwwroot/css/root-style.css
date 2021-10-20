@@ -82,3 +82,19 @@ hr {
     background-color: rgb(68, 68, 68);
     color: #fff;
 }
+
+@media (max-width: 820px){
+    body {
+        overflow-x: hidden;
+        max-width: 820px;
+    }
+    .container {
+        max-width: 820px;
+        min-width: auto;
+    }
+    .header__navigation {
+        display: none;
+    }
+    .header__row {
+    }
+}
