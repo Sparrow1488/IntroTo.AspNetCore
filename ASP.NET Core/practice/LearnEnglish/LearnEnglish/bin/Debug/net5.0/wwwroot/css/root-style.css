@@ -86,15 +86,14 @@ hr {
 @media (max-width: 820px){
     body {
         overflow-x: hidden;
+        max-width: 820px;
     }
     .container {
-        max-width: 820px;
-        min-width: auto;
+        min-width: 820px;
     }
     .header__navigation {
         display: none;
     }
     .header__row {
-        display: block;
     }
 }

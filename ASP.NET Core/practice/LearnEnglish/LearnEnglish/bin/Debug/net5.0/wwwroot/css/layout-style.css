@@ -95,5 +95,12 @@ footer .container {
 @media (min-width: 820px) {
     .explain-panel__buttons {
         flex-direction: column;
+        display: block;
+    }
+    .container {
+        min-width: 820px;
+    }
+    .explain-panel__buttons .btn {
+        display: block;
     }
 }
