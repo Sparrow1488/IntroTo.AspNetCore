@@ -34,3 +34,5 @@ C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\A
 C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.DatabasePractice\obj\Debug\netcoreapp3.1\AuthorizationNETCore.DatabasePractice.csproj.CopyComplete
 C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.DatabasePractice\obj\Debug\netcoreapp3.1\Razor\Views\Home\Profile.cshtml.g.cs
 C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.DatabasePractice\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.DatabasePractice\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.DatabasePractice\obj\Debug\netcoreapp3.1\Razor\Views\Home\AccessDenied.cshtml.g.cs

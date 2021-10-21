@@ -11,9 +11,16 @@ namespace AuthorizationNETCore.DatabasePractice
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddAuthentication("Cookie").AddCookie("Cookie", config => config.LoginPath = "/Home/Login");
-            services.AddAuthorization(config => config.AddPolicy("User", 
-                                                        config => config.RequireClaim(ClaimTypes.Role, "Admin")));
+            services.AddAuthentication("Cookie").AddCookie("Cookie", config => 
+            {
+                config.LoginPath = "/Home/Login";
+                config.AccessDeniedPath = "/Home/AccessDenied";
+            });
+            services.AddAuthorization(config =>
+            {
+                config.AddPolicy("User", configurePolicy => configurePolicy.RequireClaim(ClaimTypes.Role, "User"));
+                config.AddPolicy("Admin", configurePolicy => configurePolicy.RequireClaim(ClaimTypes.Role, "Admin"));
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

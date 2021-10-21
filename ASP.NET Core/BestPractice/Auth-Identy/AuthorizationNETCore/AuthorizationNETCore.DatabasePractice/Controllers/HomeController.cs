@@ -32,7 +32,7 @@ namespace AuthorizationNETCore.DatabasePractice.Controllers
             {
                 requestResult = Redirect(vm.ReturnUrl);
                 var claims = new List<Claim> {
-                    new Claim(ClaimTypes.Role, "User")
+                    new Claim(ClaimTypes.Role, "Admin")
                 };
                 var identity = new ClaimsIdentity(claims, "Cookie");
                 var principal = new ClaimsPrincipal(identity);
@@ -51,6 +51,12 @@ namespace AuthorizationNETCore.DatabasePractice.Controllers
         {
             return View();
         }
-        
+
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+
     }
 }
