@@ -1,0 +1,13 @@
+﻿<h1 style="color: darkred">Access Denied</h1>
+
+<a asp-controller="Admin" asp-action="Index">Go to <b>Admin</b></a>
+<br />
+<a asp-controller="Admin" asp-action="Administrator">Go to <b>Administrator</b></a>
+<br />
+<a asp-controller="Admin" asp-action="Manager">Go to <b>Manager</b></a>
+<br />
+
+<p>
+    IsAuthenticated : @ViewBag.IsAuthenticated <br />
+    Name : @ViewBag.Name
+</p>
