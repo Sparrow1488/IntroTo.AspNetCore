@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationNETCore.Base",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationNETCore.Roles", "AuthorizationNETCore.Roles\AuthorizationNETCore.Roles.csproj", "{26CDA6C2-BA46-4F5B-AE4D-84A0D911BBDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationNETCore.Database", "AuthorizationNETCore.Database\AuthorizationNETCore.Database.csproj", "{2CD9F6BF-5D09-4B1E-B643-BD3B23F13CB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationNETCore.Database", "AuthorizationNETCore.Database\AuthorizationNETCore.Database.csproj", "{2CD9F6BF-5D09-4B1E-B643-BD3B23F13CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationNETCore.DatabasePractice", "AuthorizationNETCore.DatabasePractice\AuthorizationNETCore.DatabasePractice.csproj", "{CDB03027-8908-4A06-9348-AEB67DCD4037}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2CD9F6BF-5D09-4B1E-B643-BD3B23F13CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CD9F6BF-5D09-4B1E-B643-BD3B23F13CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CD9F6BF-5D09-4B1E-B643-BD3B23F13CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB03027-8908-4A06-9348-AEB67DCD4037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB03027-8908-4A06-9348-AEB67DCD4037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB03027-8908-4A06-9348-AEB67DCD4037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB03027-8908-4A06-9348-AEB67DCD4037}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,53 @@
+﻿@model LoginViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="navigation">
+            <div class="container">
+                <div class="navigation__body">
+                    <a asp-controller="Home" asp-action="Index" class="btn">Home</a>
+                    <a asp-controller="Home" asp-action="Profile" class="btn">Profile</a>
+                    <a asp-controller="Admin" asp-action="Index" class="btn">Admin</a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="content__body">
+                    <p class="title"><b>SignIn</b> page</p>
+                    <div class="sign-in">
+                        <form method="post" class="login-form" asp-controller="Home" asp-action="Login">
+                            <p class="text">Input login and password to authorizate</p>
+
+                            <div class="form__item">
+                                <label class="text">Login: </label>
+                                <input type="text" asp-for="Login" />
+                                <span asp-validation-for="Login"></span>
+                            </div>
+
+                            <div class="form__item">
+                                <label class="text">Password: </label>
+                                <input type="password" asp-for="Password" />
+                                <span asp-validation-for="Password"></span>
+                            </div>
+
+                            <div class="form__item">
+                                <input type="text" asp-for="ReturnUrl" hidden />
+                            </div>
+
+                            <div class="send-form-data-block">
+                                <button><p>Login</p></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
