@@ -1,4 +1,5 @@
 using AuthorizationNETCore.Database.Database;
+using AuthorizationNETCore.Database.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -12,11 +13,28 @@ namespace AuthorizationNETCore.Database
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(config => config.UseInMemoryDatabase("Auth-Memory-Db"));
+            services.AddDbContext<ApplicationDbContext>(config => config.UseInMemoryDatabase("Auth-Memory-Db"))
+                         .AddIdentity<AppUser, AppRole>(config =>
+                         {
+                             config.Password.RequireDigit = false;
+                             config.Password.RequireLowercase = false;
+                             config.Password.RequireUppercase = false;
+                             config.Password.RequiredLength = 3;
+                             config.Password.RequireNonAlphanumeric = false;
+                         })
+                         .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            string scheme = "Cookie";
             services.AddControllersWithViews();
-            services.AddAuthentication(scheme).AddCookie(scheme, config =>
+
+            /* ==== Когда мы подключаем Microsoft.Identity, то данный функционал престает работать ===== */
+
+            //services.AddAuthentication(scheme).AddCookie(scheme, config =>
+            //{
+            //    config.LoginPath = "/Admin/Login";
+            //    config.AccessDeniedPath = "/Home/AccessDenied";
+            //});
+
+            services.ConfigureApplicationCookie(config =>
             {
                 config.LoginPath = "/Admin/Login";
                 config.AccessDeniedPath = "/Home/AccessDenied";

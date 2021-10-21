@@ -50,3 +50,10 @@ C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\A
 C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\ASP.NET Core\BestPractice\Auth-Identy\AuthorizationNETCore\AuthorizationNETCore.Database\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

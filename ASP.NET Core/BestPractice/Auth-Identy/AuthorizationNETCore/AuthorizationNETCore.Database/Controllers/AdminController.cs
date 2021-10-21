@@ -1,11 +1,8 @@
-﻿using AuthorizationNETCore.Database.Database;
+﻿using AuthorizationNETCore.Database.Entities;
 using AuthorizationNETCoreBase.Database.ViewModels;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace AuthorizationNETCoreBase.Database.Controllers
@@ -13,12 +10,15 @@ namespace AuthorizationNETCoreBase.Database.Controllers
     [Authorize]
     public class AdminController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        public AdminController(ApplicationDbContext db)
+        public AdminController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
-            _db = db;
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
+        
 
         public IActionResult Index()
         {
@@ -47,23 +47,15 @@ namespace AuthorizationNETCoreBase.Database.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel vm)
         {
-            string scheme = "Cookie";
             IActionResult requestResult = View(vm);
             if (ModelState.IsValid)
             {
-                var user = _db.Users.SingleOrDefault(user => user.Name == vm.UserName && 
-                                                                                            user.Password == vm.Password);
+                var user = await _userManager.FindByNameAsync(vm.UserName);
                 if(user != null)
                 {
-                    var identies = new List<Claim>()
-                    {
-                        new Claim(ClaimTypes.Name, vm.UserName),
-                        new Claim(ClaimTypes.Role, "Administrator")
-                    };
-                    var identy = new ClaimsIdentity(identies, scheme);
-                    var principal = new ClaimsPrincipal(identy);
-                    await HttpContext.SignInAsync(scheme, principal);
-                    requestResult = Redirect(vm.ReturnUrl);
+                    var result = await _signInManager.PasswordSignInAsync(vm.UserName, vm.Password , false, false);
+                    if(result.Succeeded)
+                        requestResult = Redirect(vm.ReturnUrl);
                 }
                 else 
                     ModelState.AddModelError("Login", "User not found!");
@@ -73,8 +65,7 @@ namespace AuthorizationNETCoreBase.Database.Controllers
 
         public async Task<IActionResult> SignOut()
         {
-            string scheme = "Cookie";
-            await HttpContext.SignOutAsync(scheme);
+            await _signInManager.SignOutAsync();
             return Redirect("/Home/Index");
         }
     }
