@@ -1,0 +1,138 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:root {
+    --large-title: 54px;
+    --high-title: 38px;
+    --middle-title: 28px;
+
+    --main-title-color: #fff;
+    --additional-title-color: #4A895D;
+    --additional-text-color: rgb(221, 221, 221);
+}
+body {
+    margin: 0;
+}
+p {
+    font-size: 14px;
+}
+a {
+    color: gray;
+    text-decoration: none;
+}
+#wrapper {
+    overflow-x: hidden;
+    height: 100%;
+} 
+.container {
+    width: 880px;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+.link {
+    color: rgb(83, 83, 83);
+    text-decoration: underline;
+}
+.link_active {
+    color: rgb(219, 219, 0);
+}
+.link:hover {
+    color: rgb(219, 219, 0);
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+}
+.header .container {
+    padding: 0;
+}
+.header-content {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: var(--high-title);
+}
+.burger {
+    border-radius: 100%;
+    background-color: #fff;
+    padding: 10px;
+}
+.burger__line {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 3px 0;
+}
+
+.represent {
+    background: url(img/hero-bg.jpg) center center no-repeat;
+}
+.represent-content {
+    width: 440px;
+    padding: 80px 0;
+    color: var(--main-title-color);
+}
+.represent__subtitle {
+    color: var(--additional-text-color);
+}
+.represent__title {
+    font-size: var(--large-title);
+    margin: 5px 0;
+}
+.represent__text {
+    color: var(--additional-text-color);
+}
+.represent__link {
+    display: block;
+    margin-top: 40px;
+}
+
+.products__title {
+    color: var(--additional-title-color);
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+.products-list {
+    display: flex;
+    padding: 0 20px;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    margin: 0 5px;
+}
+.product-card__title {
+    font-weight: lighter;
+    font-size: var(--middle-title);
+    margin: 5px 0;
+}
+.product-card__text {
+    height: 100%;
+}
+
+.invite {
+    position: relative;
+    top: 180px;
+    right: 100px;
+    margin-top: -50px;
+    padding-left: 200px;
+    box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.2);
+    background-color: #F8F8F8;
+    z-index: 2;
+}
+.invite__title {
+    color: var(--additional-title-color);
+    font-size: var(--large-title);
+    margin: 50px 0;
+}
+
+.footer {
+    z-index: 0;
+    background-color: #4A895D;
+    padding-top: 200px;
+}
