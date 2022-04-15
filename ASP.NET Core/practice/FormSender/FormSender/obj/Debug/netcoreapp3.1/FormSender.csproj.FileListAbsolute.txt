@@ -67,3 +67,15 @@ C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.N
 C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\FormSender.Entities.pdb
 C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
