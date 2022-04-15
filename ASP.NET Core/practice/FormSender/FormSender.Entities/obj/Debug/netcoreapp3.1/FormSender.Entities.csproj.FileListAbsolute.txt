@@ -1,0 +1,10 @@
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\bin\Debug\netcoreapp3.1\FormSender.Entities.deps.json
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\bin\Debug\netcoreapp3.1\FormSender.Entities.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\bin\Debug\netcoreapp3.1\FormSender.Entities.pdb
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\obj\Debug\netcoreapp3.1\FormSender.Entities.csproj.AssemblyReference.cache
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\obj\Debug\netcoreapp3.1\FormSender.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\obj\Debug\netcoreapp3.1\FormSender.Entities.AssemblyInfoInputs.cache
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\obj\Debug\netcoreapp3.1\FormSender.Entities.AssemblyInfo.cs
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\obj\Debug\netcoreapp3.1\FormSender.Entities.csproj.CoreCompileInputs.cache
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\obj\Debug\netcoreapp3.1\FormSender.Entities.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender.Entities\obj\Debug\netcoreapp3.1\FormSender.Entities.pdb
