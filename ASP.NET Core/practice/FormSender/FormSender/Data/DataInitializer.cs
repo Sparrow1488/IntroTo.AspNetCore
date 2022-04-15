@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FormSender.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,9 +17,17 @@ namespace FormSender.Data
             {
                 var dbCreator = dbContext.GetService<IDatabaseCreator>() as RelationalDatabaseCreator;
                 var exists = await dbCreator.ExistsAsync();
-                if (exists)
+                if (!exists)
                 {
                     await dbContext.Database.MigrateAsync();
+                    var messageForm = new MessageForm()
+                    {
+                        Message = "Первое сообщения, автоматически созданное при инициализации данного проекта",
+                        DateCreated = DateTime.Now,
+                        DateUpdated = DateTime.Now,
+                    };
+                    await dbContext.MessageForms.AddAsync(messageForm);
+                    await dbContext.SaveChangesAsync();
                 }
             }
         }
