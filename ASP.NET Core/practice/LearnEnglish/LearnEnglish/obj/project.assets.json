@@ -5802,11 +5802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\practice\\LearnEnglish\\LearnEnglish\\LearnEnglish.csproj",
+      "projectUniqueName": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\Repositories\\The-basis-of-ASP.NET\\ASP.NET Core\\practice\\LearnEnglish\\LearnEnglish\\LearnEnglish.csproj",
       "projectName": "LearnEnglish",
-      "projectPath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\practice\\LearnEnglish\\LearnEnglish\\LearnEnglish.csproj",
+      "projectPath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\Repositories\\The-basis-of-ASP.NET\\ASP.NET Core\\practice\\LearnEnglish\\LearnEnglish\\LearnEnglish.csproj",
       "packagesPath": "C:\\Users\\aleks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\ASP.NET Core\\practice\\LearnEnglish\\LearnEnglish\\obj\\",
+      "outputPath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\Repositories\\The-basis-of-ASP.NET\\ASP.NET Core\\practice\\LearnEnglish\\LearnEnglish\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\aleks\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5868,7 +5868,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

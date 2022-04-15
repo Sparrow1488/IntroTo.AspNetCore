@@ -101,6 +101,6 @@ footer .container {
         min-width: 820px;
     }
     .explain-panel__buttons .btn {
-        display: block;
+        display: inline-block;
     }
 }

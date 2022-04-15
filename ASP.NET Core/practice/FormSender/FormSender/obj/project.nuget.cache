@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "HL9k8ReGO0a6zggYJonhAfB73magas+UeGg1doVupL6d3rjrXoxausu9agaylu1+Kzz78hQH4gjYtDdyv7LCXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\Repositories\\The-basis-of-ASP.NET\\ASP.NET Core\\practice\\FormSender\\FormSender\\FormSender.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleks\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\swashbuckle.aspnetcore\\6.3.0\\swashbuckle.aspnetcore.6.3.0.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.3.0\\swashbuckle.aspnetcore.swagger.6.3.0.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.3.0\\swashbuckle.aspnetcore.swaggergen.6.3.0.nupkg.sha512",
+    "C:\\Users\\aleks\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.3.0\\swashbuckle.aspnetcore.swaggerui.6.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
