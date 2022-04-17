@@ -4,14 +4,16 @@ using FormSender.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace FormSender.Migrations
+namespace FormSender.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220417125231_AddWebDocument")]
+    partial class AddWebDocument
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,12 +27,8 @@ namespace FormSender.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("ContentId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Extension")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Size")
                         .HasColumnType("int");
@@ -39,12 +37,9 @@ namespace FormSender.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Url")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ContentId");
 
                     b.ToTable("Documents");
                 });
@@ -56,13 +51,10 @@ namespace FormSender.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Text")
-                        .IsRequired()
-                        .HasMaxLength(350)
-                        .HasColumnType("nvarchar(350)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -91,13 +83,6 @@ namespace FormSender.Migrations
                     b.ToTable("MessageForms");
                 });
 
-            modelBuilder.Entity("FormSender.Entities.Abstractions.WebDocument", b =>
-                {
-                    b.HasOne("FormSender.Entities.Content", null)
-                        .WithMany("Documents")
-                        .HasForeignKey("ContentId");
-                });
-
             modelBuilder.Entity("FormSender.Entities.MessageForm", b =>
                 {
                     b.HasOne("FormSender.Entities.Content", "Content")
@@ -105,11 +90,6 @@ namespace FormSender.Migrations
                         .HasForeignKey("ContentId");
 
                     b.Navigation("Content");
-                });
-
-            modelBuilder.Entity("FormSender.Entities.Content", b =>
-                {
-                    b.Navigation("Documents");
                 });
 #pragma warning restore 612, 618
         }

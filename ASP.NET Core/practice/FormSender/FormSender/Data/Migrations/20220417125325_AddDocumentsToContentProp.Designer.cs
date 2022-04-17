@@ -4,14 +4,16 @@ using FormSender.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace FormSender.Migrations
+namespace FormSender.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220417125325_AddDocumentsToContentProp")]
+    partial class AddDocumentsToContentProp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,8 +31,7 @@ namespace FormSender.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Extension")
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Size")
                         .HasColumnType("int");
@@ -39,7 +40,6 @@ namespace FormSender.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Url")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -56,13 +56,10 @@ namespace FormSender.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Text")
-                        .IsRequired()
-                        .HasMaxLength(350)
-                        .HasColumnType("nvarchar(350)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
