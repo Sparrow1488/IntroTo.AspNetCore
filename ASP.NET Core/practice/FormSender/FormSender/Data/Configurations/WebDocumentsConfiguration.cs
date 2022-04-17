@@ -1,4 +1,4 @@
-﻿using FormSender.Entities.Abstractions;
+﻿using FormSender.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

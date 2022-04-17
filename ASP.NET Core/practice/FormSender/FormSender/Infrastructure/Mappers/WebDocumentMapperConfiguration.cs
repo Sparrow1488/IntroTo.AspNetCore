@@ -1,4 +1,4 @@
-﻿using FormSender.Entities.Abstractions;
+﻿using FormSender.Entities;
 using FormSender.Infrastructure.Mappers.Base;
 using FormSender.ViewModels;
 
