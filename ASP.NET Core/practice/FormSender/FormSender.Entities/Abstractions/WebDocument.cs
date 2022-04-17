@@ -1,4 +1,5 @@
 ﻿using FormSender.Entities.Enums;
+using System;
 
 namespace FormSender.Entities.Abstractions
 {
@@ -8,5 +9,6 @@ namespace FormSender.Entities.Abstractions
         public int Size { get; set; }
         public string Extension { get; set; }
         public SourceType Type { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

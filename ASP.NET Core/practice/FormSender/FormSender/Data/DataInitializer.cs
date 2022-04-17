@@ -39,7 +39,8 @@ namespace FormSender.Data
                         {
                             Url = "https://cdn.kodixauto.ru/media//media/image/6257b93e825ab09b2f4ba19b",
                             Extension = ".jpeg",
-                            Type = SourceType.Image
+                            Type = SourceType.Image,
+                            CreatedAt = DateTime.Now
                         }}
             };
             var messageForm = new MessageForm()
