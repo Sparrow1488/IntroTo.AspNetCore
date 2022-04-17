@@ -4,14 +4,16 @@ using FormSender.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace FormSender.Migrations
+namespace FormSender.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220417145351_OneToOneFormsAndContent")]
+    partial class OneToOneFormsAndContent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,6 +57,7 @@ namespace FormSender.Migrations
             modelBuilder.Entity("FormSender.Entities.Content", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Text")
@@ -77,6 +80,9 @@ namespace FormSender.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("ContentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
@@ -84,6 +90,8 @@ namespace FormSender.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ContentId");
 
                     b.ToTable("MessageForms");
                 });
@@ -95,25 +103,18 @@ namespace FormSender.Migrations
                         .HasForeignKey("ContentId");
                 });
 
-            modelBuilder.Entity("FormSender.Entities.Content", b =>
+            modelBuilder.Entity("FormSender.Entities.MessageForm", b =>
                 {
-                    b.HasOne("FormSender.Entities.MessageForm", "MessageForm")
-                        .WithOne("Content")
-                        .HasForeignKey("FormSender.Entities.Content", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("FormSender.Entities.Content", "Content")
+                        .WithMany()
+                        .HasForeignKey("ContentId");
 
-                    b.Navigation("MessageForm");
+                    b.Navigation("Content");
                 });
 
             modelBuilder.Entity("FormSender.Entities.Content", b =>
                 {
                     b.Navigation("Documents");
-                });
-
-            modelBuilder.Entity("FormSender.Entities.MessageForm", b =>
-                {
-                    b.Navigation("Content");
                 });
 #pragma warning restore 612, 618
         }

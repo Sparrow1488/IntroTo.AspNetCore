@@ -14,7 +14,11 @@ namespace FormSender.Data.Configurations
             builder.Property(x => x.Id);
             builder.Property(x => x.DateCreated).IsRequired();
             builder.Property(x => x.DateUpdated);
-            builder.HasOne(x => x.Content);
+            builder.HasOne(x => x.Content)
+                   .WithOne(x => x.MessageForm)
+                   .HasForeignKey<Content>(x => x.Id)
+                   .OnDelete(DeleteBehavior.Cascade)
+                   .IsRequired();
         }
     }
 }
