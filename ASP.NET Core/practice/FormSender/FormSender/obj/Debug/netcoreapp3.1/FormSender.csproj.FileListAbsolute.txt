@@ -79,3 +79,6 @@ C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.N
 C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
 C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
 C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\aleks\OneDrive\Desktop\Илья\Repositories\The-basis-of-ASP.NET\ASP.NET Core\practice\FormSender\FormSender\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll

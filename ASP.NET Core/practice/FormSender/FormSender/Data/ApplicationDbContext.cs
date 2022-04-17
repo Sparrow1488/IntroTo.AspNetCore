@@ -10,6 +10,7 @@ namespace FormSender.Data
         public ApplicationDbContext([NotNull]DbContextOptions options) : base(options) { }
         public DbSet<MessageForm> MessageForms { get; set; }
         public DbSet<WebDocument> Documents { get; set; }
+        public DbSet<Content> Content { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

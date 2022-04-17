@@ -1,4 +1,5 @@
 using FormSender.Data;
+using FormSender.Infrastructure.Mappers.Base;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,7 @@ namespace FormSender
             services.AddControllers();
             services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "FormSender", Version = "v1" }));
             services.AddDbContext<ApplicationDbContext>(opt => UseSqlServer(opt));
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
