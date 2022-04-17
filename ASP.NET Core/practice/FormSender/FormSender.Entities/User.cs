@@ -1,10 +1,9 @@
-﻿using System;
+﻿using FormSender.Entities.Abstractions;
 
 namespace FormSender.Entities
 {
-    public class User
+    public class User : Identity
     {
-        public Guid Id { get; set; }
         public string Login { get; set; }
     }
 }
