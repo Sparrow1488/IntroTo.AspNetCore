@@ -32,7 +32,9 @@ namespace FormSender.Controllers
         {
             var form = _db.MessageForms.First();
             var content = _db.Content.Where(c => c.Id == form.Id).First();
+            var docs = _db.Documents.Where(d => d.Content.Id == content.Id).ToArray();
             form.Content = content;
+            form.Content.Documents = docs;
             return form;
         }
     }

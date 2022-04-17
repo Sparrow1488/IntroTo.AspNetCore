@@ -14,7 +14,9 @@ namespace FormSender.Data.Configurations
             builder.Property(x => x.Id);
             builder.Property(x => x.Title).HasMaxLength(50);
             builder.Property(x => x.Text).HasMaxLength(350).IsRequired();
-            builder.HasMany(x => x.Documents);
+            builder.HasMany(x => x.Documents)
+                   .WithOne(x => x.Content)
+                   .HasForeignKey(x => x.Id);
         }
     }
 }
