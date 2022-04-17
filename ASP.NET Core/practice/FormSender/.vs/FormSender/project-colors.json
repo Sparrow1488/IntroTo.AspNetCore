@@ -5,7 +5,17 @@
       "ProjectGuid": "f4ae8f5f-4d6c-4c48-a29b-5138981166cf",
       "DisplayName": "FormSender",
       "ColorIndex": 0
+    },
+    "85884e75-a265-484d-a150-503b8dbf6d43": {
+      "ProjectGuid": "85884e75-a265-484d-a150-503b8dbf6d43",
+      "DisplayName": "FormSender.Entities",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

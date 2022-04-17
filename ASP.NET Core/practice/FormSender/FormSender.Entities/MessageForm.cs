@@ -1,13 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using FormSender.Entities.Abstractions;
+using System;
 
 namespace FormSender.Entities
 {
-    public class MessageForm
+    public class MessageForm : Identity
     {
-        [Key]
-        public Guid Id { get; set; }
-        public string Message { get; set; }
+        public Content Content { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
     }
