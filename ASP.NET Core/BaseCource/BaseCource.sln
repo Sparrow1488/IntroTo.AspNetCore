@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.BaseCource", "BaseCource\1.BaseCource.csproj", "{7E8D9CD0-FFD6-4EF9-96BC-985087EEBB8B}"
 EndProject
@@ -51,9 +51,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.Cookies", "12.Cookies\12
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.Sessions", "13.Sessions\13.Sessions.csproj", "{34F9C474-F4BF-4BDD-A43B-B6492D46268E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.Routing", "14.Routing\14.Routing.csproj", "{F1389454-C589-4954-8ADF-57DF9C0F0275}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.Routing", "14.Routing\14.Routing.csproj", "{F1389454-C589-4954-8ADF-57DF9C0F0275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.CustomRouting", "15.CustomRouting\15.CustomRouting.csproj", "{356E05AB-F2CA-43D0-B66F-4B8077A59D1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15.CustomRouting", "15.CustomRouting\15.CustomRouting.csproj", "{356E05AB-F2CA-43D0-B66F-4B8077A59D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Api.FluentValidationLearn", "Project.Api.FluentValidationLearn\Project.Api.FluentValidationLearn.csproj", "{0D04AEA7-CFA1-4A7E-A58B-0F5E0806B0A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +151,10 @@ Global
 		{356E05AB-F2CA-43D0-B66F-4B8077A59D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356E05AB-F2CA-43D0-B66F-4B8077A59D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356E05AB-F2CA-43D0-B66F-4B8077A59D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D04AEA7-CFA1-4A7E-A58B-0F5E0806B0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D04AEA7-CFA1-4A7E-A58B-0F5E0806B0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D04AEA7-CFA1-4A7E-A58B-0F5E0806B0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D04AEA7-CFA1-4A7E-A58B-0F5E0806B0A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
