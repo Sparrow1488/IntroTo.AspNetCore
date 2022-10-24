@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uc6usRzNwvZ2MVuTuUsFmrMACrZaeXHk2+857s/MFfk=",
+  "Source": "IntroTo.Auth.Jwt",
+  "BasePath": "_content/IntroTo.Auth.Jwt",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
