@@ -7,8 +7,8 @@ using System.Security.Claims;
 
 namespace IntroTo.Auth.Jwt.Controllers;
 
-[Route("api/[controller]")]
 [ApiController]
+[Route("values")]
 public class ValuesController : Controller
 {
     private readonly IUsersProvider _usersProvider;
