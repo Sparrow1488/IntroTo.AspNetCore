@@ -1,8 +1,5 @@
 using IntroTo.Auth.Jwt.Enums;
-using IntroTo.Auth.Jwt.Models;
 using IntroTo.Auth.Jwt.Services;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.IdentityModel.Tokens.Jwt;
@@ -14,21 +11,21 @@ namespace IntroTo.Auth.Jwt.Controllers;
 [Route("auth")]
 public class AuthorizationController : Controller
 {
-    private readonly ICollection<User> _users = new List<User>();
+    private readonly IUsersProvider _usersProvider;
     private readonly IJwtTokenFactory _tokenFactory;
     private readonly JwtSecurityTokenHandler _tokenHandler;
 
     public AuthorizationController(
+        IUsersProvider usersProvider,
         IJwtTokenFactory tokenFactory,
         JwtSecurityTokenHandler tokenHandler)
     {
-        _users.Add(new() { Name = "Yuri", Password = "1234", Role = AppClaims.User.Default });
-        _users.Add(new() { Name = "Oleg", Password = "1234", Role = AppClaims.User.Admin });
+        _usersProvider = usersProvider;
         _tokenFactory = tokenFactory;
         _tokenHandler = tokenHandler;
     }
 
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize]
     [HttpGet("me")]
     public IActionResult GetMyInformation()
     {
@@ -48,14 +45,13 @@ public class AuthorizationController : Controller
 
         var token = _tokenFactory.CreateToken(identity.Claims.ToArray());
         var encodedToken = _tokenHandler.WriteToken(token);
-        Response.Cookies.Append("Authorization", "Bearer " + encodedToken);
 
         return Ok(encodedToken);
     }
 
     private ClaimsIdentity? GetClaimsIdentity(string name, string password)
     {
-        var user = _users.SingleOrDefault(x => x.Name == name && x.Password == password);
+        var user = _usersProvider.GetUsers().SingleOrDefault(x => x.Name == name && x.Password == password);
         if (user is null)
             return null;
 

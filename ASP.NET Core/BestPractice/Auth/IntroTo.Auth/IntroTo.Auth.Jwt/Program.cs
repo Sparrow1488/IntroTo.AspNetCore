@@ -18,12 +18,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                         ValidateIssuer = true,
 
                         ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = JwtConfiguration.GetSecurityKey()
+                        IssuerSigningKey = JwtConfiguration.GetSecurityKey(),
+                        ValidateIssuerSigningKey = true
                     };
                 });
 
 builder.Services.AddSingleton<IJwtTokenFactory, JwtTokenFactory>();
+builder.Services.AddSingleton<IUsersProvider, UsersProvider>();
 builder.Services.AddSingleton<JwtSecurityTokenHandler>();
 
 builder.Services.AddControllers();

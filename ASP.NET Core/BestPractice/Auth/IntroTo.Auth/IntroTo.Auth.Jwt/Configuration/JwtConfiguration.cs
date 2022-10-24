@@ -7,7 +7,7 @@ public class JwtConfiguration
 {
     public const string Audience = "[Client]IntroTo.Auth.Jwt";
     public const string Issuer = "[Server]IntroTo.Auth.Jwt";
-    public static readonly TimeSpan ExpiresTime = TimeSpan.FromHours(1);
+    public static readonly TimeSpan ExpiresTime = TimeSpan.FromSeconds(15);
 
     private static readonly string _securityKey = "super_secret_security_key";
 
