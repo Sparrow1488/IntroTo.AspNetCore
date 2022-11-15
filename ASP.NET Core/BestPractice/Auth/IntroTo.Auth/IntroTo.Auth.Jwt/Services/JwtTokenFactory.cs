@@ -1,4 +1,5 @@
 ﻿using IntroTo.Auth.Jwt.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
@@ -13,6 +14,7 @@ public class JwtTokenFactory : IJwtTokenFactory
             audience: JwtConfiguration.Audience,
             claims: claims,
             notBefore: DateTime.UtcNow,
-            expires: DateTime.UtcNow.Add(JwtConfiguration.ExpiresTime));
+            expires: DateTime.UtcNow.Add(JwtConfiguration.ExpiresTime),
+            signingCredentials: new SigningCredentials(JwtConfiguration.GetSecurityKey(), SecurityAlgorithms.HmacSha256));
     }
 }

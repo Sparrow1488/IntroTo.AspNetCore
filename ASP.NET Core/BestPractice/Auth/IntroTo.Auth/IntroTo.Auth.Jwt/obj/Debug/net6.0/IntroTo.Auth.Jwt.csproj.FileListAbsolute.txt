@@ -32,3 +32,37 @@ C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\Int
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.pdb
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.genruntimeconfig.cache
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\ref\IntroTo.Auth.Jwt.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\appsettings.json
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\IntroTo.Auth.Jwt.exe
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\IntroTo.Auth.Jwt.deps.json
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\IntroTo.Auth.Jwt.runtimeconfig.json
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\IntroTo.Auth.Jwt.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\IntroTo.Auth.Jwt.pdb
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.csproj.AssemblyReference.cache
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.AssemblyInfoInputs.cache
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.AssemblyInfo.cs
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.csproj.CoreCompileInputs.cache
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\scopedcss\bundle\IntroTo.Auth.Jwt.styles.css
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.csproj.CopyComplete
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\refint\IntroTo.Auth.Jwt.dll
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.pdb
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\IntroTo.Auth.Jwt.genruntimeconfig.cache
+C:\Users\aleks\Desktop\разное\GitHub\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth\IntroTo.Auth.Jwt\obj\Debug\net6.0\ref\IntroTo.Auth.Jwt.dll

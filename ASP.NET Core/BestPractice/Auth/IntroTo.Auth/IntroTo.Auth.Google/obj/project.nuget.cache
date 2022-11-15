@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cn9+xSBSsVpRFJdE4wifConvzOXgRHmVjpJRHdf8brjyW7rSxC/9acfN72ArACk7TnFr1BUg1Qacv8EbWGZWMw==",
+  "dgSpecHash": "INsNhpQxQeRMkK9XAgnU6hbHFWycOZyiAsM+d2wQ9zPuS5YhL5LgYtMXTPQg6A8zGaJCYBFdT4DMl+Ppb11zog==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Google\\IntroTo.Auth.Google.csproj",
   "expectedPackageFiles": [
