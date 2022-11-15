@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5Sng2giixPdxqmKuzH2tLnl9Hr8wgvFXjqUrSQjtls1kd7FXKFH+1bWDtLTklWEhqZWq3Et6emdTiz+A+L8G9A==",
+  "dgSpecHash": "v88B4p68YZExZV563s+0SnQf4BedrjR5SscrZik5xeao2kw8SKRvfGZBovKcqCVF1MHepO3IhBfU2541SDhnoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\Repositories\\The-basis-of-ASP.NET\\ASP.NET Core\\BaseCource\\1.Practice\\1.Practice.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BaseCource\\1.Practice\\1.Practice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

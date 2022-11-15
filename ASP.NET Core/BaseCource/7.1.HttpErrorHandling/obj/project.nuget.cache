@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "jgje1gop1pI8nD+V2+YZxJStz2dGByFeErvmneTBqlrloColhK7OKHwtg8Y8tOieZ2RsqXF/eDMUN3715DayWg==",
+  "dgSpecHash": "QpVP7ZAtM9dy67vPJqOjh+nVfm13HRY5yoEWzBhThWg4Kagt0EEaXmXm4+uLFFbHWMlgeOZm1H+I9gq2kt3C9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleks\\OneDrive\\Desktop\\Илья\\Repositories\\The-basis-of-ASP.NET\\ASP.NET Core\\BaseCource\\7.1.HttpErrorHandling\\7.1.HttpErrorHandling.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BaseCource\\7.1.HttpErrorHandling\\7.1.HttpErrorHandling.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
