@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using IntroTo.OIDC.Shared.Schemes;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,11 +20,11 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/authentication/login";
     })
-    .AddOpenIdConnect("idserver", options =>
+    .AddOpenIdConnect(CustomIdentityAuthenticationScheme.AuthenticationScheme, options =>
     {
         options.Authority = "https://localhost:3001";
-        options.ClientId = "ClientAPI";
-        options.ClientSecret = "ClientAPISecret";
+        options.ClientId = "WebAPI";
+        options.ClientSecret = builder.Configuration["Authentication:IdentityServer:ClientSecret"];
         options.GetClaimsFromUserInfoEndpoint = true;
         
         options.Scope.Add("email");

@@ -1,6 +1,6 @@
 using IdentityServer4;
-using IntroTo.OpenIdConnect.Configurations;
-using IntroTo.OpenIdConnect.Handlers;
+using IntroTo.OpenIdConnect.Authentication.Configurations;
+using IntroTo.OpenIdConnect.Authentication.Handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,9 +23,9 @@ builder.Services.AddAuthentication(IdentityServerConstants.DefaultCookieAuthenti
     });
 
 builder.Services.Configure<RouteOptions>(x => {
-    x.LowercaseUrls = true;
-    x.LowercaseQueryStrings = true;
-});
+        x.LowercaseUrls = true;
+        x.LowercaseQueryStrings = true;
+    });
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

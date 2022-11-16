@@ -1,0 +1,12 @@
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\bin\Debug\net6.0\IntroTo.OIDC.Shared.deps.json
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\bin\Debug\net6.0\IntroTo.OIDC.Shared.dll
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\bin\Debug\net6.0\IntroTo.OIDC.Shared.pdb
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\IntroTo.OIDC.Shared.csproj.AssemblyReference.cache
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\IntroTo.OIDC.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\IntroTo.OIDC.Shared.AssemblyInfoInputs.cache
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\IntroTo.OIDC.Shared.AssemblyInfo.cs
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\IntroTo.OIDC.Shared.csproj.CoreCompileInputs.cache
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\IntroTo.OIDC.Shared.dll
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\refint\IntroTo.OIDC.Shared.dll
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\IntroTo.OIDC.Shared.pdb
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Shared\obj\Debug\net6.0\ref\IntroTo.OIDC.Shared.dll

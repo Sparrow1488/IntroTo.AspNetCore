@@ -2,7 +2,7 @@
 using IdentityServer4;
 using IdentityServer4.Models;
 
-namespace IntroTo.OpenIdConnect.Configurations;
+namespace IntroTo.OpenIdConnect.Authentication.Configurations;
 
 public static class IdentityConfiguration
 {
@@ -17,18 +17,12 @@ public static class IdentityConfiguration
             })
         };
     
-    // public static IEnumerable<ApiResource> GetApiResources() =>
-    //     new List<ApiResource> {
-    //         new ApiResource(name: "client", displayName: "Client API",
-    //             userClaims: new[] { "client.read", "client.write" })
-    //     };
-
     public static IEnumerable<Client> GetClients() =>
         new List<Client> {
             new Client {
-                ClientId = "ClientAPI",
+                ClientId = "WebAPI",
                 ClientSecrets = {
-                    new Secret("ClientAPISecret")
+                    new Secret("my-super-duper-client-secret")
                 },
                 
                 AllowedGrantTypes = GrantTypes.Implicit,

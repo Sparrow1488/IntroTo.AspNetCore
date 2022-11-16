@@ -185,6 +185,16 @@
             "rid": "win"
           }
         }
+      },
+      "IntroTo.OIDC.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/IntroTo.OIDC.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IntroTo.OIDC.Shared.dll": {}
+        }
       }
     }
   },
@@ -573,10 +583,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "IntroTo.OIDC.Shared/1.0.0": {
+      "type": "project",
+      "path": "../IntroTo.OIDC.Shared/IntroTo.OIDC.Shared.csproj",
+      "msbuildProject": "../IntroTo.OIDC.Shared/IntroTo.OIDC.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "IntroTo.OIDC.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 6.0.11",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -612,7 +628,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth.OIDC\\IntroTo.OIDC.Shared\\IntroTo.OIDC.Shared.csproj": {
+              "projectPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth.OIDC\\IntroTo.OIDC.Shared\\IntroTo.OIDC.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nIoNRWA61M5EYBRSLMAMFWgOd4wTIY4b8W6f8p6/sYMM3wmOgpjp+yKwICdfnOdfnAqEX6N/eJtrkdTQjisKKA==",
+  "dgSpecHash": "giTksGcq921YDJK8iXgV2HMptLCpCbVJcRMR3csH0wYR+g8k/GcKXcPD52HYyiYZbSmNNqGUuznoHZaLiV4XZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth.OIDC\\IntroTo.OIDC.Client\\IntroTo.OIDC.Client.csproj",
   "expectedPackageFiles": [

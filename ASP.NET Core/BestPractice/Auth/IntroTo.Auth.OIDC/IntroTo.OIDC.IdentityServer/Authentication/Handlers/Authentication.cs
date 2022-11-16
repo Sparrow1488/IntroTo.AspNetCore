@@ -5,7 +5,7 @@ using IdentityModel;
 using IdentityServer4.Extensions;
 using Microsoft.AspNetCore.Authentication;
 
-namespace IntroTo.OpenIdConnect.Handlers;
+namespace IntroTo.OpenIdConnect.Authentication.Handlers;
 
 public static class Authentication
 {
