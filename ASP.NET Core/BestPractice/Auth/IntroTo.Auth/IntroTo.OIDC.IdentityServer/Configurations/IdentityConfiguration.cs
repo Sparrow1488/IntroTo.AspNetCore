@@ -8,7 +8,12 @@ public static class IdentityConfiguration
     public static IEnumerable<IdentityResource> GetIdentityResources() =>
         new List<IdentityResource> {
             new IdentityResources.OpenId(),
-            new IdentityResources.Profile()
+            new IdentityResources.Profile(),
+            new IdentityResources.Email(),
+            new IdentityResource("client_data", new[]
+            {
+                "client_name", "client_country"
+            })
         };
     
     // public static IEnumerable<ApiResource> GetApiResources() =>
@@ -30,7 +35,9 @@ public static class IdentityConfiguration
                 AllowedScopes =
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
-                    IdentityServerConstants.StandardScopes.Profile
+                    IdentityServerConstants.StandardScopes.Profile,
+                    IdentityServerConstants.StandardScopes.Email,
+                    "client_data"
                 },
                 RedirectUris = { "https://localhost:5001/signin-oidc" }
             }

@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddIdentityServer(options => {
         options.UserInteraction.LoginUrl = "/authentication/login";
         // Optional
-        options.Authentication.CookieLifetime = TimeSpan.FromMinutes(10);
+        options.Authentication.CookieLifetime = TimeSpan.FromMinutes(3);
         options.Authentication.CookieSlidingExpiration = true;
         options.Authentication.CookieSameSiteMode = SameSiteMode.Lax;
     })

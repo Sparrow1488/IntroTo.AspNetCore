@@ -12,9 +12,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.Authority = "https://localhost:3001";
         options.ClientId = "ClientAPI";
         options.ClientSecret = "ClientAPISecret";
-        
-        options.SaveTokens = true;
         options.GetClaimsFromUserInfoEndpoint = true;
+        
+        options.Scope.Add("email");
+        options.Scope.Add("client_data");
     });
 
 builder.Services.Configure<RouteOptions>(x => {

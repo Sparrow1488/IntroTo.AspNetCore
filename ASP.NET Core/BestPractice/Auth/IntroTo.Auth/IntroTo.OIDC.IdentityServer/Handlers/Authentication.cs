@@ -11,14 +11,43 @@ public static class Authentication
 {
     public static Task OnAuthentication(OpenIdAuthenticatedContext context)
     {
+        var steamIdClaim = context.Identity?.FindFirst(ClaimTypes.NameIdentifier)
+                             ?? throw new InvalidOperationException("NameIdentifier not found");
+        var steamId = steamIdClaim.Value[37..];
+
+        var steamNicknameClaim = context.Identity?.FindFirst(ClaimTypes.Name)
+                                    ?? throw new InvalidOperationException("Name not found");;
+        var steamName = steamNicknameClaim.Value;
+        
         List<Claim> userClaims = new () {
             new Claim(
                 JwtClaimTypes.Subject,
-                context.Identity.GetSubjectId(),
+                steamId,
                 ClaimValueTypes.String,
                 "https://localhost:3001",
                 SteamAuthenticationDefaults.Authority
-            )
+            ),
+            new Claim(
+                    JwtClaimTypes.Email,
+                    "ilyaokubev@gmail.com",
+                    ClaimValueTypes.String,
+                    "https://localhost:3001",
+                    "https://localhost:3001"
+            ),
+            new Claim(
+                "client_country",
+                "Russia",
+                ClaimValueTypes.String,
+                "https://localhost:3001",
+                "https://localhost:3001"
+            ),
+            new Claim(
+                "client_name",
+                steamName,
+                ClaimValueTypes.String,
+                "https://localhost:3001",
+                "https://localhost:3001"
+            ),
         };
 
         var identity = new ClaimsIdentity(
