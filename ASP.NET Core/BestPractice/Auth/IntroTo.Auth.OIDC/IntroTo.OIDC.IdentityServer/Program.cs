@@ -18,7 +18,7 @@ builder.Services.AddIdentityServer(options => {
 builder.Services.AddAuthentication(IdentityServerConstants.DefaultCookieAuthenticationScheme)
     .AddSteam(options => {
        options.SignInScheme = IdentityServerConstants.DefaultCookieAuthenticationScheme;
-       options.ApplicationKey = "secret";
+       options.ApplicationKey = "7AB88B47ABE0668520C7966B98C9EA79";
        options.Events.OnAuthenticated += Authentication.OnAuthentication;
     });
 
