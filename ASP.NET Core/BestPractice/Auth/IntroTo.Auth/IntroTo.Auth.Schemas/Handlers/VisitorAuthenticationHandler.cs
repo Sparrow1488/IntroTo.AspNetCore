@@ -13,7 +13,7 @@ public class LocalAuthenticationHandler : CookieAuthenticationHandler
         IOptionsMonitor<CookieAuthenticationOptions> options, 
         ILoggerFactory logger, 
         UrlEncoder encoder, 
-        ISystemClock clock) 
+        ISystemClock clock)
     : base(options, logger, encoder, clock)
     {
     }
@@ -21,23 +21,15 @@ public class LocalAuthenticationHandler : CookieAuthenticationHandler
     protected override async Task<AuthenticateResult> HandleAuthenticateAsync()
     {
         var result = await base.HandleAuthenticateAsync();
-        if (result.Succeeded)
+        if (result.Succeeded)   
             return result;
-        
-        // For Example: get user claims from db
-        var claims = new[]
-        {
-            new Claim(ClaimTypes.NameIdentifier, Guid.NewGuid().ToString()),
-            new Claim(ClaimTypes.Name, "ApiUser"),
-            new Claim(ClaimTypes.Email, "user@gmail.com")
-        };
-        var identity = new ClaimsIdentity(claims, ApiSchemas.LocalAuthenticationSchema);
+
+        var tempId = Guid.NewGuid().ToString();
+        var claims = new[] { new Claim(ClaimTypes.NameIdentifier, tempId) };
+        var identity = new ClaimsIdentity(claims, ApiSchemes.VisitorAuthenticationScheme);
         var user = new ClaimsPrincipal(identity);
         
-        await Context.SignInAsync(ApiSchemas.LocalAuthenticationSchema, user, new AuthenticationProperties
-        {
-            RedirectUri = "/me"
-        });
-        return AuthenticateResult.Success(new AuthenticationTicket(user, ApiSchemas.LocalAuthenticationSchema));
+        await Context.SignInAsync(user, result.Properties);
+        return AuthenticateResult.Success(new AuthenticationTicket(user, ApiSchemes.VisitorAuthenticationScheme));
     }
 }

@@ -1,30 +1,26 @@
 using System.Security.Claims;
 using IntroTo.Auth.Schemas.Handlers;
+using IntroTo.Auth.Schemas.Permissions;
 using IntroTo.Auth.Schemas.Schemas;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication(ApiSchemas.AnonAuthenticationSchema)
-    .AddCookie(ApiSchemas.AnonAuthenticationSchema, opt =>
-    {
-        opt.LoginPath = "/login-anon";
-        opt.Cookie.Name = "auth.anonymous";
-    })
+builder.Services.AddAuthentication(ApiSchemes.VisitorAuthenticationScheme)
+    .AddCookie(ApiSchemes.LocalAuthenticationScheme, opt => 
+        opt.LoginPath = "/login-local")
     .AddScheme<CookieAuthenticationOptions, LocalAuthenticationHandler>(
-        ApiSchemas.LocalAuthenticationSchema, 
-        opt =>
-        {
-            opt.Cookie.Name = "auth.local";
-        });
+        ApiSchemes.VisitorAuthenticationScheme, x=> {});
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("NamedUser", policyBuilder =>
+    options.AddPolicy(ApiPolicies.NamedUser, policyBuilder =>
     {
         policyBuilder.RequireAuthenticatedUser();
-        policyBuilder.AddAuthenticationSchemes(ApiSchemas.LocalAuthenticationSchema);
+        policyBuilder.AddAuthenticationSchemes(
+            ApiSchemes.LocalAuthenticationScheme,
+            ApiSchemes.VisitorAuthenticationScheme);
         policyBuilder.RequireClaim(ClaimTypes.Name);
     });
 });
@@ -38,17 +34,24 @@ app.MapGet("/", () => "Hello World!").RequireAuthorization();
 
 app.MapGet("/me", async ctx =>
 {
-    var nameClaim = ctx.User.FindFirst(ClaimTypes.Name);
-    var name = nameClaim?.Value;
+    var name = ctx.User.FindFirstValue(ClaimTypes.Name);
     await ctx.Response.WriteAsync($"Hello, {name}!");
-}).RequireAuthorization("NamedUser");
+}).RequireAuthorization(ApiPolicies.NamedUser);
 
-app.MapGet("/login-anon", async ctx =>
+app.MapGet("/login-local", async ctx =>
 {
-    var claims = new[] { new Claim(ClaimTypes.NameIdentifier, Guid.NewGuid().ToString()) };
-    var identity = new ClaimsIdentity(claims, ApiSchemas.AnonAuthenticationSchema);
+    var claims = new[]
+    {
+        new Claim(ClaimTypes.NameIdentifier, Guid.NewGuid().ToString()),
+        new Claim(ClaimTypes.Name, "Valentin")
+    };
+    var identity = new ClaimsIdentity(claims, ApiSchemes.LocalAuthenticationScheme);
     var user = new ClaimsPrincipal(identity);
-    await ctx.SignInAsync(ApiSchemas.AnonAuthenticationSchema, user);
+        
+    await ctx.SignInAsync(ApiSchemes.LocalAuthenticationScheme, user, new AuthenticationProperties
+    {
+        RedirectUri = "/me"
+    });
 });
 
 app.Run();
