@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntroTo.Auth.Jwt", "IntroTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Auth.Google", "IntroTo.Auth.Google\IntroTo.Auth.Google.csproj", "{6FB5688E-5B8F-431B-9308-B202FE4FF3B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Auth.Schemas", "IntroTo.Auth.Schemas\IntroTo.Auth.Schemas.csproj", "{BD946A94-2DA2-4E9D-BF7C-B6D004B74155}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Auth.Schemes", "IntroTo.Auth.Schemes\IntroTo.Auth.Schemes.csproj", "{BD946A94-2DA2-4E9D-BF7C-B6D004B74155}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

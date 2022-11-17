@@ -1,4 +1,4 @@
-﻿namespace IntroTo.Auth.Schemas.Schemas;
+﻿namespace IntroTo.Auth.Schemes.Schemes;
 
 public static class ApiSchemes
 {

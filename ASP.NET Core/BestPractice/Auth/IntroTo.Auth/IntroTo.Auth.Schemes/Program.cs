@@ -1,7 +1,7 @@
 using System.Security.Claims;
-using IntroTo.Auth.Schemas.Handlers;
-using IntroTo.Auth.Schemas.Permissions;
-using IntroTo.Auth.Schemas.Schemas;
+using IntroTo.Auth.Schemes.Handlers;
+using IntroTo.Auth.Schemes.Permissions;
+using IntroTo.Auth.Schemes.Schemes;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 

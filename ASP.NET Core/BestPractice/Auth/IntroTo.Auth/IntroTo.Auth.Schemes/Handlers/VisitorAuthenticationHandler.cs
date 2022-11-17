@@ -1,11 +1,11 @@
 ﻿using System.Security.Claims;
 using System.Text.Encodings.Web;
-using IntroTo.Auth.Schemas.Schemas;
+using IntroTo.Auth.Schemes.Schemes;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Options;
 
-namespace IntroTo.Auth.Schemas.Handlers;
+namespace IntroTo.Auth.Schemes.Handlers;
 
 public class LocalAuthenticationHandler : CookieAuthenticationHandler
 {

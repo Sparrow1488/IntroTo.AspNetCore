@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Schemas\\IntroTo.Auth.Schemas.csproj",
-      "projectName": "IntroTo.Auth.Schemas",
-      "projectPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Schemas\\IntroTo.Auth.Schemas.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Schemes\\IntroTo.Auth.Schemes.csproj",
+      "projectName": "IntroTo.Auth.Schemes",
+      "projectPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Schemes\\IntroTo.Auth.Schemes.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Schemas\\obj\\",
+      "outputPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Schemes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,4 +1,4 @@
-﻿namespace IntroTo.Auth.Schemas.Permissions;
+﻿namespace IntroTo.Auth.Schemes.Permissions;
 
 public static class ApiPolicies
 {
