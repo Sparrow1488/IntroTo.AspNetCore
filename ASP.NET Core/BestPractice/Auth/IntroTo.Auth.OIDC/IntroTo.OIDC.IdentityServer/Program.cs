@@ -4,18 +4,22 @@ using IntroTo.OpenIdConnect.Authentication.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Logging.SetMinimumLevel(LogLevel.Debug);
+
 builder.Services.AddIdentityServer(options => {
         options.UserInteraction.LoginUrl = "/authentication/login";
         options.Endpoints.EnableUserInfoEndpoint = true;
+        options.Endpoints.EnableTokenEndpoint = true;
+        options.Endpoints.EnableTokenRevocationEndpoint = true;
 
         // Optional
-        options.Authentication.CookieLifetime = TimeSpan.FromMinutes(10);
-        options.Authentication.CookieSlidingExpiration = true;
-        options.Authentication.CookieSameSiteMode = SameSiteMode.Lax;
+        // options.Authentication.CookieLifetime = TimeSpan.FromMinutes(10);
+        // options.Authentication.CookieSlidingExpiration = true;
+        // options.Authentication.CookieSameSiteMode = SameSiteMode.Lax;
     })
+    .AddInMemoryClients(IdentityConfiguration.Clients)
     .AddInMemoryApiScopes(IdentityConfiguration.ApiScopes)
-    .AddInMemoryClients(IdentityConfiguration.GetClients())
-    .AddInMemoryIdentityResources(IdentityConfiguration.GetIdentityResources())
+    .AddInMemoryIdentityResources(IdentityConfiguration.IdentityResources)
     .AddDeveloperSigningCredential();
 
 builder.Services.AddAuthentication(IdentityServerConstants.DefaultCookieAuthenticationScheme)

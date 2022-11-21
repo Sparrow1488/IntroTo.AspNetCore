@@ -10,30 +10,30 @@ public static class IdentityConfiguration
     public static IEnumerable<ApiScope> ApiScopes =>
         new List<ApiScope>
         {
-            new ApiScope("console", new []
+            new("client/console", new []
             {
                 "client_data", "profile", "openid"
-            }),
-            new ApiScope("webclient", new []
-            {
-                "client_data", "profile", "openid", "email"
-            }),
+            })
         };
     
-    public static IEnumerable<IdentityResource> GetIdentityResources() =>
+    public static IEnumerable<IdentityResource> IdentityResources =>
         new List<IdentityResource> {
             new IdentityResources.OpenId(),
             new IdentityResources.Profile(),
             new IdentityResources.Email(),
-            new IdentityResource("client_data", new[]
+            new("client-info", new[]
             {
-                "client_name", "client_country", ClaimTypes.Role
+                "client_name", 
+                "client_country", 
+                ClaimTypes.Role, 
+                IdentityServerConstants.StandardScopes.Email
             })
         };
     
-    public static IEnumerable<Client> GetClients() =>
+    public static IEnumerable<Client> Clients =>
         new List<Client> {
-            new Client {
+            new()
+            {
                 ClientId = "WebAPI",
                 ClientSecrets = {
                     new Secret("1488".ToSha256())
@@ -42,18 +42,20 @@ public static class IdentityConfiguration
                 AllowedGrantTypes = GrantTypes.Code,
                 AllowAccessTokensViaBrowser = true,
                 AlwaysIncludeUserClaimsInIdToken = true,
+                AllowOfflineAccess = true, // To Generate Refresh Token
+                RefreshTokenUsage = TokenUsage.ReUse,
                 
                 AllowedScopes =
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
-                    IdentityServerConstants.StandardScopes.Email,
-                    "client_data"
+                    "client-info"
                 },
                 RedirectUris = { "https://localhost:5001/signin-oidc" },
             },
             
-            new Client {
+            new()
+            {
                 ClientId = "ConsoleClient",
                 ClientSecrets = {
                     new Secret("1488".ToSha256())

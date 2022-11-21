@@ -30,8 +30,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         
         options.ResponseType = OpenIdConnectResponseType.Code;
         
-        options.Scope.Add("email");
-        options.Scope.Add("client_data");
+        options.Scope.Add("client-info");
     });
 
 builder.Services.Configure<RouteOptions>(x => {

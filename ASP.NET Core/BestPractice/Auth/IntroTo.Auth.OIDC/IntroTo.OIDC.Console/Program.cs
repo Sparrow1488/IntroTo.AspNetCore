@@ -30,14 +30,13 @@ Console.WriteLine();
 
 using var apiClient = new HttpClient();
 apiClient.SetBearerToken(tokenResponse.AccessToken);
-var info = await apiClient.GetUserInfoAsync(new UserInfoRequest()
-{
-    Address = discovery.UserInfoEndpoint,
 
+var tokens = await apiClient.RequestTokenAsync(new TokenRequest
+{
+    Address = discovery.TokenEndpoint,
     ClientId = "ConsoleClient",
     ClientSecret = "1488",
-    Token = tokenResponse.IdentityToken
+    GrantType = "authorization_code"
 });
-Console.WriteLine(info.Json);
-// var response = await apiClient.GetStringAsync("https://localhost:5001/home/claims");
-// Console.WriteLine(response);
+
+Console.WriteLine(tokens.Json);
