@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "INsNhpQxQeRMkK9XAgnU6hbHFWycOZyiAsM+d2wQ9zPuS5YhL5LgYtMXTPQg6A8zGaJCYBFdT4DMl+Ppb11zog==",
+  "dgSpecHash": "xiBLUJqcEgqNTT+Y9xHxlrXo45u38bZt4GE2gyoqNi3HqNY0QW2oJ7eazOGtn8NcXOX9gotepo7e7jmR+9VS8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Google\\IntroTo.Auth.Google.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.10\\microsoft.aspnetcore.authentication.google.6.0.10.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.11\\microsoft.aspnetcore.authentication.google.6.0.11.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",

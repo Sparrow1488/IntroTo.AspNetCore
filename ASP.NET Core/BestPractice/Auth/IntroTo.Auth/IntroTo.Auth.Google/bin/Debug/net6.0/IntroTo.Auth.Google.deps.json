@@ -8,18 +8,18 @@
     ".NETCoreApp,Version=v6.0": {
       "IntroTo.Auth.Google/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.Google": "6.0.10",
+          "Microsoft.AspNetCore.Authentication.Google": "6.0.11",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
           "IntroTo.Auth.Google.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.Google/6.0.10": {
+      "Microsoft.AspNetCore.Authentication.Google/6.0.11": {
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {
-            "assemblyVersion": "6.0.10.0",
-            "fileVersion": "6.0.1022.47617"
+            "assemblyVersion": "6.0.11.0",
+            "fileVersion": "6.0.1122.52304"
           }
         }
       },
@@ -78,12 +78,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Authentication.Google/6.0.10": {
+    "Microsoft.AspNetCore.Authentication.Google/6.0.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-D9ZgmzDU78XXp1j/Rk6JOYYhB4/lVtUlSfcBYMNF4ieSNm5gM2d+3RALxGZEjQxd6QL/7YGdCd3jygsLNltm1w==",
-      "path": "microsoft.aspnetcore.authentication.google/6.0.10",
-      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.10.nupkg.sha512"
+      "sha512": "sha512-EjZhKpe5WVy6p23pRYLhO62t4rQW7bZO72J0eU01TmbOYRsJ/ZAUZqYQ4C3Kd3+CH18Ac4KkSl3X8YhuXHAatA==",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.11",
+      "hashPath": "microsoft.aspnetcore.authentication.google.6.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",

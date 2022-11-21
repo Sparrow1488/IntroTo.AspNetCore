@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Microsoft.AspNetCore.Authentication.Google/6.0.10": {
+      "Microsoft.AspNetCore.Authentication.Google/6.0.11": {
         "type": "package",
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
@@ -88,10 +88,10 @@
     }
   },
   "libraries": {
-    "Microsoft.AspNetCore.Authentication.Google/6.0.10": {
-      "sha512": "D9ZgmzDU78XXp1j/Rk6JOYYhB4/lVtUlSfcBYMNF4ieSNm5gM2d+3RALxGZEjQxd6QL/7YGdCd3jygsLNltm1w==",
+    "Microsoft.AspNetCore.Authentication.Google/6.0.11": {
+      "sha512": "EjZhKpe5WVy6p23pRYLhO62t4rQW7bZO72J0eU01TmbOYRsJ/ZAUZqYQ4C3Kd3+CH18Ac4KkSl3X8YhuXHAatA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.google/6.0.10",
+      "path": "microsoft.aspnetcore.authentication.google/6.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -99,7 +99,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll",
         "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.xml",
-        "microsoft.aspnetcore.authentication.google.6.0.10.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.google.6.0.11.nupkg.sha512",
         "microsoft.aspnetcore.authentication.google.nuspec"
       ]
     },
@@ -231,7 +231,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.AspNetCore.Authentication.Google >= 6.0.10",
+      "Microsoft.AspNetCore.Authentication.Google >= 6.0.11",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -281,7 +281,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Google": {
             "target": "Package",
-            "version": "[6.0.10, )"
+            "version": "[6.0.11, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
