@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "giTksGcq921YDJK8iXgV2HMptLCpCbVJcRMR3csH0wYR+g8k/GcKXcPD52HYyiYZbSmNNqGUuznoHZaLiV4XZQ==",
+  "dgSpecHash": "AWhP/WEzbTxhAKGmUrGPqXN7T0Qv93dNHfzwJ+Wm3U1Y6HIxO/IyKRidclgESny703IN7pV3YIc3f8CoIilBXA==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth.OIDC\\IntroTo.OIDC.Client\\IntroTo.OIDC.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.11\\microsoft.aspnetcore.authentication.jwtbearer.6.0.11.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\6.0.11\\microsoft.aspnetcore.authentication.openidconnect.6.0.11.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

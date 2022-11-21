@@ -68,3 +68,4 @@ C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\Int
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Client\obj\Debug\net6.0\IntroTo.OIDC.Client.pdb
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Client\obj\Debug\net6.0\IntroTo.OIDC.Client.genruntimeconfig.cache
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Client\obj\Debug\net6.0\ref\IntroTo.OIDC.Client.dll
+C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\Auth\IntroTo.Auth.OIDC\IntroTo.OIDC.Client\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

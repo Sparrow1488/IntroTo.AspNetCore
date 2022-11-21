@@ -5,148 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2cc5a79-1aca-4590-a93a-36b47f822d12" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/Controllers/AuthenticationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/Controllers/HomeController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/IntroTo.OIDC.Client.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/IntroTo.OIDC.Client.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/IntroTo.OIDC.Client.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/IntroTo.OIDC.Client.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/IntroTo.OIDC.Client.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/IntroTo.OIDC.Client.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Microsoft.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/bin/Debug/net6.0/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/IntroTo.OIDC.Client.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/ref/IntroTo.OIDC.Client.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/refint/IntroTo.OIDC.Client.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/IntroTo.OIDC.Client.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/IntroTo.OIDC.Client.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/IntroTo.OIDC.Client.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.Client/obj/staticwebassets.pack.sentinel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/Configurations/IdentityConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/Controllers/AuthenticationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/Controllers/HomeController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/Handlers/Authentication.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/IntroTo.OIDC.IdentityServer.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/AngleSharp.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/AspNet.Security.OpenId.Steam.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/AspNet.Security.OpenId.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IdentityModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IdentityServer4.Storage.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IdentityServer4.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OpenIdConnect.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OpenIdConnect.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OpenIdConnect.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/IntroTo.OpenIdConnect.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Microsoft.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/bin/Debug/net6.0/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/IntroTo.OpenIdConnect.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/ref/IntroTo.OIDC.IdentityServer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/ref/IntroTo.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/refint/IntroTo.OIDC.IdentityServer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/refint/IntroTo.OpenIdConnect.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/IntroTo.OIDC.IdentityServer.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/IntroTo.OIDC.IdentityServer.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/IntroTo.OIDC.IdentityServer.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/IntroTo.OpenIdConnect.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/IntroTo.OpenIdConnect.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/IntroTo.OpenIdConnect.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/obj/staticwebassets.pack.sentinel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.OIDC.IdentityServer/tempkey.jwk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IntroTo.OIDC.IdentityServer.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IntroTo.OIDC.IdentityServer.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authentication/Configurations/IdentityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/Configurations/IdentityConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/IntroTo.OIDC.IdentityServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/IntroTo.OIDC.IdentityServer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.Auth.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../IntroTo.Auth/IntroTo.Auth.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2He3QkTI4E2VHON9fqoY7mtDmBP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -186,6 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1668631711410</updated>
       <workItem from="1668631712647" duration="13000" />
+      <workItem from="1668965456390" duration="60000" />
+      <workItem from="1668966074835" duration="320000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.OIDC.IdentityServer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.OIDC.Shared", "IntroTo.OIDC.Shared\IntroTo.OIDC.Shared.csproj", "{9B6D4D07-FFED-4BFD-AA80-10258D5511A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.OIDC.Console", "IntroTo.OIDC.Console\IntroTo.OIDC.Console.csproj", "{FBD6EA5F-126A-44D9-9794-F08717096719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{9B6D4D07-FFED-4BFD-AA80-10258D5511A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B6D4D07-FFED-4BFD-AA80-10258D5511A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B6D4D07-FFED-4BFD-AA80-10258D5511A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD6EA5F-126A-44D9-9794-F08717096719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD6EA5F-126A-44D9-9794-F08717096719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD6EA5F-126A-44D9-9794-F08717096719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD6EA5F-126A-44D9-9794-F08717096719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

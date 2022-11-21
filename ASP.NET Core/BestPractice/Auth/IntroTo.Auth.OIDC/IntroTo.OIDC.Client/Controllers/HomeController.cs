@@ -13,6 +13,13 @@ public class HomeController : Controller
         return Json(claims.Select(x => $"{x.Type}: {x.Value}"));
     }
     
+    [HttpGet("anon-claims")]
+    public IActionResult GetAnonClaims()
+    {
+        var claims = User.Identities.SelectMany(x => x.Claims);
+        return Json(claims.Select(x => $"{x.Type}: {x.Value}"));
+    }
+    
     [HttpGet("admin"), Authorize("Admin")]
     public IActionResult GetIdentityInfo()
     {

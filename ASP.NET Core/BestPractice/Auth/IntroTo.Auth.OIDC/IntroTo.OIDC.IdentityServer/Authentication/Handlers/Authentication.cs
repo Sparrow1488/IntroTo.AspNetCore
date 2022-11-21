@@ -54,7 +54,7 @@ public static class Authentication
                 ClaimValueTypes.String,
                 "https://localhost:3001",
                 "https://localhost:3001"
-            ),
+            )
         };
 
         var identity = new ClaimsIdentity(
