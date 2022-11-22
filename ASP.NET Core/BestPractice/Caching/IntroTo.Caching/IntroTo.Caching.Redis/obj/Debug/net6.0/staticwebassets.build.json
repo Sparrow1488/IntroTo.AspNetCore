@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "3O14yG1Oq85TEyCi+Tb4zWRzWdPqoW2Y7szWx4M+nrE=",
+  "Source": "IntroTo.Caching.Redis",
+  "BasePath": "_content/IntroTo.Caching.Redis",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
