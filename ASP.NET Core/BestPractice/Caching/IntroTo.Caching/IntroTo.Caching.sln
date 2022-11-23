@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Caching.Redis", "IntroTo.Caching.Redis\IntroTo.Caching.Redis.csproj", "{1AB8D299-B38A-4EE9-9358-4484DD42ED3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Caching.Strategies", "IntroTo.Caching.Strategies\IntroTo.Caching.Strategies.csproj", "{483B2EEB-D2FE-43CE-B60A-18A57439C0A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{1AB8D299-B38A-4EE9-9358-4484DD42ED3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AB8D299-B38A-4EE9-9358-4484DD42ED3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AB8D299-B38A-4EE9-9358-4484DD42ED3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{483B2EEB-D2FE-43CE-B60A-18A57439C0A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483B2EEB-D2FE-43CE-B60A-18A57439C0A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483B2EEB-D2FE-43CE-B60A-18A57439C0A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483B2EEB-D2FE-43CE-B60A-18A57439C0A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
