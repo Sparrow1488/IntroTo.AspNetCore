@@ -13,7 +13,10 @@ builder.Services.AddAuthentication(opt =>
         opt.DefaultAuthenticateScheme = "default";
         opt.DefaultChallengeScheme = "default";
     })
-    .AddCookie("default");
+    .AddCookie("default", opt =>
+    {
+        opt.LoginPath = "/login-cookie";
+    });
 
 builder.Services.AddAuthorization();
 
@@ -27,14 +30,26 @@ app.MapGet("/", () => "Hello World!");
 app.MapGet("/secret", () => "TOP SECRET")
     .RequireAuthorization();
 
-app.MapGet("/login", async (HttpContext ctx) =>
+app.MapGet("/login", async (HttpContext ctx, string? returnUrl) =>
+{
+    await ctx.ChallengeAsync("default", new AuthenticationProperties()
+    {
+        RedirectUri = returnUrl ?? "/",
+        IsPersistent = true
+    });
+});
+
+app.MapGet("/login-cookie", async (HttpContext ctx, string? returnUrl) =>
 {
     var user = new ClaimsPrincipal(new ClaimsIdentity(new[]
     {
         new Claim(ClaimTypes.NameIdentifier, Guid.NewGuid().ToString()),
         new Claim(ClaimTypes.Name, "username")
     }, "default"));
-    await ctx.SignInAsync("default", user);
+    await ctx.SignInAsync("default", user, new AuthenticationProperties()
+    {
+        RedirectUri = returnUrl ?? "/"
+    });
 });
 
 app.Run();
