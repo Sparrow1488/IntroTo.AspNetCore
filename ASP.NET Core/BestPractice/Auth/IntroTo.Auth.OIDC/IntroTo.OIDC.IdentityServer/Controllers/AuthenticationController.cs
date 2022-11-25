@@ -38,6 +38,7 @@ public class AuthenticationController : Controller
         var principal = new ClaimsPrincipal(identities);
         var properties = new AuthenticationProperties()
         {
+            RedirectUri = returnUrl ?? "/",
             IsPersistent = true
         };
 

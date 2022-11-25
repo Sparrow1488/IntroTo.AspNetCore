@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using IntroTo.OIDC.Shared.Schemes;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IntroTo.OIDC.Client.Controllers;
@@ -14,6 +15,8 @@ public class AuthenticationController : Controller
             RedirectUri = returnUrl ?? "/",
             IsPersistent = true
         };
-        return Challenge(properties, "idserver");
+        return Challenge(
+            properties, 
+            CustomIdentityAuthenticationScheme.AuthenticationScheme);
     }
 }
