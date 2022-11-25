@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Auth.Schemes", "Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Auth.Policies", "IntroTo.Auth.Policies\IntroTo.Auth.Policies.csproj", "{CC7EDD75-6E04-4975-B9C5-25563DB76BD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Auth.OpenID", "IntroTo.Auth.OpenID\IntroTo.Auth.OpenID.csproj", "{031E90D1-28ED-458B-883B-1EA6ECE4590C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroTo.Auth.Cookies", "IntroTo.Auth.Cookies\IntroTo.Auth.Cookies.csproj", "{E095ACD1-5581-49B1-96DB-E5988E9E5B7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{CC7EDD75-6E04-4975-B9C5-25563DB76BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7EDD75-6E04-4975-B9C5-25563DB76BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC7EDD75-6E04-4975-B9C5-25563DB76BD5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{031E90D1-28ED-458B-883B-1EA6ECE4590C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{031E90D1-28ED-458B-883B-1EA6ECE4590C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{031E90D1-28ED-458B-883B-1EA6ECE4590C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{031E90D1-28ED-458B-883B-1EA6ECE4590C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E095ACD1-5581-49B1-96DB-E5988E9E5B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E095ACD1-5581-49B1-96DB-E5988E9E5B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E095ACD1-5581-49B1-96DB-E5988E9E5B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E095ACD1-5581-49B1-96DB-E5988E9E5B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.OpenID\\IntroTo.Auth.OpenID.csproj": {}
+    "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Cookies\\IntroTo.Auth.Cookies.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.OpenID\\IntroTo.Auth.OpenID.csproj": {
+    "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Cookies\\IntroTo.Auth.Cookies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.OpenID\\IntroTo.Auth.OpenID.csproj",
-        "projectName": "IntroTo.Auth.OpenID",
-        "projectPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.OpenID\\IntroTo.Auth.OpenID.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Cookies\\IntroTo.Auth.Cookies.csproj",
+        "projectName": "IntroTo.Auth.Cookies",
+        "projectPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Cookies\\IntroTo.Auth.Cookies.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.OpenID\\obj\\",
+        "outputPath": "C:\\Users\\USER\\GitHub Repos\\IntroTo.AspNetCore\\ASP.NET Core\\BestPractice\\Auth\\IntroTo.Auth\\IntroTo.Auth.Cookies\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

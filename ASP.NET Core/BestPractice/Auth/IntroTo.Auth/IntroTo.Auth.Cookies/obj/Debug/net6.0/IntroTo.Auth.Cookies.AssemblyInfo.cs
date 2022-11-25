@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("IntroTo.Auth.OpenID")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("IntroTo.Auth.Cookies")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("IntroTo.Auth.OpenID")]
-[assembly: System.Reflection.AssemblyTitleAttribute("IntroTo.Auth.OpenID")]
+[assembly: System.Reflection.AssemblyProductAttribute("IntroTo.Auth.Cookies")]
+[assembly: System.Reflection.AssemblyTitleAttribute("IntroTo.Auth.Cookies")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
