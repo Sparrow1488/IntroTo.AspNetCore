@@ -1,9 +1,6 @@
 using System.Security.Claims;
-using IntroTo.OIDC.Shared.Schemes;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
-using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,15 +20,17 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/authentication/login";
     })
-    .AddOpenIdConnect(CustomIdentityAuthenticationScheme.AuthenticationScheme, options =>
+    .AddOpenIdConnect("idserver", options =>
     {
         options.Authority = "https://localhost:3001";
         options.ClientId = "WebAPI";
         options.ClientSecret = "1488";
 
+        options.SaveTokens = true;
         options.ResponseType = OpenIdConnectResponseType.Code;
         
-        options.Scope.Add("client-info");
+        options.Scope.Add("client_info");
+        options.Scope.Add("offline_access");
     });
 
 builder.Services.Configure<RouteOptions>(x => {

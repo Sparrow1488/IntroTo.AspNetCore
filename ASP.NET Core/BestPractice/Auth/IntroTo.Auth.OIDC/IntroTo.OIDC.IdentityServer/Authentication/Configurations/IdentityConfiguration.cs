@@ -10,7 +10,7 @@ public static class IdentityConfiguration
     public static IEnumerable<ApiScope> ApiScopes =>
         new List<ApiScope>
         {
-            new("client/console", new []
+            new("console", new []
             {
                 "client_data", "profile", "openid"
             })
@@ -21,7 +21,7 @@ public static class IdentityConfiguration
             new IdentityResources.OpenId(),
             new IdentityResources.Profile(),
             new IdentityResources.Email(),
-            new("client-info", new[]
+            new("client_info", new[]
             {
                 "client_name", 
                 "client_country", 
@@ -49,7 +49,7 @@ public static class IdentityConfiguration
                 {
                     IdentityServerConstants.StandardScopes.OpenId,
                     IdentityServerConstants.StandardScopes.Profile,
-                    "client-info"
+                    "client_info"
                 },
                 RedirectUris = { "https://localhost:5001/signin-oidc" },
             },
@@ -60,8 +60,14 @@ public static class IdentityConfiguration
                 ClientSecrets = {
                     new Secret("1488".ToSha256())
                 },
-                AllowedGrantTypes = GrantTypes.ClientCredentials,
-                AllowedScopes = { "console" }
+                AllowedGrantTypes = GrantTypes.Code,
+                AllowOfflineAccess = true,
+                AllowedScopes =
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "console"
+                }
             }
         };
 }

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "sofy7NhdRh1VeyXWT7A75Z3XZJt1zG1G6BLfFboEETU=",
+  "Source": "IntroTo.OIDC.IdentityServer",
+  "BasePath": "_content/IntroTo.OIDC.IdentityServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,4 +1,4 @@
-﻿using IntroTo.OIDC.Shared.Schemes;
+﻿using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +17,16 @@ public class AuthenticationController : Controller
         };
         return Challenge(
             properties, 
-            CustomIdentityAuthenticationScheme.AuthenticationScheme);
+            "idserver");
+    }
+
+    [HttpGet("token")]
+    public async Task<string> GetJsonTokenAsync(string tokenName)
+    {
+        var tokenJson = await HttpContext.GetTokenAsync(tokenName);
+        var handler = new JwtSecurityTokenHandler();
+        return handler.CanReadToken(tokenJson) 
+            ? handler.ReadJwtToken(tokenJson).ToString() 
+            : "Null or can't read";
     }
 }
