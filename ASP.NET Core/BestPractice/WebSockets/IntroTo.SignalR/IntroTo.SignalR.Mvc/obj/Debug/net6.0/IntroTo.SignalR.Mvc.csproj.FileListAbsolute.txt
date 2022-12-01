@@ -12,8 +12,6 @@ C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSocke
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\IntroTo.SignalR.Mvc.AssemblyInfo.cs
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\IntroTo.SignalR.Mvc.csproj.CoreCompileInputs.cache
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\IntroTo.SignalR.Mvc.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\IntroTo.SignalR.Mvc.RazorAssemblyInfo.cache
-C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\IntroTo.SignalR.Mvc.RazorAssemblyInfo.cs
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc\obj\Debug\net6.0\scopedcss\bundle\IntroTo.SignalR.Mvc.styles.css

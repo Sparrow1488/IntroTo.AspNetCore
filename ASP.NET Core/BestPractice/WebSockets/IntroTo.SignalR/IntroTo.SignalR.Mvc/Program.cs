@@ -1,16 +1,18 @@
 using IntroTo.SignalR.Mvc.Hubs;
+using IntroTo.SignalR.Mvc.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSignalR();
+builder.Services.AddSingleton<UserManager>();
 
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
+    app.UseDeveloperExceptionPage();
     app.UseHsts();
 }
 
@@ -24,14 +26,12 @@ app.UseAuthorization();
 
 app.MapGet("/", ctx =>
 {
-    ctx.Response.Redirect("/Chat/Index");
+    ctx.Response.Redirect("/chat.html");
     return Task.CompletedTask;
 });
 
 app.MapHub<ChatHub>("/chat");
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapControllers();
 
 app.Run();

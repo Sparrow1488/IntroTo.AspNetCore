@@ -14,7 +14,3 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\USER\GitHub Repos\IntroTo.AspNetCore\ASP.NET Core\BestPractice\WebSockets\IntroTo.SignalR\IntroTo.SignalR.Mvc
 build_property._RazorSourceGeneratorDebug = 
-
-[C:/Users/USER/GitHub Repos/IntroTo.AspNetCore/ASP.NET Core/BestPractice/WebSockets/IntroTo.SignalR/IntroTo.SignalR.Mvc/Views/Chat/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 

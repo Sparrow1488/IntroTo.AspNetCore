@@ -1,24 +1,47 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using IntroTo.SignalR.Mvc.Models;
+using IntroTo.SignalR.Mvc.Services;
+using Microsoft.AspNetCore.SignalR;
 
 namespace IntroTo.SignalR.Mvc.Hubs;
 
 public class ChatHub : Hub
 {
-    public async Task Send(string text, string userId)
+    private readonly UserManager _manager;
+
+    public ChatHub(UserManager manager)
     {
-        if (int.TryParse(userId, out var validId) && string.IsNullOrWhiteSpace(text))
+        _manager = manager;
+    }
+    
+    [HubMethodName("Send")]
+    public async Task SendAsync(MessageRequest message, string userId)
+    {
+        var user = Clients.User("1");
+        await Groups.AddToGroupAsync(Context.ConnectionId, "group");
+        
+        var authorizedUser = _manager.GetUser(int.Parse(userId));
+        if (authorizedUser is not null && !string.IsNullOrWhiteSpace(message.Text))
         {
-            var response = GetMessageTemplate(validId, text);
-            await Clients.All.SendAsync("Receive", response);
+            var response = GetMessageTemplate(authorizedUser.Id, message.Text);
+            await Clients.All.SendCoreAsync("Receive", new object?[] { response });
+            return;
         }
-        else
-        {
-            var caller = Clients.Caller;
-            var response = GetMessageTemplate(101010, "System Response: Invalid UserId");
-            await caller.SendAsync("Receive", response);
-        }
+        await WriteErrorAsync("[System] O-ops");
     }
 
-    private static string GetMessageTemplate(int sender, string message)
-        => $"(id:{sender})msg: {message}";
+    private static MessageResponse GetMessageTemplate(int sender, string message)
+    {
+        return new MessageResponse
+        {
+            Text = $"({sender}) {message}",
+            Type = MessageType.Message
+        };
+    }
+
+    private async Task WriteErrorAsync(string error)
+    {
+        var caller = Clients.Caller;
+        var response = GetMessageTemplate(-1, error);
+        await caller.SendAsync("Receive", response);
+    }
 }
